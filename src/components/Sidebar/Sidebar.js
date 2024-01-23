@@ -88,7 +88,6 @@ const linksArray = [
         label: "Home",
         icon: <AiOutlineHome />,
         to: "/",
-        notification: 0,
     },
     {
         label: "Servers",
