@@ -30,6 +30,16 @@ table tbody tr td {
     border-collapse: collapse;
   }
 
+  .servertable tbody tr td thead{
+    border: 1px solid black;
+    text-align: left;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem;
+    outline: 2px;
+    border-collapse: collapse;
+  }
+
 thead {
     background-color: #ccc;
     color: #222;
@@ -71,4 +81,7 @@ thead {
     text-align: left;
     color: #2d0bb6;
   }
+
+  
+  /* Login Css */
   

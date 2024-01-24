@@ -3,15 +3,16 @@ import { Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Table from "./Table";
 import "./Table.css"
+import Servertable from "./manageserver/servertable.js";
 
-const Routes = () => {
+    const Routes = () => {
     return (
         <Switch>
             <Route exact path="/">
                 <HomePage />
             </Route>
             <Route exact path="/servers">
-                <h1>Servers Page</h1>
+                <Servertable/>
             </Route>
             <Route exact path="/certificates">
             <div className="center">

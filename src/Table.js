@@ -13,7 +13,7 @@ function Table() {
     const [certvalues, setcert] = useState("Cert Created");
 
     const handleClick = (e) => {
-        fetch("http://127.0.0.1:5000/")
+        fetch("http://localhost:5000/")
             .then((res) => res.json())
             .then((jsonRes) => setcert(jsonRes));
         console.log(e);
