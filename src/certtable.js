@@ -2,14 +2,14 @@ import { Button } from "@mui/material";
 // import { useEffect, useState } from 'react';
 import "C:/Mediaroom/src/Table.css";
 import React from "react";
-import servertable from "C:/Mediaroom/src/manageserver/data.json";
+import servertable from "C:/Mediaroom/src/certdata.json";
 
-const Servertable = () => {
-  // const handleClick = (e) => {
-  //   e.Status === "Running"
-  //     ? console.log("Running")
-  //     : alert("Your server restarted successfully!");
-  // };
+const Table = () => {
+//   const handleClick = (e) => {
+//     e.Status === "Running"
+//       ? console.log("Running")
+//       : alert("Your server restarted successfully!");
+//   };
 
   return (
     <div className="column">
@@ -18,7 +18,7 @@ const Servertable = () => {
           <caption className="caption">
             <b>
               <br></br>
-              <br></br>SERVER DETAILS
+              <br></br>CERTIFICATE DETAILS
             </b>
             <br></br>
             <br></br>
@@ -53,4 +53,4 @@ const Servertable = () => {
   );
 };
 
-export default Servertable;
+export default Table;
