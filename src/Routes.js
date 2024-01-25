@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Table from "./Table";
+import Certtable from "./certtable.js";
 import "./Table.css"
 import Servertable from "./manageserver/servertable.js";
 import Layout from "./components/Layout/Layout.js";
@@ -18,7 +18,7 @@ import Layout from "./components/Layout/Layout.js";
             </Route>
             <Route exact path="/certificates">
             <div className="center">
-                <Table/>
+                <Certtable/>
             </div>
             </Route>
         </Switch>

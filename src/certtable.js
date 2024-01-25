@@ -4,7 +4,7 @@ import "C:/Mediaroom/src/Table.css";
 import React from "react";
 import servertable from "C:/Mediaroom/src/certdata.json";
 
-const Table = () => {
+const Certtable = () => {
 //   const handleClick = (e) => {
 //     e.Status === "Running"
 //       ? console.log("Running")
@@ -53,4 +53,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default Certtable;
