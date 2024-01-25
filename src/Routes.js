@@ -4,9 +4,11 @@ import HomePage from "./pages/HomePage";
 import Table from "./Table";
 import "./Table.css"
 import Servertable from "./manageserver/servertable.js";
+import Layout from "./components/Layout/Layout.js";
 
     const Routes = () => {
     return (
+        <Layout>
         <Switch>
             <Route exact path="/">
                 <HomePage />
@@ -20,6 +22,7 @@ import Servertable from "./manageserver/servertable.js";
             </div>
             </Route>
         </Switch>
+        </Layout>
     );
 };
 
