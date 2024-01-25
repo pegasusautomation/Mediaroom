@@ -20,6 +20,45 @@ $row.ServerStatus = $vms.Day
 $table.Rows.Add($row)
 }
 
+# Create an HTML version of the DataTable
+$html = @"
+<style>
+table {         
+   border-collapse: collapse;         
+   width: 100%;     
+}   
+ th, td 
+ {         
+   border: 1px solid #dddddd;         
+   text-align: left;         
+   padding: 8px;     }    
+th {         
+   background-color: #f2f2f2;     
+}
+h2 {
+   color:red;
+}
+</style>
+<table><tr><th>SERVER NAME</th><th>SERVER STATUS</th><th>SERVER ID</th></tr> 
+"@
+foreach ($row in $table.Rows)
+{ 
+    $html += "<tr><td>" + $row[0] + "</td><td>" + $row[2] + "</td><td>" + $row[1] + "</td></tr>"
+}
+$html += "</table>"
+       $subj = "CERTIFICATE ALERT"
+       $body = "<h2>CERTIFICATE DETAILS</h2> <h3>VMs are not active and we are restarting it</h3><br>" + $html
+
+       $smtpPort = 587
+       $smtpServer = "smtp.office365.com" 
+       $receiverEmail = "raghavendra.ga9@outlook.com"
+       $senderEmail = "raghavendra.ga9@outlook.com"
+       $password = "Rathna@123"
+       $SecurePassword = ConvertTo-SecureString -string $password -AsPlainText -Force
+       $Cred = New-Object System.Management.Automation.PSCredential -argumentlist $senderEmail, $SecurePassword
+           
+       Send-MailMessage -From $senderEmail -To $receiverEmail -Subject $subj -Body $body -BodyAsHtml -SmtpServer $smtpServer -Port $smtpPort -UseSsl -Credential (Get-Credential -Credential $Cred)
+
 # Code to get server status and save it in json file
 $servername_list = New-Object System.Collections.Generic.List[string]
 $serveid_list = New-Object System.Collections.Generic.List[string]
