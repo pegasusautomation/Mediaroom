@@ -103,7 +103,7 @@ const linksArray = [
 
 const secondaryLinksArray = [
     {
-        label: "Logout",
+        label: "Login History",
         icon: <MdLogout />,
     },
 ];
