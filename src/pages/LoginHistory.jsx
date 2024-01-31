@@ -8,7 +8,7 @@ const LoginHistoryPage = () => {
         const getData = async () => {
             try {
               const res = await fetch(
-                "https://sheet.best/api/sheets/da498c34-41c5-452d-bb1f-a8dab2e5ea4a"
+                "https://sheet.best/api/sheets/da498c34-41c5-452d-bb1f-a8dab2e5ea4a%"
               );
               const data = await res.json();
               console.log(data);

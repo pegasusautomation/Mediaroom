@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 // import { useEffect, useState } from 'react';
 import "C:/Mediaroom/src/Table.css";
 import React from "react";
-import servertable from "C:/Mediaroom/src/manageserver/data.json";
+import servertable from "C:/Mediaroom/src/manageserver/ServerData.json";
 
 const Servertable = () => {
   // const handleClick = (e) => {

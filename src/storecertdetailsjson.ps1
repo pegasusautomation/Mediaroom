@@ -76,26 +76,35 @@ $serverstatus_list.Add($vms.Year)
 # Example JSON data with multiple objects
 $data = @(
     [PSCustomObject]@{
-        ServerName	 = $servername_list[0]
-        ServerID = $serveid_list[0]
-        Status = $serverstatus_list[0]
+        Cert_Name	 = $servername_list[0]
+        Server_Name = $serveid_list[0]
+        Issue_Date = $serverstatus_list[0]
+        Expiry_Date = "2033"
+        Cert_Template = "template"
+        Cert_CA = "digicert"
     },
     [PSCustomObject]@{
-        ServerName	 = $servername_list[1]
-        ServerID = $serveid_list[1]
-        Status = $serverstatus_list[1]
+        Cert_Name	 = $servername_list[1]
+        Server_Name = $serveid_list[1]
+        Issue_Date = $serverstatus_list[1]
+        Expiry_Date = "2033"
+        Cert_Template = "template"
+        Cert_CA = "digicert"
     },
     [PSCustomObject]@{
-        ServerName	 = $servername_list[2]
-        ServerID = $serveid_list[2]
-        Status = $serverstatus_list[2]
+        Cert_Name	 = $servername_list[2]
+        Server_Name = $serveid_list[2]
+        Issue_Date = $serverstatus_list[2]
+        Expiry_Date = "2033"
+        Cert_Template = "template"
+        Cert_CA = "digicert"
     })
 
 # Convert the updated array to JSON
 $updatedJsonString = $data | ConvertTo-Json
 
 # Specify the file path where you want to save the JSON data
-$filePath = "C:\Mediaroom\src\certdata.json"
+$filePath = "C:\Mediaroom\src\CertData.json"
 
 # Write the JSON data to a file
 $updatedJsonString | Out-File -FilePath $filePath -Encoding UTF8
