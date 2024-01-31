@@ -6,6 +6,7 @@ import "./Table.css"
 import Servertable from "./manageserver/servertable.js";
 import Layout from "./components/Layout/Layout.js";
 import Topbar from "./pages/topbar.jsx";
+import LoginHistoryPage from "./pages/LoginHistory.jsx";
 
     const Routes = () => {
     return (
@@ -21,9 +22,12 @@ import Topbar from "./pages/topbar.jsx";
                 <Servertable/>
             </Route>
             <Route exact path="/certificates">
-            <div className="center">
+            {/* <div className="center"> */}
                 <Certtable/>
-            </div>
+            {/* </div> */}
+            </Route>
+            <Route exact path="/loginhistory">
+                <LoginHistoryPage/>
             </Route>
         </Switch> 
         </Layout>

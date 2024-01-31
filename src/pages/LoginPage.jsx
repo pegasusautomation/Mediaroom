@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./login.css"
 import { useHistory } from "react-router-dom";
 
 const LoginPage = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const [details, setData] = useState('');
     let data = [];
 
     const history = useHistory();
@@ -34,7 +35,7 @@ const LoginPage = (props) => {
         // Store user login data to google sheet
           try {
             const res = await fetch(
-              "https://sheet.best/api/sheets/da498c34-41c5-452d-bb1f-a8dab2e5ea4aa",
+              "https://sheet.best/api/sheets/da498c34-41c5-452d-bb1f-a8dab2e5ea4a",
               {
                 method: "POST",
                 headers: {
@@ -52,6 +53,22 @@ const LoginPage = (props) => {
         
          
     }
+
+    const getData = async () => {
+        try {
+          const res = await fetch(
+            "https://sheet.best/api/sheets/da498c34-41c5-452d-bb1f-a8dab2e5ea4a"
+          );
+          const details = await res.json();
+          setData(Object.keys(details).map((key) => details[key]));
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+      useEffect(() => {
+        getData();
+      }, []);
  
     return (
         <div className="auth-form-container">

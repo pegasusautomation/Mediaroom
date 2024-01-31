@@ -63,7 +63,7 @@ const Sidebar = () => {
             <SDivider />
             {secondaryLinksArray.map(({ icon, label }) => (
                 <SLinkContainer key={label}>
-                    <SLink to="/" style={!sidebarOpen ? { width: `fit-content` } : {}}>
+                    <SLink to="/loginhistory" style={!sidebarOpen ? { width: `fit-content` } : {}}>
                         <SLinkIcon>{icon}</SLinkIcon>
                         {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
                     </SLink>
@@ -105,6 +105,7 @@ const secondaryLinksArray = [
     {
         label: "Login History",
         icon: <MdLogout />,
+        to:"/loginhistory"
     },
 ];
 
