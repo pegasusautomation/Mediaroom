@@ -28,10 +28,7 @@ const LoginHistoryPage = () => {
               {data ? (
                 <table className="table">
                   <caption className="caption">
-                    <b>
-                      <br></br>
-                      <br></br>LOGIN HISTORY
-                    </b>
+                    <b><br></br><br></br><br></br><br></br><br></br><br></br>LOGIN HISTORY</b>
                     <br></br>
                     <br></br>
                   </caption>
@@ -53,7 +50,7 @@ const LoginHistoryPage = () => {
                   </tbody>
                 </table>
               ) : (
-                <p>Loading...</p>
+                <p><br></br><br></br>Loading...</p>
               )}
             </div>
           );

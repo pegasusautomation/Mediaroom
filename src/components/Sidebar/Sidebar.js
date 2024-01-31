@@ -41,7 +41,7 @@ const Sidebar = () => {
                 </SSidebarButton>
             </>
             <SLogo>
-                <h1>MR</h1>
+                <h1><br></br>MR</h1>
             </SLogo>
             <SDivider />
             {linksArray.map(({ icon, label, notification, to }) => (

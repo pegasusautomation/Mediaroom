@@ -1,11 +1,16 @@
 .topbar {
-    background-color: #333;
+    background-color: #6e6d8e;
     color: white;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: 100;
+    white-space: nowrap;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
   
   nav ul {

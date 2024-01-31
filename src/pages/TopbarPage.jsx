@@ -20,7 +20,7 @@ const Topbar = ({ username, onLogout, props }) => {
       </span>
 
       <button type="submit" onClick={handleSubmit}>
-        Log Out
+        Log out
       </button>
     </div>
   );
