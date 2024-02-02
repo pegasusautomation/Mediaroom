@@ -52,12 +52,11 @@ const LoginPage = ({onLogin}) => {
  
     return (
         <div className="auth-form-container">
-        <h2>MR Login</h2>
+        <h2>MediaRoom</h2>
         <form className="login-form" onSubmit={handleSubmit}>
-      <br></br>
-            <br></br>
+        <br></br>
             {/* <label htmlFor="email">email</label> */}
-            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email"/>           
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="Username" id="email" name="email"/>           
             {/* <label htmlFor="password">password</label> */}
             <br></br>
             <br></br>

@@ -1,8 +1,6 @@
-import { Button } from "@mui/material";
-// import { useEffect, useState } from 'react';
 import "C:/Mediaroom/src/Table.css";
 import React from "react";
-import certTable from "C:/Mediaroom/src/certdata.json";
+import certTable from "C:/Mediaroom/src/CertData.json";
 
 const Certtable = ({userData}) => {
 //   const handleClick = (e) => {

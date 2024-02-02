@@ -1,7 +1,7 @@
 .login {
     text-align: center;
     display: flex;
-    min-height: 100vh;
+    min-height: 30vh;
     align-items: center;
     justify-content: center;
     color: white;
@@ -18,9 +18,14 @@
   @media screen and (min-width: 600px) {
     .auth-form-container {
       padding: 5rem;
-      border: 1px solid white;
+      border: 1px solid rgb(109, 84, 84);
       border-radius: 10px;
       margin: 0.5rem;
+      border-width: thick;
+      width: 300px;
+      height: 300px;
+      padding: 50px;
+      
     }
   }
   
@@ -40,7 +45,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
-    padding: 2px 16px;
+    padding: 0;
     height: 32px;
     min-width: 60px;
     min-height: 32px;
