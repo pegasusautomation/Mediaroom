@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
 // import { useEffect, useState } from 'react';
-import "C:/Mediaroom/src/Table.css";
+import "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/Table.css";
 import React from "react";
-import servertable from "C:/Mediaroom/src/certdata.json";
+import servertable from "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/certdata.json";
 
-const Certtable = () => {
+const Certtable = ({userData}) => {
 //   const handleClick = (e) => {
 //     e.Status === "Running"
 //       ? console.log("Running")
@@ -12,6 +12,7 @@ const Certtable = () => {
 //   };
 
   return (
+    userData.role==="manager"||userData.role==="admin"?
     <div className="column">
       {servertable ? (
         <table className="table">
@@ -50,6 +51,7 @@ const Certtable = () => {
         <p>Loading...</p>
       )}
     </div>
+    :<div>You are not Authorised to this page</div>
   );
 };
 

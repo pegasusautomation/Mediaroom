@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
 // import { useEffect, useState } from 'react';
-import "C:/Mediaroom/src/Table.css";
+import "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/Table.css";
 import React from "react";
-import servertable from "C:/Mediaroom/src/manageserver/data.json";
+import servertable from "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/manageserver/data.json";
 
-const Servertable = () => {
+const Servertable = ({userData}) => {
+  // role=userData.role
   // const handleClick = (e) => {
   //   e.Status === "Running"
   //     ? console.log("Running")
@@ -12,6 +13,8 @@ const Servertable = () => {
   // };
 
   return (
+    userData.role==="admin" ?
+    // CURRENT_USER_TYPE===<div>{userData.role}</div> ?
     <div className="column">
       {servertable ? (
         <table className="table">
@@ -50,6 +53,7 @@ const Servertable = () => {
         <p>Loading...</p>
       )}
     </div>
+    :<div>You are not Authorised</div>
   );
 };
 

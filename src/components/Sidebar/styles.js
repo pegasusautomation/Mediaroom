@@ -17,15 +17,16 @@ export const SSidebarButton = styled.button`
     position: absolute;
     top: ${v.xxlSpacing};
     right: ${({ isOpen }) => (isOpen ? `-16px` : `-40px`)};
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+    width: 20px;
+    height: 15px;
+    border-radius: 20%;
     background: ${({ theme }) => theme.bg};
-    box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
+    box-shadow: 0 0 4px ${({ theme }) => theme.bg}, 0 0 7px ${({ theme }) => theme.primary};
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    zoom:0.8;
 
     transform: ${({ isOpen }) => (!isOpen ? `rotate(180deg)` : `initial`)};
 `;
@@ -81,7 +82,7 @@ export const SDivider = styled.div`
 export const SLinkContainer = styled.div`
     background: ${({ theme, isActive }) => (!isActive ? `transparent` : theme.bg3)};
     border-radius: ${v.borderRadius};
-    margin: 8px 0;
+    margin: 6px 0;
 
     :hover {
         box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
@@ -135,12 +136,12 @@ export const SThemeToggler = styled.button`
     ${btnReset};
     margin: 0 auto;
     cursor: pointer;
-    width: 36px;
-    height: 20px;
-    border-radius: 10px;
-    background: ${({ theme, isActive }) => (!isActive ? theme.bg3 : theme.primary)};
-
+    width: 0px;
+    height: 0px;
+    border-radius: 80px;
+    background: ${({ theme, isActive }) => (!isActive ? theme.bg3 : theme.bg3)};
     position: relative;
+    zoom:0.6;
 `;
 
 export const SToggleThumb = styled.div`
@@ -152,5 +153,5 @@ export const SToggleThumb = styled.div`
     transition: 0.2s ease right;
     right: calc(100% - 18px - 1px);
     border-radius: 50%;
-    background: ${({ theme }) => theme.bg};
+    background: ${({ theme }) => theme.primary};
 `;

@@ -1,4 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
+// import { ThemeProvider } from 'styled-components';
+import { ThemeContext } from "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/App.js";
 import {
     SDivider,
     SLink,
@@ -23,10 +25,10 @@ import {
 import { MdLogout } from "react-icons/md";
 import { BsServer } from "react-icons/bs";
 
-import { ThemeContext } from "./../../App";
+// import { ThemeContext } from 'styled-components'
 import { useLocation } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({userData}) => {
     const searchRef = useRef(null);
     const { setTheme, theme } = useContext(ThemeContext);
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -34,6 +36,7 @@ const Sidebar = () => {
 
  
     return (
+      
         <SSidebar isOpen={sidebarOpen}>
             <>
                 <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)}>
@@ -41,7 +44,7 @@ const Sidebar = () => {
                 </SSidebarButton>
             </>
             <SLogo>
-                <h1>MR</h1>
+                <h1><br></br>MR</h1>
             </SLogo>
             <SDivider />
             {linksArray.map(({ icon, label, notification, to }) => (
@@ -63,13 +66,13 @@ const Sidebar = () => {
             <SDivider />
             {secondaryLinksArray.map(({ icon, label }) => (
                 <SLinkContainer key={label}>
-                    <SLink to="/" style={!sidebarOpen ? { width: `fit-content` } : {}}>
+                    <SLink to="/loginhistory" style={!sidebarOpen ? { width: `fit-content` } : {}}>
                         <SLinkIcon>{icon}</SLinkIcon>
                         {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
                     </SLink>
                 </SLinkContainer>
             ))}
-            <SDivider />
+            {/* <SDivider /> */}
             <STheme>
                 {sidebarOpen && <SThemeLabel>Dark Mode</SThemeLabel>}
                 <SThemeToggler
@@ -84,10 +87,17 @@ const Sidebar = () => {
 };
 
 const linksArray = [
+  {
+    // {userData && (
+            label: "Profile",
+            icon: <AiOutlineHome />,
+            to: "/Profile",
+    // )}
+        },
     {
         label: "Home",
         icon: <AiOutlineHome />,
-        to: "/",
+        to: "/home",
     },
     {
         label: "Servers",
@@ -103,9 +113,41 @@ const linksArray = [
 
 const secondaryLinksArray = [
     {
-        label: "Logout",
+        label: "Login History",
         icon: <MdLogout />,
+        to:"/loginhistory"
     },
 ];
 
 export default Sidebar;
+
+// import {React} from 'react';
+// import { Link } from 'react-router-dom';
+// import 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/components/sidebar.css';
+
+// const Sidebar = ({userData}) => {
+//   return (
+//     <div className="sidebar"><br></br><br></br><br></br>
+//      {userData && (
+//         // <div className="profile">
+//         //   <p>{userData.name}</p>
+//         //   <p>{userData.email}</p>
+//         //   </div>
+//           <Link to="/Profile">Profile</Link>
+//      )}
+//       <Link to="/home">Home</Link>
+//       {/* <Link to="/logout">Logout</Link> */}
+      
+//       <Link to="/servers">Server</Link>
+//       <Link to="/certificates">Certificates</Link>
+//       <Link to="/loginhistory">LoginHistory</Link>
+//       {/* <Link to="/login">Login</Link> */}
+//       {/* <button onClick={toggleDarkMode}>
+//           {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+//         </button> */}
+//         {/* {CURRENT_USER_TYPE} */}
+//     </div>
+//   );
+// };
+
+// export default Sidebar;
