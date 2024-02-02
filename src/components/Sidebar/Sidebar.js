@@ -21,6 +21,7 @@ import {
     AiFillSafetyCertificate,
     AiOutlineHome,
     AiOutlineLeft,
+    AiOutlineProfile,
 } from "react-icons/ai";
 import { MdLogout } from "react-icons/md";
 import { BsServer } from "react-icons/bs";
@@ -90,7 +91,7 @@ const linksArray = [
   {
     // {userData && (
             label: "Profile",
-            icon: <AiOutlineHome />,
+            icon: <AiOutlineProfile />,
             to: "/Profile",
     // )}
         },

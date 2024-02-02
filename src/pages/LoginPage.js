@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./login.css"
+import "./login.css";
 import { useHistory } from "react-router-dom";
-import AuthService from 'C:/Mediaroom/src/AuthService.js'
 
 const LoginPage = ({onLogin}) => {
     const [email, setEmail] = useState('');
