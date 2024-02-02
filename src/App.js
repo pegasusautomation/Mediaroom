@@ -10,14 +10,14 @@ import LoginPage from './pages/LoginPage';
 import HomePage from "./pages/HomePage";
 import Certtable from "./certtable.js";
 import "./Table.css";
- import 'C:/Users/Kothakota.Deepika_EX/Mediaroom-copy/src/App.css';
+ import 'C:/Mediaroom/src/App.css';
 import Servertable from "./manageserver/servertable.js";
-import UserProfile from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/pages/UserProfile.js';
-import ManagerProfile from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/pages/ManagerProfile.js';
-import AdminProfile from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/pages/AdminProfile.js';
-import TopbarPage from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/pages/TopbarPage.js';
-import LoginHistory from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/pages/LoginHistory.js'
-import AuthService from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/AuthService.js'
+import UserProfile from 'C:/Mediaroom/src/pages/UserProfile.js';
+import ManagerProfile from 'C:/Mediaroom/src/pages/ManagerProfile.js';
+import AdminProfile from 'C:/Mediaroom/src/pages/AdminProfile.js';
+import TopbarPage from 'C:/Mediaroom/src/pages/TopbarPage.js';
+import LoginHistory from 'C:/Mediaroom/src/pages/LoginHistory.js'
+import AuthService from 'C:/Mediaroom/src/AuthService.js'
 
 
 // const User_types={

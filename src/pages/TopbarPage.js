@@ -4,7 +4,7 @@ import React from "react";
 // import Servertable from "C:/Mediaroom/src/manageserver/servertable.js";
 // import LoginPage from "./LoginPage";
 import { useHistory } from "react-router-dom";
-import "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/pages/topbar.css"
+import "C:/Mediaroom/src/pages/topbar.css"
 
 const Topbar = ({ userData, onLogout, props }) => {
   const history = useHistory();

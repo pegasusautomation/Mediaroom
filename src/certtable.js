@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 // import { useEffect, useState } from 'react';
-import "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/Table.css";
+import "C:/Mediaroom/src/Table.css";
 import React from "react";
-import servertable from "C:/Users/Kothakota.Deepika_EX/Mediaroom/src/certdata.json";
+import certTable from "C:/Mediaroom/src/certdata.json";
 
 const Certtable = ({userData}) => {
 //   const handleClick = (e) => {
@@ -14,7 +14,7 @@ const Certtable = ({userData}) => {
   return (
     userData.role==="manager"||userData.role==="admin"?
     <div className="column">
-      {servertable ? (
+      {certTable ? (
         <table className="table">
           <caption className="caption">
             <b>
@@ -26,14 +26,14 @@ const Certtable = ({userData}) => {
           </caption>
           <thead>
             <tr>
-              {Object.keys(servertable[0]).map((key, index) => (
+              {Object.keys(certTable[0]).map((key, index) => (
                 <th key={index}>{key}</th>
               ))}
               {/* <th>{Action}</th> */}
             </tr>
           </thead>
           <tbody>
-            {servertable.map((row, rowIndex) => (
+            {certTable.map((row, rowIndex) => (
               <tr key={rowIndex}>
                 {Object.values(row).map((cell, cellIndex) => (
                   <td key={cellIndex}>{cell}</td>

@@ -98,26 +98,32 @@ $serverstatus_list.Add($vms.State)
 # Example JSON data with multiple objects
 $data = @(
     [PSCustomObject]@{
-        ServerName	 = $servername_list[0]
-        ServerID = $serveid_list[0]
-        Status = $serverstatus_list[0]
+        Server_Name	 = $servername_list[0]
+        ISS_Status = "Running"
+        Server_ID = $serveid_list[0]
+        Server_Status = $serverstatus_list[0]
+        Static_Snapshot = "NA"
     },
     [PSCustomObject]@{
-        ServerName	 = $servername_list[1]
-        ServerID = $serveid_list[1]
-        Status = $serverstatus_list[1]
+        Server_Name	 = $servername_list[1]
+        ISS_Status = "Running"
+        Server_ID = $serveid_list[1]
+        Server_Status = $serverstatus_list[1]
+        Static_Snapshot = "NA1"
     },
     [PSCustomObject]@{
-        ServerName	 = $servername_list[2]
-        ServerID = $serveid_list[2]
-        Status = $serverstatus_list[2]
+        Server_Name	 = $servername_list[2]
+        ISS_Status = "Running"  
+        Server_ID = $serveid_list[2]
+        Server_Status = $serverstatus_list[2]
+        Static_Snapshot = "NA"
     })
 
 # Convert the updated array to JSON
 $updatedJsonString = $data | ConvertTo-Json
 
 # Specify the file path where you want to save the JSON data
-$filePath = "C:\Mediaroom\src\manageserver\data.json"
+$filePath = "C:\Mediaroom\src\manageserver\ServerData.json"
 
 # Write the JSON data to a file
 $updatedJsonString | Out-File -FilePath $filePath -Encoding UTF8

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./login.css"
 import { useHistory } from "react-router-dom";
-import AuthService from 'C:/Users/Kothakota.Deepika_EX/Mediaroom/src/AuthService.js'
+import AuthService from 'C:/Mediaroom/src/AuthService.js'
 
 const LoginPage = ({onLogin}) => {
     const [email, setEmail] = useState('');
@@ -57,7 +57,7 @@ const LoginPage = ({onLogin}) => {
       <br></br>
             <br></br>
             {/* <label htmlFor="email">email</label> */}
-            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email"/>           
             {/* <label htmlFor="password">password</label> */}
             <br></br>
             <br></br>
