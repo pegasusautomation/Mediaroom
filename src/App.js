@@ -17,7 +17,7 @@ import ManagerProfile from "C:/Mediaroom/src/pages/ManagerProfile.js";
 import AdminProfile from "C:/Mediaroom/src/pages/AdminProfile.js";
 import TopbarPage from "C:/Mediaroom/src/pages/TopbarPage.js";
 import LoginHistory from "C:/Mediaroom/src/pages/LoginHistory.js";
-import AuthService from "C:/Mediaroom/src/AuthService.js";
+import AuthService from "./AuthService.js";
 
 export const ThemeContext = React.createContext(null);
 const App = () => {
