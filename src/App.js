@@ -1,16 +1,16 @@
 
- import { Helmet } from "react-helmet";
- import { ThemeProvider } from "styled-components";
+import { Helmet } from "react-helmet";
+import { ThemeProvider } from "styled-components";
 import Layout from "./components/Layout/Layout";
- import { GlobalStyle } from "./styles/globalStyles";
- import { darkTheme, lightTheme } from "./styles/theme";
+import { GlobalStyle } from "./styles/globalStyles";
+import { darkTheme, lightTheme } from "./styles/theme";
 import React ,{useState}from 'react';
 import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import Certtable from "./certtable.js";
 import "./Table.css";
- import "C:/Mediaroom/src/App.css";
+import "./App.css";
 import Servertable from "./manageserver/servertable.js";
 import UserProfile from "C:/Mediaroom/src/pages/UserProfile.js";
 import ManagerProfile from "C:/Mediaroom/src/pages/ManagerProfile.js";
