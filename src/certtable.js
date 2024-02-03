@@ -1,4 +1,4 @@
-import "C:/Mediaroom/src/Table.css";
+import "./Table.css";
 import React from "react";
 import certTable from "C:/Mediaroom/src/CertData.json";
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "C:/Mediaroom/src/Table.css";
+import "../Table.css";
 // import { useHistory } from "react-router-dom";
 
 const LoginHistoryPage = () => {
