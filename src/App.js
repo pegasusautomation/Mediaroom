@@ -12,11 +12,11 @@ import Certtable from "./certtable.js";
 import "./Table.css";
 import "./App.css";
 import Servertable from "./manageserver/servertable.js";
-import UserProfile from "C:/Mediaroom/src/pages/UserProfile.js";
-import ManagerProfile from "C:/Mediaroom/src/pages/ManagerProfile.js";
-import AdminProfile from "C:/Mediaroom/src/pages/AdminProfile.js";
-import TopbarPage from "C:/Mediaroom/src/pages/TopbarPage.js";
-import LoginHistory from "C:/Mediaroom/src/pages/LoginHistory.js";
+import UserProfile from "./pages/UserProfile.js";
+import ManagerProfile from "./pages/ManagerProfile.js";
+import AdminProfile from "./pages/AdminProfile.js";
+import TopbarPage from "./pages/TopbarPage.js";
+import LoginHistory from "./pages/LoginHistory.js";
 import AuthService from "./AuthService.js";
 
 export const ThemeContext = React.createContext(null);
