@@ -1,6 +1,6 @@
 import "./Table.css";
 import React from "react";
-import certTable from "./CertData.json";
+import certTable from "./certdata.json";
 
 const Certtable = ({userData}) => {
 //   const handleClick = (e) => {

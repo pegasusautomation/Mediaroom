@@ -30,7 +30,6 @@ import { BsServer } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 
 const Sidebar = ({userData}) => {
-    const searchRef = useRef(null);
     const { setTheme, theme } = useContext(ThemeContext);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const { pathname } = useLocation();
