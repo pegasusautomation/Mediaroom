@@ -1,6 +1,6 @@
 import "./Table.css";
 import React from "react";
-import certTable from "C:/Mediaroom/src/CertData.json";
+import certTable from "./CertData.json";
 
 const Certtable = ({userData}) => {
 //   const handleClick = (e) => {
