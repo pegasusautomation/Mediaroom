@@ -1,6 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
 // import { ThemeProvider } from 'styled-components';
-import { ThemeContext } from "C:/Mediaroom/src/App";
 import {
     SDivider,
     SLink,
@@ -29,6 +28,7 @@ import { BsServer } from "react-icons/bs";
 // import { ThemeContext } from 'styled-components'
 import { useLocation } from "react-router-dom";
 
+export const ThemeContext = React.createContext(null);
 const Sidebar = ({userData}) => {
     const { setTheme, theme } = useContext(ThemeContext);
     const [sidebarOpen, setSidebarOpen] = useState(false);
