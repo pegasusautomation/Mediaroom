@@ -4,7 +4,7 @@ from flask import Flask,Response,jsonify, request
  
 app = Flask(__name__)
  
-script_file ="C:/Mediaroom/src/createCert.ps1"
+script_file ="./createCert.ps1"
  
 @app.route("/")
 def createcert():

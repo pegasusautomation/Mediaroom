@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet";
 import { ThemeProvider } from "styled-components";
 import Layout from "./components/Layout/Layout";

@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 // import { ThemeProvider } from 'styled-components';
-import { ThemeContext } from "C:/Mediaroom/src/App.js";
+import { ThemeContext } from "C:/Mediaroom/src/App";
 import {
     SDivider,
     SLink,

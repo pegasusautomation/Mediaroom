@@ -1,6 +1,6 @@
 import "../Table.css";
 import React from "react";
-import servertable from "C:/Mediaroom/src/manageserver/ServerData.json";
+import servertable from "./ServerData.json";
 
 const Servertable = ({userData}) => {
   // role=userData.role
