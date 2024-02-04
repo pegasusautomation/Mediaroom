@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import "../Table.css";
 import React from "react";
 import servertable from "C:/Mediaroom/src/manageserver/ServerData.json";

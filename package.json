@@ -1,4 +1,5 @@
 {
+    "homepage": "http://mediaroom.github.io/Mediaroom",
     "name": "2-sidebar-react",
     "version": "0.1.0",
     "private": true,
@@ -30,7 +31,9 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-page -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -54,5 +57,10 @@
     "main": "index.js",
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.4.17",
+        "gh-pages": "^6.1.1",
+        "postcss": "^8.4.33"
+    }
 }
