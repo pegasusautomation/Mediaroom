@@ -25,10 +25,9 @@ import {
 import { MdLogout } from "react-icons/md";
 import { BsServer } from "react-icons/bs";
 
-// import { ThemeContext } from 'styled-components'
+import { ThemeContext } from 'styled-components'
 import { useLocation } from "react-router-dom";
 
-export const ThemeContext = React.createContext(null);
 const Sidebar = ({userData}) => {
     const { setTheme, theme } = useContext(ThemeContext);
     const [sidebarOpen, setSidebarOpen] = useState(false);
