@@ -2,21 +2,21 @@
     {
         "Server_Name":  "Server01",
         "ISS_Status":  "Running",
-        "Server_ID":  "bb69db32-3fd8-48f7-bd70-98991f165504",
+        "Server_ID":  "cebe637d-b41a-48da-82c0-70c997709133",
         "Server_Status":  "Running",
         "Static_Snapshot":  "NA"
     },
     {
         "Server_Name":  "Server02",
         "ISS_Status":  "Running",
-        "Server_ID":  "fbb9ad71-e2ba-481a-b596-e908796aadbb",
+        "Server_ID":  "725e05c5-5a31-4926-82d9-c223070202fe",
         "Server_Status":  "Running",
-        "Static_Snapshot":  "NA1"
+        "Static_Snapshot":  "NA"
     },
     {
-        "Server_Name":  "WSTEST",
+        "Server_Name":  "Server03",
         "ISS_Status":  "Running",
-        "Server_ID":  "6f8a29a6-437c-413c-b136-4c83a0179876",
+        "Server_ID":  "fe4da5f6-b94e-4b4e-926f-805413082a09",
         "Server_Status":  "Running",
         "Static_Snapshot":  "NA"
     }

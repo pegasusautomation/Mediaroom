@@ -15,9 +15,10 @@ table tbody tr td {
   text-align: left;
   font-size: small;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0.5rem;
   outline: 2px;
   border-collapse: collapse;
+  position: sticky;
+  padding: 0.5rem;
 }
 
 thead {
@@ -47,6 +48,11 @@ thead {
   justify-content: center;
   height: 100vh;
   background-color: #faf9f6;
+  position: fixed;
+    width: 700px;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
 }
 
 .caption

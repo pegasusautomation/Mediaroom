@@ -1,4 +1,4 @@
-$vm_list = Get-Content "C:\manageserver\vmlist.txt" #txt file with the vm list
+$vm_list = Get-Content "C:\Mediaroom\src\manageserver\vmlist.txt" #txt file with the vm list
 
 # Snippet to send alert
 # Create a DataTable
@@ -13,6 +13,7 @@ $table.columns.add($col3)
 foreach ($vm in $vm_list)
 {
 $vms = Get-VM -Name  $vm
+Write-Output($vms)
 $row = $table.NewRow()
 $row.ServerName = $vms.VMName
 $row.ServerId = $vms.VMId
@@ -69,7 +70,6 @@ foreach($vm in $vm_list)
 Write-Output("SERVER HEALTH STATUS")
 foreach ($vm in $vm_list) {
     $vms = Get-VM -Name  $vm
-
     if ($vms.State -eq "Running") {
         Write-Output("The virtual machine " + $vm + " is " + $vms.State)
     }
@@ -81,7 +81,7 @@ foreach ($vm in $vm_list) {
     }   
 }
 
-# Code to get server status and save it in json file
+# # Code to get server status and save it in json file
 $servername_list = New-Object System.Collections.Generic.List[string]
 $serveid_list = New-Object System.Collections.Generic.List[string]
 $serverstatus_list = New-Object System.Collections.Generic.List[string]
@@ -95,7 +95,7 @@ $serverstatus_list.Add($vms.State)
 }
 
 
-# Example JSON data with multiple objects
+# # Example JSON data with multiple objects
 $data = @(
     [PSCustomObject]@{
         Server_Name	 = $servername_list[0]
@@ -109,7 +109,7 @@ $data = @(
         ISS_Status = "Running"
         Server_ID = $serveid_list[1]
         Server_Status = $serverstatus_list[1]
-        Static_Snapshot = "NA1"
+        Static_Snapshot = "NA"
     },
     [PSCustomObject]@{
         Server_Name	 = $servername_list[2]
