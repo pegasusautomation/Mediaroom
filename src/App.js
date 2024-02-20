@@ -74,14 +74,14 @@ const App = () => {
         <TopbarPage  userData={userData}/>
         <Layout userData={userData}>
         {/* <Sidebar userRole={userRole} userData={userData}/> */}
-        <div className="content">
+        {/* <div className="content"> */}
           <Switch>
           {/* <Route path="/home" component={HomePage} />  */}
           <Route exact path="/home">
                <HomePage/>
             </Route>
             {/* <Route path="/login" component={LoginPage} />  */}
-            <Route exact path="/servers">
+            <Route exact path="/servers" className="bitrate">
                 <Servertable userData={userData}/>
              </Route>
             <Route exact path="/certificates">
@@ -96,7 +96,7 @@ const App = () => {
                   {userData.role === 'admin' && <AdminProfile userData={userData}/>}
                 </Route>
           </Switch>
-         </div>
+         {/* </div> */}
           </Layout>
          </>
         )}
