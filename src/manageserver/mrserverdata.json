@@ -1,0 +1,368 @@
+﻿[
+    {
+        "ComputerName":  "MSPBE5BEDB001\\LIVEDB",
+        "Roles":  [
+                      {
+                          "Name":  "ContentDistributionDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "vodBackendDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "L2VBackendDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "liveBackendDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "ListingsSettingsDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "SubscriberActivityDB",
+                          "Type":  "database"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDB001",
+        "Roles":  [
+                      {
+                          "Name":  "MDSFileStore",
+                          "Type":  "other"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDB001\\MDB",
+        "Roles":  [
+                      {
+                          "Name":  "CommonDB",
+                          "Type":  "database"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5NTP1",
+        "Roles":  [
+                      {
+                          "Name":  "ntp",
+                          "Type":  "other"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5NTP2",
+        "Roles":  [
+                      {
+                          "Name":  "ntp",
+                          "Type":  "other"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5VCTRL001",
+        "Roles":  [
+                      {
+                          "Name":  "vodCreatorControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ContentDistributionControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "vodImportPreprocessorService",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5VCRT001",
+        "Roles":  [
+                      {
+                          "Name":  "vodCreatorStation",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "vodCreator",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDIST001",
+        "Roles":  [
+                      {
+                          "Name":  "ContentDistributionServer",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5VMGMT001",
+        "Roles":  [
+                      {
+                          "Name":  "ossContentDistributionWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ossVodBackendWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtVODBackend",
+                          "Type":  "webservice"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5RSERV001",
+        "Roles":  [
+                      {
+                          "Name":  "BackendLiveToVodRecServer",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5ASERV003",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "FARM01-ACQ-37",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5AMGMT001",
+        "Roles":  [
+                      {
+                          "Name":  "ossBackendBlackoutWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LiveBackendManagement",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtBackendLiveToVod",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ossLiveBackend",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ossBackendLiveToVodWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LOTTOSS",
+                          "Type":  "webservice"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5ACTRL001",
+        "Roles":  [
+                      {
+                          "Name":  "crashDetectorService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "acquisitionControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "BackendLiveToVodControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ListingsSyncService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "LOTTController",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ListingsLibrarian",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LottKeyGenerator",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5ASERV002",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5ASERV004",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5ASERV001",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDSAF001",
+        "Roles":  [
+                      {
+                          "Name":  "DistributedCache",
+                          "Type":  "other"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDSAF002",
+        "Roles":  [
+                      {
+                          "Name":  "DistributedCache",
+                          "Type":  "other"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MMGMT001",
+        "Roles":  [
+                      {
+                          "Name":  "MDSManagementWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSSubscriberManagementWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtContracts",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "contractManagementService",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtMDSManagement",
+                          "Type":  "webservice"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDSING001",
+        "Roles":  [
+                      {
+                          "Name":  "DataGeneratorService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "sessionKeyAuthority_KeyGenerator",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "MDSListingsLibrarian",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MdsSlabGenerator",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "sessionKeyAuthorityWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "IngestionService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "FragmentGeneratorService",
+                          "Type":  "service"
+                      }
+                  ]
+    },
+    {
+        "ComputerName":  "MSPBE5MDSFE001",
+        "Roles":  [
+                      {
+                          "Name":  "MDSSubscriberDataWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSTokenGenerator",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSMediaResourceWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSVodWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSDvrDataWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LicenseServer",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSSearchWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSExternalPurchaseWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSListingsWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSMediaCatalog",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSContractWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSAuthWS",
+                          "Type":  "webservice"
+                      }
+                  ]
+    }
+]

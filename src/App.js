@@ -17,6 +17,7 @@ import AdminProfile from "./pages/AdminProfile.js";
 import TopbarPage from "./pages/TopbarPage.js";
 import LoginHistory from "./pages/LoginHistory.js";
 import AuthService from "./AuthService.js";
+import Mrserverdetails from "./manageserver/mrserverdetails.js";
 
 export const ThemeContext = React.createContext(null);
 const App = () => {
@@ -83,6 +84,9 @@ const App = () => {
             {/* <Route path="/login" component={LoginPage} />  */}
             <Route exact path="/servers">
                 <Servertable userData={userData}/>
+             </Route>
+             <Route exact path="/planoservers">
+                <Mrserverdetails userData={userData}/>
              </Route>
             <Route exact path="/certificates">
                <Certtable userData={userData}/>

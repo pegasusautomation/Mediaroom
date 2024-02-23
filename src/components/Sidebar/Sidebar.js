@@ -104,6 +104,11 @@ const linksArray = [
         to: "/servers",
     },
     {
+        label: "Plano Servers",
+        icon: <BsServer />,
+        to: "/planoservers",
+    },
+    {
         label: "Certificates",
         icon: <AiFillSafetyCertificate />,
         to: "/certificates",
