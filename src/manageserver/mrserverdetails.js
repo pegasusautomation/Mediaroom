@@ -2,14 +2,16 @@ import React from "react";
 import jsonData from "./mrserverdata.json";
 
 const Mrserverdetails = () => {
+  
   return (
     <div>
-      <h2>Computer Roles</h2>
+      <h2>Plano Servers</h2>
       <table>
         <thead>
           <tr>
             <th>Computer Name</th>
             <th>Roles</th>
+            <th> Computer Status</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +28,7 @@ const Mrserverdetails = () => {
                   ))}
                 </ul>
               </td>
+              <td>{item.ServerStatus}</td>
             </tr>
           ))}
         </tbody>

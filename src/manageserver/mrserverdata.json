@@ -1,6 +1,7 @@
 ﻿[
     {
         "ComputerName":  "MSPBE5BEDB001\\LIVEDB",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5BEDB001\\\u0027LIVEDB\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ContentDistributionDB",
@@ -30,6 +31,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDB001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDB001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "MDSFileStore",
@@ -39,6 +41,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDB001\\MDB",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDB001\\\u0027MDB\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "CommonDB",
@@ -48,6 +51,7 @@
     },
     {
         "ComputerName":  "MSPBE5NTP1",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5NTP1\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ntp",
@@ -57,6 +61,7 @@
     },
     {
         "ComputerName":  "MSPBE5NTP2",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5NTP2\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ntp",
@@ -66,6 +71,7 @@
     },
     {
         "ComputerName":  "MSPBE5VCTRL001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5VCTRL001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "vodCreatorControllerWS",
@@ -83,6 +89,7 @@
     },
     {
         "ComputerName":  "MSPBE5VCRT001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5VCRT001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "vodCreatorStation",
@@ -96,6 +103,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDIST001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDIST001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ContentDistributionServer",
@@ -105,6 +113,7 @@
     },
     {
         "ComputerName":  "MSPBE5VMGMT001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5VMGMT001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ossContentDistributionWS",
@@ -122,6 +131,7 @@
     },
     {
         "ComputerName":  "MSPBE5RSERV001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5RSERV001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "BackendLiveToVodRecServer",
@@ -131,6 +141,7 @@
     },
     {
         "ComputerName":  "MSPBE5ASERV003",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV003\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "acquisitionServiceV3",
@@ -140,6 +151,7 @@
     },
     {
         "ComputerName":  "FARM01-ACQ-37",
+        "ServerStatus":  "Error: Testing connection to computer \u0027FARM01-ACQ-37\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "acquisitionServiceV3",
@@ -149,6 +161,7 @@
     },
     {
         "ComputerName":  "MSPBE5AMGMT001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5AMGMT001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ossBackendBlackoutWS",
@@ -178,6 +191,7 @@
     },
     {
         "ComputerName":  "MSPBE5ACTRL001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5ACTRL001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "crashDetectorService",
@@ -211,6 +225,7 @@
     },
     {
         "ComputerName":  "MSPBE5ASERV002",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV002\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "acquisitionServiceV3",
@@ -220,6 +235,7 @@
     },
     {
         "ComputerName":  "MSPBE5ASERV004",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV004\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "acquisitionServiceV3",
@@ -229,6 +245,7 @@
     },
     {
         "ComputerName":  "MSPBE5ASERV001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "acquisitionServiceV3",
@@ -238,6 +255,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDSAF001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSAF001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "DistributedCache",
@@ -247,6 +265,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDSAF002",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSAF002\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "DistributedCache",
@@ -256,6 +275,7 @@
     },
     {
         "ComputerName":  "MSPBE5MMGMT001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MMGMT001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "MDSManagementWS",
@@ -281,6 +301,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDSING001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSING001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "DataGeneratorService",
@@ -314,6 +335,7 @@
     },
     {
         "ComputerName":  "MSPBE5MDSFE001",
+        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSFE001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "MDSSubscriberDataWS",
