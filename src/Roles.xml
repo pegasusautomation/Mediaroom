@@ -824,6 +824,8 @@
         <resource resource="GetRights" uri="http://%serverLayoutMachineRef:role=smsPublic;%/clientsms/GetRights.ashx" routeable="true"/>
         <resource resource="GetGroupGrantedKeys" uri="http://%serverLayoutMachineRef:role=smsPublic;%/clientsms/GetGroupGrantedKeys.ashx" routeable="true"/>
         <resource resource="GetIndividuallyGrantedKeys" uri="http://%serverLayoutMachineRef:role=smsPublic;%/clientsms/GetIndividuallyGrantedKeys.ashx" routeable="true"/>
+        <resource resource="GetGroupGrantedKeysWidevine" uri="http://%serverLayoutMachineRef:role=smsPublic;%/clientsms/GetGroupGrantedKeysWidevine.ashx" routeable="true"/>
+        <resource resource="GetIndividuallyGrantedKeysWidevine" uri="http://%serverLayoutMachineRef:role=smsPublic;%/clientsms/GetIndividuallyGrantedKeysWidevine.ashx" routeable="true"/>
         <resource resource="RightsManager" uri="http://%serverLayoutMachineRef:role=smsPublic;%/clientsms/RightsManager.asmx" routeable="true"/>
         <prerequisites>
           <prerequisite Name="IIS8" />
@@ -911,6 +913,7 @@
       </machineRole>
       <machineRole location="Branch"  role="bootstrap" type="webservice" install="installed" description="Provides client bootstrap functionality. The bootstrap Web service is the first service that IPTV Edition clients encounter when they go through their startup sequence">
         <resource resource="bootstrap" uri="http://%serverLayoutMachineRef:role=bootstrap;%/bootstrap/bootstrap.asmx" routeable="true" />
+        <resource resource="clientAuth" uri="https://%serverLayoutMachineRef:role=bootstrap;%/bootstrap/ClientAuth.ashx" routeable="true" requireHttps="true" />
         <prerequisites>
           <prerequisite Name="IIS8" />
           <prerequisite Name="Windows2012R2" />
@@ -1356,6 +1359,23 @@
         </roleLocations>
       </machineRole>
       <machineRole location="Branch" role="CloudDVRRecordingRecycler" type="service" install="installed" description="This Windows service cleans up orphan cloud recordings, which are not used in a branch any more, from cloud recorders.">
+        <prerequisites>
+          <prerequisite Name="Windows2012R2" />
+          <prerequisite Name="NET452" />
+        </prerequisites>
+      </machineRole>
+      <machineRole role="WidevineServer" type="other" install="installed" description="Widevine server used for ATV DRM.">
+        <resource resource="WidevineLicenseServerWS" uri="https://%serverLayoutMachineRef:role=WidevineServer;%/widevineproxy" requireHttps="true" />
+      </machineRole>
+      <machineRole location="Branch" role="ExternalAdapterNotificationWS" type="webservice" install="installed" description="This webservice receives recording notifications from external recorder adapter.">
+        <prerequisites>
+          <prerequisite Name="IIS8" />
+          <prerequisite Name="Windows2012R2" />
+          <prerequisite Name="NET452" />
+          <prerequisite Name="AspNetMvc4" />
+        </prerequisites>
+      </machineRole>
+      <machineRole location="Branch" role="CloudDVRBlackoutSyncr" type="service" install="installed" description="This Windows service synchronizes substitution history from Live Backend to CloudDVR DB.">
         <prerequisites>
           <prerequisite Name="Windows2012R2" />
           <prerequisite Name="NET452" />
