@@ -71,6 +71,7 @@ const Mrserverdetails = ({userData}) => {
           <option value="ComputerName">ComputerName</option>
           <option value="Roles">Role</option>
           <option value="ServerStatus">ServerStatus</option>
+          <option value="ServiceStatus">ServiceStatus</option>
         </select>
             )}
             </div>
@@ -92,6 +93,7 @@ const Mrserverdetails = ({userData}) => {
             <th>Computer Name</th>
             <th>Roles</th>
             <th>Computer Status</th>
+            <th>Service Status</th>
           </tr>
         </thead>
         <tbody>
@@ -109,6 +111,16 @@ const Mrserverdetails = ({userData}) => {
                 </ul>
               </td>
               <td>{item.ServerStatus}</td>
+              <td>
+                <ul>
+                  {item.ServiceStatus.map((role, roleIndex) => (
+                    <li key={roleIndex}>
+                      <strong>Name:</strong> {role.Name}, <strong>Status:</strong>{" "}
+                      {role.Status}
+                    </li>
+                  ))}
+                </ul>
+              </td>
             </tr>
           ))}
         </tbody>

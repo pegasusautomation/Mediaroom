@@ -13,6 +13,7 @@ foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
 $xmlFilePath = ".\serverLayout.xml"
 $xml = [xml](Get-Content $xmlFilePath)
  
+$serviceNames = @("iphlpsvc", "AppMgmt", "AppXSvc","BDESVC")
 $extractedData = @()
  
  
@@ -22,7 +23,62 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
         # $zoneName = $zone.SelectSingleNode("@name").Value
         foreach ($computer in $zone.SelectNodes(".//computer")) {
             $computerName = $computer.SelectSingleNode("@name").Value
+            # if ($computerName -eq "MSPBE5BEDB001\LIVEDB" -or `
+            # $computerName -eq "MSPBE5MDB001" -or `
+            # $computerName -eq "MSPBE5VCRT001" -or `
+            # $computerName -eq "MSPBE5VCTRL001") {
+                # Get service status for local machine
+                # $services = Get-Service -Name "iphlpsvc"| Select-Object -Property Name, Status
+            #     $serviceStatus = Get-Service
 
+            #     #  $serviceStatus =$service.Status
+            #     # foreach ($service in $services) {
+            #     #     $service.Status
+            #     # }
+            # if ($serviceStatus.Name -eq "iphlpsvc" -or $serviceStatus.Name -eq "AppMgmt" -or $serviceStatus.Name -eq "AppXSvc" -or $serviceStatus.Name -eq "BDESVC" ) {
+            #         $iptvServiceStatus = $serviceStatus.Status
+            #         if ($iptvServiceStatus -eq "Running") {
+            #             $iptvServiceStatus = "Running"
+            #         } else {
+            #             $iptvServiceStatus = "Stopped"
+            #         }
+            #     } else {
+            #         $iptvServiceStatus = "Service Not Found"
+            #     }
+            # } 
+            $serviceStatus = @()
+            
+                try {
+                    foreach ($serviceName in $serviceNames) {
+                    $service = Get-Service
+                    # if ($service) {
+                        $iptvServiceStatus = $service.Status
+                    if ($iptvServiceStatus -eq "Running") {
+                        $iptvServiceStatus = "Running"
+                    } else {
+                        $iptvServiceStatus = "Stopped"
+                    }
+                        $serviceStatus += @{
+                            "Name" = $serviceName
+                            "Status" = $iptvServiceStatus
+                        }
+                    
+                    #  else {
+                    #     $serviceStatus += @{
+                    #         "Name" = $serviceName
+                    #         "Status" = "Service not found"
+                    #     }
+                    # }
+                } 
+            }
+            catch {
+                    $serviceStatus += @{
+                        "Name" = $serviceName
+                        "Status" = "Error: $($_.Exception.Message)"
+                    }
+                }
+            
+           
             try {
                 $result = Test-Connection -ComputerName $computerName -Count 1 -ErrorAction Stop
                 if ($result) {
@@ -33,7 +89,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             } catch {
                 $serverStatus = "Error: $($_.Exception.Message)"
             }
-
+            
             $roles = @()
             foreach ($roleNode in $computer.SelectNodes(".//role")) {
                 $roleName = $roleNode.SelectSingleNode("@name").Value
@@ -49,11 +105,12 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                 "ComputerName" = $computerName
                 "Roles" = $roles
                 "ServerStatus" = $serverStatus
+                "ServiceStatus" = $serviceStatus
             }
         }
     }
+
 }
- 
 
 $updatedJsonString = $extractedData | ConvertTo-Json -Depth 5
  

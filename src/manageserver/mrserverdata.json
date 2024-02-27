@@ -1,5 +1,23 @@
 ﻿[
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "NTP1",
         "ServerStatus":  "Error: Testing connection to computer \u0027NTP1\u0027 failed: No such host is known",
         "Roles":  [
@@ -10,6 +28,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5DSERV103",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV103\u0027 failed: No such host is known",
         "Roles":  [
@@ -20,6 +56,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5DSERV101",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV101\u0027 failed: No such host is known",
         "Roles":  [
@@ -30,6 +84,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5CGSG021",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG021\u0027 failed: No such host is known",
         "Roles":  [
@@ -52,6 +124,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5TSSERV001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5TSSERV001\u0027 failed: No such host is known",
         "Roles":  [
@@ -62,6 +152,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5DSERV102",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV102\u0027 failed: No such host is known",
         "Roles":  [
@@ -72,6 +180,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5BMGMT001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5BMGMT001\u0027 failed: No such host is known",
         "Roles":  [
@@ -162,6 +288,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5SFSG021",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG021\u0027 failed: No such host is known",
         "Roles":  [
@@ -196,6 +340,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5HPNR011",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5HPNR011\u0027 failed: No such host is known",
         "Roles":  [
@@ -206,6 +368,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBE5MFMAP001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MFMAP001\u0027 failed: No such host is known",
         "Roles":  [
@@ -213,6 +393,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5VSERV002",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV002\u0027 failed: No such host is known",
         "Roles":  [
@@ -223,6 +421,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5CFSG021",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG021\u0027 failed: No such host is known",
         "Roles":  [
@@ -273,6 +489,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5CFSG011",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG011\u0027 failed: No such host is known",
         "Roles":  [
@@ -323,6 +557,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5SYNC001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SYNC001\u0027 failed: No such host is known",
         "Roles":  [
@@ -337,6 +589,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5VDIST001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5VDIST001\u0027 failed: No such host is known",
         "Roles":  [
@@ -347,6 +617,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5SFSG011",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG011\u0027 failed: No such host is known",
         "Roles":  [
@@ -381,6 +669,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5CGSG011",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG011\u0027 failed: No such host is known",
         "Roles":  [
@@ -403,6 +709,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5SFBR001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFBR001\u0027 failed: No such host is known",
         "Roles":  [
@@ -457,6 +781,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5VSERV001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV001\u0027 failed: No such host is known",
         "Roles":  [
@@ -467,6 +809,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5CDBE001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDBE001\u0027 failed: No such host is known",
         "Roles":  [
@@ -485,6 +845,24 @@
                   ]
     },
     {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "iphlpsvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppMgmt",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "AppXSvc",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "BDESVC",
+                                  "Status":  "Running"
+                              }
+                          ],
         "ComputerName":  "MSPBR5CDFE001",
         "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDFE001\u0027 failed: No such host is known",
         "Roles":  [
