@@ -13,7 +13,7 @@ foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
 $xmlFilePath = ".\serverLayout.xml"
 $xml = [xml](Get-Content $xmlFilePath)
  
-$serviceNames = @("iphlpsvc", "AppMgmt", "AppXSvc","BDESVC")
+$serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager"," NetTcpPortSharing")
 $extractedData = @()
  
  
