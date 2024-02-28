@@ -2,11 +2,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -22,11 +30,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -42,11 +58,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -62,11 +86,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -94,11 +126,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -114,11 +154,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -134,11 +182,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -234,11 +290,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -278,11 +342,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -298,11 +370,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -315,11 +395,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -335,11 +423,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -395,11 +491,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -455,11 +559,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -479,11 +591,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -499,11 +619,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -543,11 +671,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -575,11 +711,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -639,11 +783,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -659,11 +811,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -687,11 +847,19 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "AdobeARMservice",
-                                  "Status":  "Running"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Service not found"
                               },
                               {
-                                  "Name":  "AJRouter",
+                                  "Name":  "IptvSched",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Service not found"
+                              },
+                              {
+                                  "Name":  "NetTcpPortSharing",
                                   "Status":  "Stopped"
                               }
                           ],
