@@ -51,13 +51,14 @@ thead {
   height: 100vh;
   background-color: #faf9f6;
   position: fixed;
-    width:90%;
+    width:93%;
     max-width: 100%;
 
     overflow-x: hidden;
-   /* overflow-y:initial; */
+   overflow-y:inherit;
     top: 0;
     bottom: 0;
+    
 }
 
 .caption

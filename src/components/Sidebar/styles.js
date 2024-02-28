@@ -17,7 +17,7 @@ export const SSidebarButton = styled.button`
     position: absolute;
     top: ${v.xxlSpacing};
     right: ${({ isOpen }) => (isOpen ? `-16px` : `-40px`)};
-    width: 20px;
+    width: 0px;
     height: 15px;
     border-radius: 20%;
     background: ${({ theme }) => theme.bg};

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import jsonData from "./mrserverdata.json";
 import "../Table.css";
 
-const ITEMS_PER_PAGE = 4;
+const ITEMS_PER_PAGE = 3;
 
 const Mrserverdetails = ({userData}) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -56,21 +56,21 @@ const Mrserverdetails = ({userData}) => {
   return (
     userData.role==="admin" ?
     <div className="column">
-       <caption className="caption">
+       <caption className="caption" style={{ marginTop: '180px'}}>
             <b>
               <br></br>
               <br></br>PLANO SERVERS
+              <br></br>
             </b>
-            <br></br>
-            <br></br>
           </caption>
+          <br></br>
       <div style={{ marginBottom: '10px', display: 'flex', alignItems: 'center'}}>
               <div style={{height:'20px'}}>
             {filteredData.length > 0 && (
             <select value={searchColumn} onChange={handleColumnChange} style={{ marginRight: '140px' }}>
           <option value="ComputerName">ComputerName</option>
           <option value="Roles">Role</option>
-          <option value="ServerStatus">ServerStatus</option>
+          <option value="ComputerStatus">ComputerStatus</option>
           <option value="ServiceStatus">ServiceStatus</option>
         </select>
             )}
@@ -87,7 +87,7 @@ const Mrserverdetails = ({userData}) => {
         <div style={{ textAlign: 'center', color: 'black' }}>No matching data found.</div>
       ) }
       {filteredData.length > 0 && (
-      <table className="table" style={{marginRight:'120px'}}>
+      <table className="table">
         <thead>
           <tr>
             <th>Computer Name</th>
@@ -96,7 +96,7 @@ const Mrserverdetails = ({userData}) => {
             <th>Service Status</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style={{ marginRight: '100px'}}>
           {filteredData.slice(startIndex, endIndex).map((item, index) => (
             <tr key={index}>
               <td>{item.ComputerName}</td>
@@ -110,7 +110,7 @@ const Mrserverdetails = ({userData}) => {
                   ))}
                 </ul>
               </td>
-              <td>{item.ServerStatus}</td>
+              <td>{item.ComputerStatus}</td>
               <td>
                 <ul>
                   {item.ServiceStatus.map((role, roleIndex) => (
@@ -126,7 +126,7 @@ const Mrserverdetails = ({userData}) => {
         </tbody>
       </table>
       )}
-       <div style={{ textAlign: 'center', marginTop: '10px',marginRight:'150px' }}>
+       <div style={{ textAlign: 'center', marginTop: '10px',marginRight:'150px' ,marginBottom:'60px'}}>
         <button onClick={handlePreviousPage} disabled={currentPage === 1 || filteredData.length === 0} style={{ color: currentPage === 1 || filteredData.length === 0 ? 'gray' : 'black', cursor: currentPage === 1 || filteredData.length === 0 ? 'default' : 'pointer' }}>{'<'}</button>
         <span style={{ margin: '0 10px' }}>Page {currentPage} of {totalPages}</span>
         <button onClick={handleNextPage} disabled={currentPage === totalPages || filteredData.length === 0} style={{ color: currentPage === totalPages || filteredData.length === 0 ? 'gray' : 'black' , cursor: currentPage === totalPages || filteredData.length === 0 ? 'default' : 'pointer'  }}>{'>'}</button>

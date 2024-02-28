@@ -95,7 +95,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             $extractedData += @{
                 "ComputerName" = $computerName
                 "Roles" = $roles
-                "ServerStatus" = $serverStatus
+                "ComputerStatus" = $serverStatus
                 "ServiceStatus" = $serviceStatus
             }
         }

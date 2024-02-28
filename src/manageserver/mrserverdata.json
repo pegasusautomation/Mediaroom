@@ -19,13 +19,13 @@
                               }
                           ],
         "ComputerName":  "NTP1",
-        "ServerStatus":  "Error: Testing connection to computer \u0027NTP1\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ntp",
                           "Type":  "other"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027NTP1\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -47,13 +47,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV103",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV103\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "dserverService",
                           "Type":  "service"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV103\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -75,13 +75,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV101",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV101\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "dserverService",
                           "Type":  "service"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV101\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -103,7 +103,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG021",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG021\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ListingsClientDataVirtualDirectory",
@@ -121,7 +120,8 @@
                           "Name":  "WSRouter",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG021\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -143,13 +143,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5TSSERV001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5TSSERV001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "timeshiftServerStore",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5TSSERV001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -171,13 +171,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV102",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV102\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "dserverService",
                           "Type":  "service"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV102\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -199,7 +199,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5BMGMT001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5BMGMT001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ossNotificationsWS",
@@ -285,7 +284,8 @@
                           "Name":  "ossEAS",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5BMGMT001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -307,7 +307,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG021",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG021\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "dvrRemote",
@@ -337,7 +336,8 @@
                           "Name":  "SGTraceLog",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG021\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -359,13 +359,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5HPNR011",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5HPNR011\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ossHighPriorityNotificationWS",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5HPNR011\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -387,10 +387,10 @@
                               }
                           ],
         "ComputerName":  "MSPBE5MFMAP001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBE5MFMAP001\u0027 failed: No such host is known",
         "Roles":  [
 
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MFMAP001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -412,13 +412,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV002",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV002\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "mediaStore",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV002\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -440,7 +440,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG021",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG021\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "notificationWS",
@@ -486,7 +485,8 @@
                           "Name":  "dvrV2WS",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG021\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -508,7 +508,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG011",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG011\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "notificationWS",
@@ -554,7 +553,8 @@
                           "Name":  "dvrV2WS",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG011\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -576,7 +576,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5SYNC001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SYNC001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "SyncService",
@@ -586,7 +585,8 @@
                           "Name":  "DiscoveryService",
                           "Type":  "service"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SYNC001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -608,13 +608,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5VDIST001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5VDIST001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ContentDistributionReceiver",
                           "Type":  "service"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5VDIST001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -636,7 +636,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG011",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG011\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "dvrRemote",
@@ -666,7 +665,8 @@
                           "Name":  "SGTraceLog",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG011\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -688,7 +688,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG011",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG011\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "ListingsClientDataVirtualDirectory",
@@ -706,7 +705,8 @@
                           "Name":  "WSRouter",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG011\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -728,7 +728,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5SFBR001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFBR001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "timeshiftControllerWS",
@@ -778,7 +777,8 @@
                           "Name":  "dvbChannelMapImportService",
                           "Type":  "service"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFBR001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -800,13 +800,13 @@
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "mediaStore",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -828,7 +828,6 @@
                               }
                           ],
         "ComputerName":  "MSPBR5CDBE001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDBE001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "JITSchedulerService",
@@ -842,7 +841,8 @@
                           "Name":  "CloudRecordingNotificationWS",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDBE001\u0027 failed: No such host is known"
     },
     {
         "ServiceStatus":  [
@@ -864,12 +864,12 @@
                               }
                           ],
         "ComputerName":  "MSPBR5CDFE001",
-        "ServerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDFE001\u0027 failed: No such host is known",
         "Roles":  [
                       {
                           "Name":  "VsppMappingWS",
                           "Type":  "webservice"
                       }
-                  ]
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDFE001\u0027 failed: No such host is known"
     }
 ]
