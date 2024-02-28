@@ -22,7 +22,7 @@ import {
     AiOutlineLeft,
     AiOutlineProfile,
 } from "react-icons/ai";
-import { MdDesignServices, MdHistory, MdLogout } from "react-icons/md";
+import { MdDesignServices, MdHistory } from "react-icons/md";
 import { BsServer } from "react-icons/bs";
 
 import { ThemeContext } from 'styled-components'
