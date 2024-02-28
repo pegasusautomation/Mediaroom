@@ -22,7 +22,7 @@ import {
     AiOutlineLeft,
     AiOutlineProfile,
 } from "react-icons/ai";
-import { MdLogout } from "react-icons/md";
+import { MdDesignServices, MdLogout } from "react-icons/md";
 import { BsServer } from "react-icons/bs";
 
 import { ThemeContext } from 'styled-components'
@@ -105,7 +105,7 @@ const linksArray = [
     },
     {
         label: "Plano Servers",
-        icon: <BsServer />,
+        icon: <MdDesignServices />,
         to: "/planoservers",
     },
     {

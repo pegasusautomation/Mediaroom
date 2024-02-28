@@ -6,7 +6,6 @@ import { btnReset, v } from "../../styles/variables";
 export const SSidebar = styled.div`
     width: ${({ isOpen }) => (!isOpen ? `auto` : v.sidebarWidth)};
     background: ${({ theme }) => theme.bg};
-    height: 100vh;
     padding: ${v.lgSpacing};
 
     position: relative;
@@ -16,7 +15,7 @@ export const SSidebarButton = styled.button`
     ${btnReset};
     position: absolute;
     top: ${v.xxlSpacing};
-    right: ${({ isOpen }) => (isOpen ? `-16px` : `-40px`)};
+    right: ${({ isOpen }) => (isOpen ? `-10px` : `-10px`)};
     width: 0px;
     height: 15px;
     border-radius: 20%;
@@ -82,7 +81,7 @@ export const SDivider = styled.div`
 export const SLinkContainer = styled.div`
     background: ${({ theme, isActive }) => (!isActive ? `transparent` : theme.bg3)};
     border-radius: ${v.borderRadius};
-    margin: 6px 0;
+    margin: 4px 0;
 
     :hover {
         box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
@@ -94,7 +93,7 @@ export const SLink = styled(Link)`
     align-items: center;
     text-decoration: none;
     color: inherit;
-    font-size: 16px;
+    font-size: 13px;
     padding: calc(${v.smSpacing} - 2px) 0;
 `;
 
@@ -108,8 +107,6 @@ export const SLinkIcon = styled.div`
 `;
 
 export const SLinkLabel = styled.span`
-    display: block;
-    flex: 1;
     margin-left: ${v.smSpacing};
 `;
 
@@ -126,7 +123,7 @@ export const SLinkNotification = styled.div`
 export const STheme = styled.div`
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 12px;
 `;
 export const SThemeLabel = styled.span`
     display: block;
