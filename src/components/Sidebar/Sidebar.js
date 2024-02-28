@@ -22,7 +22,7 @@ import {
     AiOutlineLeft,
     AiOutlineProfile,
 } from "react-icons/ai";
-import { MdDesignServices, MdLogout } from "react-icons/md";
+import { MdDesignServices, MdHistory, MdLogout } from "react-icons/md";
 import { BsServer } from "react-icons/bs";
 
 import { ThemeContext } from 'styled-components'
@@ -118,7 +118,7 @@ const linksArray = [
 const secondaryLinksArray = [
     {
         label: "Login History",
-        icon: <MdLogout />,
+        icon: <MdHistory />,
         to:"/loginhistory"
     },
 ];
