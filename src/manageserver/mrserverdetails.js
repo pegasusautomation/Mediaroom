@@ -87,7 +87,7 @@ const Mrserverdetails = ({userData}) => {
         <div style={{ textAlign: 'center', color: 'black' }}>No matching data found.</div>
       ) }
       {filteredData.length > 0 && (
-      <table>
+      <table className="table" style={{marginRight:'120px'}}>
         <thead>
           <tr>
             <th>Computer Name</th>

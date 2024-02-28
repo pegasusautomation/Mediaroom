@@ -1,4 +1,4 @@
-$roleTypeXmlFilePath = ".\Roles.xml"
+$roleTypeXmlFilePath = "C:\Mediaroom\Roles.xml"
 $roleDescriptionsXml = [xml](Get-Content $roleTypeXmlFilePath)
  
  
@@ -10,10 +10,10 @@ foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
         "Type" = $roleType
     }
 }
-$xmlFilePath = ".\serverLayout.xml"
+$xmlFilePath = "C:\Mediaroom\serverLayout.xml"
 $xml = [xml](Get-Content $xmlFilePath)
  
-$serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager"," NetTcpPortSharing")
+$serviceNames = @("AdobeARMservice", "AJRouter")
 $extractedData = @()
  
  
@@ -47,37 +47,28 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             #     }
             # } 
             $serviceStatus = @()
-            
+            foreach ($serviceName in $serviceNames) {
                 try {
-                    foreach ($serviceName in $serviceNames) {
-                    $service = Get-Service
-                    # if ($service) {
-                        $iptvServiceStatus = $service.Status
-                    if ($iptvServiceStatus -eq "Running") {
-                        $iptvServiceStatus = "Running"
-                    } else {
-                        $iptvServiceStatus = "Stopped"
-                    }
+                    $service = Get-Service -Name $serviceName
+                    if ($service) {
+                        $statusString = if ($service.Status -eq 'Running') { 'Running' } else { 'Stopped' }
                         $serviceStatus += @{
                             "Name" = $serviceName
-                            "Status" = $iptvServiceStatus
+                            "Status" = $statusString
                         }
-                    
-                    #  else {
-                    #     $serviceStatus += @{
-                    #         "Name" = $serviceName
-                    #         "Status" = "Service not found"
-                    #     }
-                    # }
-                } 
-            }
-            catch {
+                    } else {
+                        $serviceStatus += @{
+                            "Name" = $serviceName
+                            "Status" = "Service not found"
+                        }
+                    }
+                } catch {
                     $serviceStatus += @{
                         "Name" = $serviceName
                         "Status" = "Error: $($_.Exception.Message)"
                     }
                 }
-            
+            }
            
             try {
                 $result = Test-Connection -ComputerName $computerName -Count 1 -ErrorAction Stop

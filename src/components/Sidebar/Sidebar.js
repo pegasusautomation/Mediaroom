@@ -99,7 +99,7 @@ const linksArray = [
         to: "/home",
     },
     {
-        label: "Servers",
+        label: "Virtual Machines",
         icon: <BsServer />,
         to: "/servers",
     },
