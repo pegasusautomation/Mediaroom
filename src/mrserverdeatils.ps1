@@ -25,14 +25,11 @@ foreach ($service in $allServices.Name)
     }
 }
 
-foreach ($servicedec in $allServices.DisplayName -and $service.Contains("World Wide Web"))
-{
-    if($servicedec.Contains("Iptv"))
-    {
+foreach ($servicedec in $allServices.DisplayName) {
+    if ($servicedec.Contains("World Wide Web") -and $servicedec.Contains("IPTV")) {
         # Get the service with the specified display name
         $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
-        if($correspondingservice.Name -notin $serviceList)
-        {
+        if ($correspondingservice.Name -notin $serviceList) {
             $serviceList += $correspondingservice.Name
         } 
     }
