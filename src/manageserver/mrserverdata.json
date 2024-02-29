@@ -2,19 +2,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -30,19 +22,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -58,19 +42,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -86,19 +62,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -126,19 +94,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -154,19 +114,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -182,19 +134,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -290,19 +234,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -342,19 +278,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -370,19 +298,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -395,19 +315,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -423,19 +335,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -491,19 +395,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -559,19 +455,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -591,19 +479,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -619,19 +499,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -671,19 +543,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -711,19 +575,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -783,19 +639,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -811,19 +659,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],
@@ -847,19 +687,11 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "IptvDeliveryAgent",
-                                  "Status":  "Service not found"
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
                               },
                               {
-                                  "Name":  "IptvSched",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "IptvSessionManager",
-                                  "Status":  "Service not found"
-                              },
-                              {
-                                  "Name":  "NetTcpPortSharing",
+                                  "Name":  "PNRPsvc",
                                   "Status":  "Stopped"
                               }
                           ],

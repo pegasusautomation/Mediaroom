@@ -13,7 +13,33 @@ foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
 $xmlFilePath = "C:\Mediaroom\serverLayout.xml"
 $xml = [xml](Get-Content $xmlFilePath)
 
-$serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
+$allServices = Get-Service
+# $serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
+# Create an empty list to store services
+$serviceList = @()
+foreach ($service in $allServices.Name)
+{
+    if($service.Contains("Iptv") -and $service.Contains("W3SVC"))
+    {
+        $serviceList += $service
+    }
+}
+
+foreach ($servicedec in $allServices.DisplayName -and $service.Contains("World Wide Web"))
+{
+    if($servicedec.Contains("Iptv"))
+    {
+        # Get the service with the specified display name
+        $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
+        if($correspondingservice.Name -notin $serviceList)
+        {
+            $serviceList += $correspondingservice.Name
+        } 
+    }
+}
+
+Write-Host($serviceList)
+
 $extractedData = @()
  
  
@@ -47,7 +73,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             #     }
             # } 
             $serviceStatus = @()
-            foreach ($serviceName in $serviceNames) {
+            foreach ($serviceName in $serviceList) {
                 try {
                     $service = Get-Service -Name $serviceName
                     if ($service) {
