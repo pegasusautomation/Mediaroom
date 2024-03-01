@@ -2,8 +2,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "NTP1",
@@ -18,8 +34,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV103",
@@ -34,8 +66,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV101",
@@ -50,8 +98,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG021",
@@ -78,8 +142,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5TSSERV001",
@@ -94,8 +174,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV102",
@@ -110,8 +206,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5BMGMT001",
@@ -206,8 +318,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG021",
@@ -246,8 +374,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5HPNR011",
@@ -262,8 +406,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBE5MFMAP001",
@@ -275,8 +435,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV002",
@@ -291,8 +467,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG021",
@@ -347,8 +539,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG011",
@@ -403,8 +611,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5SYNC001",
@@ -423,8 +647,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5VDIST001",
@@ -439,8 +679,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG011",
@@ -479,8 +735,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG011",
@@ -507,8 +779,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5SFBR001",
@@ -567,8 +855,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV001",
@@ -583,8 +887,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5CDBE001",
@@ -607,8 +927,24 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "PhoneSvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPAutoReg",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "PNRPsvc",
+                                  "Status":  "Stopped"
+                              },
+                              {
+                                  "Name":  "Power",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "vmicvmsession",
+                                  "Status":  "Stopped"
                               }
                           ],
         "ComputerName":  "MSPBR5CDFE001",
