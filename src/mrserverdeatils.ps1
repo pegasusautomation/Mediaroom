@@ -19,14 +19,14 @@ $allServices = Get-Service
 $serviceList = @()
 foreach ($service in $allServices.Name)
 {
-    if($service.Contains("Iptv") -and $service.Contains("W3SVC"))
+    if($service.Contains("Iptv"))
     {
         $serviceList += $service
     }
 }
 
 foreach ($servicedec in $allServices.DisplayName) {
-    if ($servicedec.Contains("World Wide Web") -and $servicedec.Contains("IPTV")) {
+    if ($servicedec.Contains("Iptv")) {
         # Get the service with the specified display name
         $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
         if ($correspondingservice.Name -notin $serviceList) {
@@ -70,6 +70,8 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             #     }
             # } 
             $serviceStatus = @()
+            if($serviceList)
+            {
             foreach ($serviceName in $serviceList) {
                 try {
                     $service = Get-Service -Name $serviceName
@@ -92,6 +94,13 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                     }
                 }
             }
+        }
+        else{
+            $serviceStatus += @{
+                "Name" = "No service found"
+                "Status" = "NA"
+            }
+        }
            
             try {
                 $result = Test-Connection -ComputerName $computerName -Count 1 -ErrorAction Stop

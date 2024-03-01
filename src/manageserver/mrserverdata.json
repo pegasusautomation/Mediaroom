@@ -2,12 +2,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "NTP1",
@@ -22,12 +18,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV103",
@@ -42,12 +34,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV101",
@@ -62,12 +50,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG021",
@@ -94,12 +78,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5TSSERV001",
@@ -114,12 +94,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV102",
@@ -134,12 +110,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5BMGMT001",
@@ -234,12 +206,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG021",
@@ -278,12 +246,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5HPNR011",
@@ -298,12 +262,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBE5MFMAP001",
@@ -315,12 +275,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV002",
@@ -335,12 +291,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG021",
@@ -395,12 +347,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG011",
@@ -455,12 +403,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SYNC001",
@@ -479,12 +423,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5VDIST001",
@@ -499,12 +439,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG011",
@@ -543,12 +479,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG011",
@@ -575,12 +507,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SFBR001",
@@ -639,12 +567,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV001",
@@ -659,12 +583,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CDBE001",
@@ -687,12 +607,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CDFE001",
