@@ -13,29 +13,27 @@ foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
 $xmlFilePath = "C:\Mediaroom\serverLayout.xml"
 $xml = [xml](Get-Content $xmlFilePath)
 
-$allServices = Get-Service
-# $serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
-# Create an empty list to store services
-$serviceList = @()
-foreach ($service in $allServices.Name)
-{
-    if($service.Contains("Iptv") -or $service.Contains("W3SVC"))
-    {
-        $serviceList += $service
-    }
-}
+# $allServices = Get-Service
+# # $serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
+# # Create an empty list to store services
+# $serviceList = @()
+# foreach ($service in $allServices.Name) {
+    # if ($service.Contains("Iptv") -or $service.Contains("W3SVC")) {
+        # $serviceList += $service
+    # }
+# }
 
-foreach ($servicedec in $allServices.DisplayName) {
-    if ($servicedec.Contains("Iptv") -or $servicedec.Contains("World Wide Web")) {
-        # Get the service with the specified display name
-        $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
-        if ($correspondingservice.Name -notin $serviceList) {
-            $serviceList += $correspondingservice.Name
-        } 
-    }
-}
+# foreach ($servicedec in $allServices.DisplayName) {
+    # if ($servicedec.Contains("Iptv") -or $servicedec.Contains("World Wide Web")) {
+        # # Get the service with the specified display name
+        # $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
+        # if ($correspondingservice.Name -notin $serviceList) {
+            # $serviceList += $correspondingservice.Name
+        # } 
+    # }
+# }
 
-Write-Host($serviceList)
+# Write-Host($serviceList)
 
 $extractedData = @()
  
@@ -46,12 +44,44 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
         # $zoneName = $zone.SelectSingleNode("@name").Value
         foreach ($computer in $zone.SelectNodes(".//computer")) {
             $computerName = $computer.SelectSingleNode("@name").Value
+            Write-Output($computerName)
+			
+			# Get service name based on computer name
+             $username = 'MSPBR5\Raghavendra.Gandanah'
+             $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
+             $credential = New-Object System.Management.Automation.PSCredential($username, $password)
+             $remoteComputer = $computerName
+             $scriptBlock = {
+                 # Your PowerShell command or script here
+                 Get-Service
+                }
+
+             $allServices = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
+            # $serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
+            # Create an empty list to store services
+            $serviceList = @()
+            foreach ($service in $allServices.Name) {
+                if ($service.Contains("Iptv") -or $service.Contains("IPTV") -or $service.Contains("W3SVC")) {
+                    $serviceList += $service
+                }
+            }
+
+            foreach ($servicedec in $allServices.DisplayName) {
+                if ($servicedec.Contains("Iptv") -or $service.Contains("IPTV") -or $servicedec.Contains("World Wide Web")) {
+                    # Get the service with the specified display name
+                    $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
+                    if ($correspondingservice.Name -notin $serviceList) {
+                        $serviceList += $correspondingservice.Name
+                    } 
+                }
+            }
+            
             # if ($computerName -eq "MSPBE5BEDB001\LIVEDB" -or `
             # $computerName -eq "MSPBE5MDB001" -or `
             # $computerName -eq "MSPBE5VCRT001" -or `
             # $computerName -eq "MSPBE5VCTRL001") {
-                # Get service status for local machine
-                # $services = Get-Service -Name "iphlpsvc"| Select-Object -Property Name, Status
+            # Get service status for local machine
+            # $services = Get-Service -Name "iphlpsvc"| Select-Object -Property Name, Status
             #     $serviceStatus = Get-Service
 
             #     #  $serviceStatus =$service.Status
@@ -70,46 +100,61 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             #     }
             # } 
             $serviceStatus = @()
-            if($serviceList)
-            {
-            foreach ($serviceName in $serviceList) {
-                try {
-                    $service = Get-Service -Name $serviceName
-                    if ($service) {
-                        $statusString = if ($service.Status -eq 'Running') { 'Running' } else { 'Stopped' }
-                        $serviceStatus += @{
-                            "Name" = $serviceName
-                            "Status" = $statusString
+            if ($serviceList) {
+                foreach ($serviceName in $serviceList) {
+                    try {
+                        # Get service name based on computer name
+                        $username = 'MSPBR5\Raghavendra.Gandanah'
+                        $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
+                        $credential = New-Object System.Management.Automation.PSCredential($username, $password)
+                        $remoteComputer = $computerName
+                        $scriptBlock = {
+                            # Your PowerShell command or script here
+                            Get-Service -Name $serviceName
                         }
-                    } else {
-                        $serviceStatus += @{
-                            "Name" = $serviceName
-                            "Status" = "Service not found"
+
+                        $service = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
+
+                        
+                        if ($service) {
+                            $statusString = if ($service.Status -eq 'Running') { 'Running' } else { 'Stopped' }
+                            $serviceStatus += @{
+                                "Name"   = $serviceName
+                                "Status" = $statusString
+                            }
+                        }
+                        else {
+                            $serviceStatus += @{
+                                "Name"   = $serviceName
+                                "Status" = "Service not found"
+                            }
                         }
                     }
-                } catch {
-                    $serviceStatus += @{
-                        "Name" = $serviceName
-                        "Status" = "Error: $($_.Exception.Message)"
+                    catch {
+                        $serviceStatus += @{
+                            "Name"   = $serviceName
+                            "Status" = "Error: $($_.Exception.Message)"
+                        }
                     }
                 }
             }
-        }
-        else{
-            $serviceStatus += @{
-                "Name" = "No service found"
-                "Status" = "NA"
+            else {
+                $serviceStatus += @{
+                    "Name"   = "No service found"
+                    "Status" = "NA"
+                }
             }
-        }
            
             try {
                 $result = Test-Connection -ComputerName $computerName -Count 1 -ErrorAction Stop
                 if ($result) {
                     $serverStatus = "Reachable"
-                } else {
+                }
+                else {
                     $serverStatus = "Unreachable"
                 }
-            } catch {
+            }
+            catch {
                 $serverStatus = "Error: $($_.Exception.Message)"
             }
             
@@ -125,10 +170,10 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                 }
             }
             $extractedData += @{
-                "ComputerName" = $computerName
-                "Roles" = $roles
+                "ComputerName"   = $computerName
+                "Roles"          = $roles
                 "ComputerStatus" = $serverStatus
-                "ServiceStatus" = $serviceStatus
+                "ServiceStatus"  = $serviceStatus
             }
         }
     }
@@ -137,9 +182,9 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
 
 $updatedJsonString = $extractedData | ConvertTo-Json -Depth 5
  
-# Specify the file path where you want to save the JSON data
+ # Specify the file path where you want to save the JSON data
 $filePath = "C:\Mediaroom\src\manageserver\mrserverdata.json"
  
-# Write the JSON data to a file
+# # # Write the JSON data to a file
 $updatedJsonString | Out-File -FilePath $filePath -Encoding UTF8
 Write-Host "JSON file created: $jsonOutputFilePath"
