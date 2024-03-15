@@ -2,24 +2,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "NTP1",
@@ -34,24 +18,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV103",
@@ -66,24 +34,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV101",
@@ -98,24 +50,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG021",
@@ -142,24 +78,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5TSSERV001",
@@ -174,24 +94,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV102",
@@ -206,24 +110,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5BMGMT001",
@@ -318,24 +206,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG021",
@@ -374,24 +246,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5HPNR011",
@@ -406,24 +262,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBE5MFMAP001",
@@ -435,24 +275,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV002",
@@ -467,24 +291,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG021",
@@ -539,24 +347,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG011",
@@ -611,24 +403,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SYNC001",
@@ -647,24 +423,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5VDIST001",
@@ -679,24 +439,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG011",
@@ -735,24 +479,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG011",
@@ -779,24 +507,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5SFBR001",
@@ -855,24 +567,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV001",
@@ -887,24 +583,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CDBE001",
@@ -927,24 +607,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "PhoneSvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPAutoReg",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "PNRPsvc",
-                                  "Status":  "Stopped"
-                              },
-                              {
-                                  "Name":  "Power",
-                                  "Status":  "Running"
-                              },
-                              {
-                                  "Name":  "vmicvmsession",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "MSPBR5CDFE001",
@@ -955,5 +619,525 @@
                       }
                   ],
         "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDFE001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5BEDB001\\LIVEDB",
+        "Roles":  [
+                      {
+                          "Name":  "ContentDistributionDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "vodBackendDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "L2VBackendDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "liveBackendDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "ListingsSettingsDB",
+                          "Type":  "database"
+                      },
+                      {
+                          "Name":  "SubscriberActivityDB",
+                          "Type":  "database"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5BEDB001\\\u0027LIVEDB\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDB001",
+        "Roles":  [
+                      {
+                          "Name":  "MDSFileStore",
+                          "Type":  "other"
+                      }
+                  ],
+        "ComputerStatus":  "Reachable"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDB001\\MDB",
+        "Roles":  [
+                      {
+                          "Name":  "CommonDB",
+                          "Type":  "database"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDB001\\\u0027MDB\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5NTP1",
+        "Roles":  [
+                      {
+                          "Name":  "ntp",
+                          "Type":  "other"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5NTP1\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5NTP2",
+        "Roles":  [
+                      {
+                          "Name":  "ntp",
+                          "Type":  "other"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5NTP2\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5VCTRL001",
+        "Roles":  [
+                      {
+                          "Name":  "vodCreatorControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ContentDistributionControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "vodImportPreprocessorService",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5VCTRL001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5VCRT001",
+        "Roles":  [
+                      {
+                          "Name":  "vodCreatorStation",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "vodCreator",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5VCRT001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDIST001",
+        "Roles":  [
+                      {
+                          "Name":  "ContentDistributionServer",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDIST001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5VMGMT001",
+        "Roles":  [
+                      {
+                          "Name":  "ossContentDistributionWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ossVodBackendWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtVODBackend",
+                          "Type":  "webservice"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5VMGMT001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5RSERV001",
+        "Roles":  [
+                      {
+                          "Name":  "BackendLiveToVodRecServer",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5RSERV001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5ASERV003",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV003\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "FARM01-ACQ-37",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027FARM01-ACQ-37\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5AMGMT001",
+        "Roles":  [
+                      {
+                          "Name":  "ossBackendBlackoutWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LiveBackendManagement",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtBackendLiveToVod",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ossLiveBackend",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ossBackendLiveToVodWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LOTTOSS",
+                          "Type":  "webservice"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5AMGMT001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5ACTRL001",
+        "Roles":  [
+                      {
+                          "Name":  "crashDetectorService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "acquisitionControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "BackendLiveToVodControllerWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ListingsSyncService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "LOTTController",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "ListingsLibrarian",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LottKeyGenerator",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ACTRL001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5ASERV002",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV002\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5ASERV004",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV004\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5ASERV001",
+        "Roles":  [
+                      {
+                          "Name":  "acquisitionServiceV3",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDSAF001",
+        "Roles":  [
+                      {
+                          "Name":  "DistributedCache",
+                          "Type":  "other"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSAF001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDSAF002",
+        "Roles":  [
+                      {
+                          "Name":  "DistributedCache",
+                          "Type":  "other"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSAF002\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MMGMT001",
+        "Roles":  [
+                      {
+                          "Name":  "MDSManagementWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSSubscriberManagementWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtContracts",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "contractManagementService",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "smtMDSManagement",
+                          "Type":  "webservice"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MMGMT001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDSING001",
+        "Roles":  [
+                      {
+                          "Name":  "DataGeneratorService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "sessionKeyAuthority_KeyGenerator",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "MDSListingsLibrarian",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MdsSlabGenerator",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "sessionKeyAuthorityWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "IngestionService",
+                          "Type":  "service"
+                      },
+                      {
+                          "Name":  "FragmentGeneratorService",
+                          "Type":  "service"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSING001\u0027 failed: No such host is known"
+    },
+    {
+        "ServiceStatus":  [
+                              {
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
+                              }
+                          ],
+        "ComputerName":  "MSPBE5MDSFE001",
+        "Roles":  [
+                      {
+                          "Name":  "MDSSubscriberDataWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSTokenGenerator",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSMediaResourceWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSVodWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSDvrDataWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "LicenseServer",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSSearchWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSExternalPurchaseWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSListingsWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSMediaCatalog",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSContractWS",
+                          "Type":  "webservice"
+                      },
+                      {
+                          "Name":  "MDSAuthWS",
+                          "Type":  "webservice"
+                      }
+                  ],
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSFE001\u0027 failed: No such host is known"
     }
 ]
