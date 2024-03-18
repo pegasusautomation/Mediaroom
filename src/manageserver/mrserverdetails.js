@@ -126,7 +126,7 @@ const Mrserverdetails = ({userData}) => {
         </tbody>
       </table>
       )}
-       <div style={{ textAlign: 'center', marginTop: '10px',marginRight:'150px' ,marginBottom:'60px'}}>
+       <div style={{ textAlign: 'center', marginTop: '10px',marginRight:'150px' ,marginBottom:'10px'}}>
         <button onClick={handlePreviousPage} disabled={currentPage === 1 || filteredData.length === 0} style={{ color: currentPage === 1 || filteredData.length === 0 ? 'gray' : 'black', cursor: currentPage === 1 || filteredData.length === 0 ? 'default' : 'pointer' }}>{'<'}</button>
         <span style={{ margin: '0 10px' }}>Page {currentPage} of {totalPages}</span>
         <button onClick={handleNextPage} disabled={currentPage === totalPages || filteredData.length === 0} style={{ color: currentPage === totalPages || filteredData.length === 0 ? 'gray' : 'black' , cursor: currentPage === totalPages || filteredData.length === 0 ? 'default' : 'pointer'  }}>{'>'}</button>

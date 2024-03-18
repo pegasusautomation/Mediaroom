@@ -17,7 +17,7 @@ import AdminProfile from "./pages/AdminProfile.js";
 import TopbarPage from "./pages/TopbarPage.js";
 import LoginHistory from "./pages/LoginHistory.js";
 import AuthService from "./AuthService.js";
-import Mrserverdetails from "./manageserver/mrserverdetails.js";
+import Mrserverdetails from "./manageserver/meservertrail2.js";
 
 export const ThemeContext = React.createContext(null);
 const App = () => {
