@@ -2,8 +2,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "CertPropSvc",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "NTP1",

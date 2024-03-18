@@ -1,68 +1,62 @@
-require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const { exec } = require('child_process');
 
-const express= require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
 const app = express();
+const port = 5000; // Set the port number
 
-// Midleware
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-// // Database
-// const certificates = [
-//     {
-//         "CertificateName": "Google Cert",
-//         "DaysToExpire":290,
-//         "Status": "Not Expired"
-//       },
-//       {
-//         "CertificateName": "Yahoo Cert",
-//         "DaysToExpire":0,
-//         "Status": "Expired"
-//       },
-//       {
-//         "CertificateName": "Facebook Cert",
-//         "DaysToExpire":7,
-//         "Status": "Not Expired"
-//       },
-//       {
-//         "CertificateName": "Niscraft Cert",
-//         "DaysToExpire":1,
-//         "Status": "Not Expired"
-//       }
-//     ]
+// Middleware to parse JSON bodies
+app.use(bodyParser.json());
 
-// Connect to mongoose
-mongoose.connect(process.env.MONOGO_URI)
+// Endpoint to handle stopping the service
+app.post('/stop-service', (req, res) => {
+  const { Name } = req.body; // Extract the service name from the request body
+  const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
 
-// Create schema
-const certschema = new mongoose.Schema({
-    servername: String,
-    thumbprint: String,
-    noofdays: Number,
-    status: String
+  exec(powershellCommand, (error, stdout, stderr) => {
+    if (error) {
+      console.error('Error stopping service:', error);
+      res.status(500).send('Error stopping service');
+      return;
+    }
+    console.log('Service stopped successfully.');
+    res.send('Service stopped successfully');
+  });
 });
 
-// Create model
-const certmodel = mongoose.model("cert", certschema);
+// Endpoint to handle stopping the service
+app.post('/start-service', (req, res) => {
+    const { Name } = req.body; // Extract the service name from the request body
+    const powershellCommand = `powershell Start-Service -Name "${Name}"`;
+  
+    exec(powershellCommand, (error, stdout, stderr) => {
+      if (error) {
+        console.error('Error stopping service:', error);
+        res.status(500).send('Error stopping service');
+        return;
+      }
+      console.log('Service started successfully.');
+      res.send('Service started successfully');
+    });
+  });
 
-// // insert into db
-// certificates.forEach((cert) =>{
-//     const newcert = new certmodel({
-//         certname : cert.CertificateName,
-//         noofdays : cert.DaysToExpire,
-//         status : cert.Status
-//     });
-//     newcert.save();
-// });
+// Endpoint to handle stopping the service
+app.post('/restart-service', (req, res) => {
+    const { Name } = req.body; // Extract the service name from the request body
+    const powershellCommand = `powershell Restart-Service -Name "${Name}"`;
+  
+    exec(powershellCommand, (error, stdout, stderr) => {
+      if (error) {
+        console.error('Error stopping service:', error);
+        res.status(500).send('Error stopping service');
+        return;
+      }
+      console.log('Service restarted successfully.');
+      res.send('Service restarted successfully');
+    });
+  });
 
-app.get("/", (req, res) => {
-    certmodel.find({}).then(
-        items => res.json(items)
-    ).catch(err => console.log(err))
-});
-
-app.listen(3001, function()  {
-console.log("Server is runnings");
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

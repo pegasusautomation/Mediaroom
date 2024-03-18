@@ -24,24 +24,72 @@ const Mrserverdetails = ({ userData }) => {
   //     containerRef.current.scrollTop += ROW_HEIGHT;
   //   }
   // };
-  const handleStart = (index) => {
-    // Add logic to handle start action
-    alert("service started successfully");
-    console.log("Start action for index:", index);
-  };
-
-  const handleStop = (index) => {
+ 
+  const handleStop = (role) => {
+    
+    const jsonServiceInfo = JSON.stringify(role);
+    console.log(jsonServiceInfo) 
+    
     // Add logic to handle stop action
-    alert("service stopped");
-    console.log("Stop action for index:", index);
+    fetch('/stop-service', { method: 'POST', body: jsonServiceInfo, headers: { 'Content-Type': 'application/json' } })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error stopping service');
+        }
+        console.log('Service stopped successfully.');
+        // Handle success as needed
+      })
+      .catch(error => {
+        console.error('Error stopping service:', error.message);
+        // Handle error as needed
+      });
+    alert("Service stopped");
+    console.log("Stop action for index:", role);
+  };
+  
+  const handleStart = (role) => {
+    
+    const jsonServiceInfo = JSON.stringify(role);
+    console.log(jsonServiceInfo) 
+    
+    // Add logic to handle stop action
+    fetch('/start-service', { method: 'POST', body: jsonServiceInfo, headers: { 'Content-Type': 'application/json' } })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error stopping service');
+        }
+        console.log('Service stopped successfully.');
+        // Handle success as needed
+      })
+      .catch(error => {
+        console.error('Error stopping service:', error.message);
+        // Handle error as needed
+      });
+      alert("service restarted");
+      console.log("Restart action for index:", role);
   };
 
-  const handleRestart = (index) => {
-    // Add logic to handle restart action
-    alert("service restarted");
-    console.log("Restart action for index:", index);
+  const handleRestart = (role) => {
+    
+    const jsonServiceInfo = JSON.stringify(role);
+    console.log(jsonServiceInfo) 
+    
+    // Add logic to handle stop action
+    fetch('/restart-service', { method: 'POST', body: jsonServiceInfo, headers: { 'Content-Type': 'application/json' } })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error stopping service');
+        }
+        console.log('Service stopped successfully.');
+        // Handle success as needed
+      })
+      .catch(error => {
+        console.error('Error stopping service:', error.message);
+        // Handle error as needed
+      });
+      alert("service restarted");
+      console.log("Restart action for index:", role);
   };
-
 
   // useEffect(() => {
   //   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
@@ -168,11 +216,11 @@ const Mrserverdetails = ({ userData }) => {
                       <br></br>
                       <strong>Status:</strong> <span style={{ color: role.Status === "Stopped" ? "red" : "green" ,marginRight:'150px'}}>{role.Status}</span>
                       {role.Status === "Stopped" ? (
-      <button onClick={() => handleStart(index)} style={{marginRight: '10px', background:'#0cb061',padding:'2px'}}>Start</button>
+      <button onClick={() => handleStart(role)} style={{marginRight: '10px', background:'#0cb061',padding:'2px'}}>Start</button>
     ) : (
       <>
-        <button onClick={() => handleStop(index)} style={{marginRight: '10px', background:'#b95d5d'}}>Stop</button>
-        <button onClick={() => handleRestart(index)} style={{background:'#635279'}}>Restart</button>
+        <button onClick={() => handleStop(role)} style={{marginRight: '10px', background:'#b95d5d'}}>Stop</button>
+        <button onClick={() => handleRestart(role)} style={{background:'#635279'}}>Restart</button>
       </>
     )}
                       {/* <span style={{ color: role.Status === "Stopped" ? "red" : "green" }}></span> */}
