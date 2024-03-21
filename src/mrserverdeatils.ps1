@@ -97,7 +97,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
 
                         
                         if ($service) {
-                            $statusString = if ($service.Status -eq 'Running') { 'Stopped' } else { 'Running' }
+                            $statusString = if ($service.Status -eq 'Running') { 'Running' } else { 'Stopped' }
                             $serviceStatus += @{
                                 "Name"   = $serviceName
                                 "Status" = $statusString
