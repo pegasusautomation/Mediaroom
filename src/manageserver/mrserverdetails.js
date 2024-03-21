@@ -85,8 +85,11 @@ const Mrserverdetails = ({ userData }) => {
  
   const filteredData = jsonData.filter((item) => {
     const searchValue = item[searchColumn];
- 
-    if (typeof searchValue === 'string') {
+  
+    if (Array.isArray(searchValue)) {
+      // For arrays, we need to check if any element matches the searchTerm
+      return searchValue.some(role => role.Status.toLowerCase().includes(searchTerm.toLowerCase()));
+    } else if (typeof searchValue === 'string') {
       return searchValue.toLowerCase().includes(searchTerm.toLowerCase());
     } else if (typeof searchValue === 'number' && !isNaN(searchValue)) {
       return searchValue === parseFloat(searchTerm);
@@ -94,7 +97,7 @@ const Mrserverdetails = ({ userData }) => {
       return searchValue === searchTerm;
     }
   });
- 
+  
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, jsonData.length);
@@ -118,7 +121,6 @@ const Mrserverdetails = ({ userData }) => {
             style={{ marginLeft: '220px', width: '120px' }}
           >
             <option value="ComputerName">ComputerName</option>
-            <option value="ComputerStatus">ComputerStatus</option>
             <option value="ServiceStatus">ServiceStatus</option>
           </select>
         )}
