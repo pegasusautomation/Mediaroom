@@ -2,8 +2,8 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "CertPropSvc",
-                                  "Status":  "Stopped"
+                                  "Name":  "No service found",
+                                  "Status":  "NA"
                               }
                           ],
         "ComputerName":  "NTP1",
@@ -670,7 +670,7 @@
                           "Type":  "other"
                       }
                   ],
-        "ComputerStatus":  "Reachable"
+        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDB001\u0027 failed: Error due to lack of resources"
     },
     {
         "ServiceStatus":  [

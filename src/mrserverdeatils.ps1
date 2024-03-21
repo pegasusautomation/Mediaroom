@@ -45,29 +45,29 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             $computerName = $computer.SelectSingleNode("@name").Value
             Write-Output($computerName)
 			
-			# Get service name based on computer name
+            # Get service name based on computer name
             $username = "$($jsonObject.Branch)\Raghavendra.Gandanah"
             #  $username = 'MSPBR5\Raghavendra.Gandanah'
-             $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
-             $credential = New-Object System.Management.Automation.PSCredential($username, $password)
-             $remoteComputer = $computerName
-             $scriptBlock = {
-                 # Your PowerShell command or script here
-                 Get-Service
-                }
+            $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
+            $credential = New-Object System.Management.Automation.PSCredential($username, $password)
+            $remoteComputer = $computerName
+            $scriptBlock = {
+                # Your PowerShell command or script here
+                Get-Service
+            }
 
-             $allServices = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
+            $allServices = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
             # $serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
             # Create an empty list to store services
             $serviceList = @()
             foreach ($service in $allServices.Name) {
-                if ($service.Contains("iptv") -or $service.Contains("IPTV") -or $service.Contains("W3SVC")) {
+                if ($service.Contains("Iptv") -or $service.Contains("IPTV") -or $service.Contains("W3SVC")) {
                     $serviceList += $service
                 }
             }
 
             foreach ($servicedec in $allServices.DisplayName) {
-                if ($servicedec.Contains("iptv") -or $service.Contains("IPTV") -or $servicedec.Contains("World Wide Web")) {
+                if ($servicedec.Contains("Iptv") -or $service.Contains("IPTV") -or $servicedec.Contains("World Wide Web")) {
                     # Get the service with the specified display name
                     $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
                     if ($correspondingservice.Name -notin $serviceList) {
@@ -86,16 +86,18 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                         $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
                         $credential = New-Object System.Management.Automation.PSCredential($username, $password)
                         $remoteComputer = $computerName
+                        $Servicename = $serviceName
+
                         $scriptBlock = {
-                            # Your PowerShell command or script here
-                            Get-Service -Name $serviceName
+                            param($ServiceName)
+                            Get-Service -Name $ServiceName
                         }
 
-                        $service = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
+                        $service = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock -ArgumentList $Servicename
 
                         
                         if ($service) {
-                            $statusString = if ($service.Status -eq 'Running') { 'Running' } else { 'Stopped' }
+                            $statusString = if ($service.Status -eq 'Running') { 'Stopped' } else { 'Running' }
                             $serviceStatus += @{
                                 "Name"   = $serviceName
                                 "Status" = $statusString
@@ -167,18 +169,18 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
             $computerName = $computer.SelectSingleNode("@name").Value
             Write-Output($computerName)
 			
-			# Get service name based on computer name
+            # Get service name based on computer name
             $username = "$($jsonObject.Aquasition)\Raghavendra.Gandanah"
             #  $username = 'MSPBR5\Raghavendra.Gandanah'
-             $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
-             $credential = New-Object System.Management.Automation.PSCredential($username, $password)
-             $remoteComputer = $computerName
-             $scriptBlock = {
-                 # Your PowerShell command or script here
-                 Get-Service
-                }
+            $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
+            $credential = New-Object System.Management.Automation.PSCredential($username, $password)
+            $remoteComputer = $computerName
+            $scriptBlock = {
+                # Your PowerShell command or script here
+                Get-Service
+            }
 
-             $allServices = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
+            $allServices = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
             # $serviceNames = @("IptvDeliveryAgent", "IptvSched", "IptvSessionManager","NetTcpPortSharing")
             # Create an empty list to store services
             $serviceList = @()
@@ -208,12 +210,14 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                         $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
                         $credential = New-Object System.Management.Automation.PSCredential($username, $password)
                         $remoteComputer = $computerName
+                        $Servicename = $serviceName
+
                         $scriptBlock = {
-                            # Your PowerShell command or script here
-                            Get-Service -Name $serviceName
+                            param($ServiceName)
+                            Get-Service -Name $ServiceName
                         }
 
-                        $service = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock
+                        $service = Invoke-Command -ComputerName $remoteComputer -Credential $credential -ScriptBlock $scriptBlock -ArgumentList $Servicename
 
                         
                         if ($service) {
@@ -282,7 +286,7 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
 
 $updatedJsonString = $extractedData | ConvertTo-Json -Depth 5
  
- # Specify the file path where you want to save the JSON data
+# Specify the file path where you want to save the JSON data
 $filePath = "C:\Mediaroom\src\manageserver\mrserverdata.json"
  
 # # # Write the JSON data to a file
