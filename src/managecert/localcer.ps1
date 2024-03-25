@@ -18,7 +18,6 @@ foreach ($cert in $personalCertificates) {
 
         # Create a hashtable to store certificate details
         $certDetails = @{
-            "Subject" = $cert.Subject
             "IssuedTo" = $cert.Subject
             "IssuedBy" = $cert.Issuer
             "ExpirationDate" = $cert.GetExpirationDateString()
