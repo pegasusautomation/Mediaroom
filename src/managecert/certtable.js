@@ -1,4 +1,4 @@
-import "./Table.css";
+import "../Table.css";
 import React from "react";
 import certTable from "./certdata.json";
 

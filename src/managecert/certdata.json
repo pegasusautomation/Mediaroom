@@ -1,0 +1,56 @@
+﻿[
+    {
+        "IssuedTo":  "CN=92d51de2-b023-4ba3-96a1-a8669b7c6acc",
+        "IssuedBy":  "DC=net + DC=windows + CN=MS-Organization-Access + OU=82dbaca4-3e81-46ca-9c73-0950c1eaca97",
+        "Subject":  "CN=92d51de2-b023-4ba3-96a1-a8669b7c6acc",
+        "SubjectKeyIdentifier":  "Not available",
+        "ExpirationDate":  "12/4/2033 2:48:34 PM",
+        "ValidFrom":  "2023-12-04 14:18:34",
+        "ValidTo":  "2033-12-04 14:48:34"
+    },
+    {
+        "IssuedTo":  "CN=MKX5941.MediaKind.net",
+        "IssuedBy":  "CN=SJC-ADCA-02, DC=MediaKind, DC=net",
+        "Subject":  "CN=MKX5941.MediaKind.net",
+        "SubjectKeyIdentifier":  "3bc3b213b3cfdc1d5909d668610ac23544dffc01",
+        "ExpirationDate":  "11/22/2024 12:36:50 PM",
+        "ValidFrom":  "2023-11-23 12:36:50",
+        "ValidTo":  "2024-11-22 12:36:50"
+    },
+    {
+        "IssuedTo":  "CN=dc610fc8-b896-4d43-af64-d7a5166b66f0",
+        "IssuedBy":  "CN=Microsoft Intune MDM Device CA",
+        "Subject":  "CN=dc610fc8-b896-4d43-af64-d7a5166b66f0",
+        "SubjectKeyIdentifier":  "af25f7bfa60e69ccaf90a7997c51908660a6f8b1",
+        "ExpirationDate":  "12/1/2024 12:11:11 PM",
+        "ValidFrom":  "2023-12-04 14:38:57",
+        "ValidTo":  "2024-12-01 12:11:11"
+    },
+    {
+        "IssuedTo":  "CN=*.test.com",
+        "IssuedBy":  "CN=*.test.com",
+        "Subject":  "CN=*.test.com",
+        "SubjectKeyIdentifier":  "0699021874ec413b31fa229803e35dc1d9e6fdeb",
+        "ExpirationDate":  "12/22/2024 3:31:42 PM",
+        "ValidFrom":  "2023-12-22 15:11:42",
+        "ValidTo":  "2024-12-22 15:31:42"
+    },
+    {
+        "IssuedTo":  "CN=*.test.com",
+        "IssuedBy":  "CN=*.test.com",
+        "Subject":  "CN=*.test.com",
+        "SubjectKeyIdentifier":  "687cb0b427a8cd86ed04112231f5d717c179fb4e",
+        "ExpirationDate":  "12/22/2026 6:12:16 PM",
+        "ValidFrom":  "2023-12-22 18:02:17",
+        "ValidTo":  "2026-12-22 18:12:16"
+    },
+    {
+        "IssuedTo":  "CN=92d51de2-b023-4ba3-96a1-a8669b7c6acc, DC=50c4eade-8aa0-432a-8b0c-93eea580bc99",
+        "IssuedBy":  "CN=MS-Organization-P2P-Access [2023]",
+        "Subject":  "CN=92d51de2-b023-4ba3-96a1-a8669b7c6acc, DC=50c4eade-8aa0-432a-8b0c-93eea580bc99",
+        "SubjectKeyIdentifier":  "Not available",
+        "ExpirationDate":  "3/26/2024 11:27:05 AM",
+        "ValidFrom":  "2024-03-25 11:22:05",
+        "ValidTo":  "2024-03-26 11:27:05"
+    }
+]

@@ -7,7 +7,7 @@ import React ,{useState}from 'react';
 import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
-import Certtable from "./certtable.js";
+import Certtable from "./managecert/certtable.js";
 import "./Table.css";
 import "./App.css";
 import Servertable from "./manageserver/servertable.js";
