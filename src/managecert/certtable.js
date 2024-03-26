@@ -44,7 +44,7 @@ const Certtable = ({ userData }) => {
           <b>CERTIFICATE DETAILS</b>
         </h1>
         <label><b>Select ComputerName</b></label>
-        <select value={selectedComputer} onChange={handleSelectComputer} style={{marginLeft:'10px',height:'25px',width:'150px'}}>
+        <select value={selectedComputer} onChange={handleSelectComputer} style={{marginLeft:'10px',height:'25px',width:'200px'}}>
             {uniqueComputerNames.map((computer, index) => (
               <option key={index} value={computer}>
                 {computer}
