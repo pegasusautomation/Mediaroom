@@ -86,17 +86,16 @@ const Mrserverdetails = ({ userData }) => {
   const filteredData = jsonData.filter((item) => {
     const searchValue = item[searchColumn];
   
-    if (Array.isArray(searchValue)) {
-      // For arrays, we need to check if any element matches the searchTerm
-      return searchValue.some(role => role.Status.toLowerCase().includes(searchTerm.toLowerCase()));
-    } else if (typeof searchValue === 'string') {
+    if (searchValue && Array.isArray(searchValue)) {
+      return searchValue.some(role => role.Status && role.Status.toLowerCase().includes(searchTerm.toLowerCase()));
+    } else if (searchValue && typeof searchValue === 'string') {
       return searchValue.toLowerCase().includes(searchTerm.toLowerCase());
     } else if (typeof searchValue === 'number' && !isNaN(searchValue)) {
       return searchValue === parseFloat(searchTerm);
     } else {
       return searchValue === searchTerm;
     }
-  });
+  });  
   
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
