@@ -14,7 +14,7 @@ const Certtable = ({ userData }) => {
     if (selectedComputer === "") {
       setSelectedComputer(uniqueComputerNames[0]);
     }
-  }, []);
+  }, [selectedComputer, uniqueComputerNames]);
 
   // Filter computer details based on selected computer name
   const filteredDetails = selectedComputer
