@@ -18,8 +18,7 @@ if (-not $computerName) {
 if ($computerName -like "MSPBR5*") {
     # Get service name based on computer name
     $username = "MSPBR5\Raghavendra.Gandanah"
-}
-else {
+} else {
     # Get service name based on computer name
     $username = "MSPBE5\Raghavendra.Gandanah"
 }
@@ -32,7 +31,6 @@ Invoke-Command -ComputerName $computerName -Credential $credential -ScriptBlock 
     param($serviceName)
     Restart-Service -Name $serviceName
 } -ArgumentList $ServiceName
-
 
 # Invoke-Command to get the service status on the remote computer
 $servicename = $ServiceName
@@ -66,3 +64,45 @@ $jsonUpdated
 # Write the JSON data to a file
 $jsonUpdated | Out-File -FilePath $jsonpath -Encoding UTF8
 Write-Host "JSON file created: $jsonUpdated"
+
+# Record user stop event
+$logFilePath = "C:\Logs\UserLogonEvents.json"
+
+# Array of users
+$users = @($username)  # Add or remove users as needed
+
+# Array of machines
+$machines = @($computerName)  # Add or remove machines as needed
+
+# Array of services
+$services = @($ServiceName)  # Add or remove services as needed
+
+# Array of actions
+$actions = @($service1.Status)  # Add or remove actions as needed
+
+# Initialize an empty array to store data
+$data = @()
+
+# Loop through users, machines, and dates to generate data
+foreach ($user in $users) {
+    foreach ($machine in $machines) {
+        foreach ($service in $services) {
+            foreach ($action in $actions) {
+                $currentDate = Get-Date            
+                $data += [PSCustomObject]@{
+                    "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
+                    "User" = $user
+                    "Machine" = $machine
+                    "Service" = $service
+                    "Action" = "Restarted"
+                }
+            }
+        }
+    }
+}
+
+# Convert the data to JSON format
+$jsonData = $data | ConvertTo-Json -Depth 100
+
+# Append the JSON data to the file
+$jsonData | Out-File -FilePath $logFilePath -Append
