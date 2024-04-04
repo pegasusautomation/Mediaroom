@@ -9,9 +9,9 @@ const HistoryPage = () => {
       <table style={{ height: "300px", overflowY: "inherit" }}>
         <thead style={{ background: "#908fb0" ,height:'30px'}}>
           <tr>
-            <th>Time Log</th>
+            <th>Event Time</th>
             <th>User</th>
-            <th>Machine</th>
+            <th>Server</th>
             <th>Service</th>
             <th>Action</th>
           </tr>
