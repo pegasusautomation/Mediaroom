@@ -1,0 +1,57 @@
+
+[{
+
+    "Timelog":  "2024-03-28 02:43:16",
+
+    "User":  "MSPBR5\\Raghavendra.Gandanah",
+
+    "Machine":  "MSPBR5CFSG011",
+
+    "Service":  "IptvFileReplicatorService",
+
+    "Action":  "Restarted"
+
+},
+
+{
+
+    "Timelog":  "2024-03-28 02:43:31",
+
+    "User":  "MSPBR5\\Raghavendra.Gandanah",
+
+    "Machine":  "MSPBR5VSERV001",
+
+    "Service":  "W3SVC",
+
+    "Action":  "Restarted"
+
+},
+
+{
+
+    "Timelog":  "2024-03-28 02:43:33",
+
+    "User":  "MSPBR5\\Raghavendra.Gandanah",
+
+    "Machine":  "MSPBR5VSERV001",
+
+    "Service":  "IptvSessionManager",
+
+    "Action":  "Stopped"
+
+},
+
+{
+
+    "Timelog":  "2024-03-28 02:43:37",
+
+    "User":  "MSPBR5\\Raghavendra.Gandanah",
+
+    "Machine":  "MSPBR5VSERV001",
+
+    "Service":  "IptvSessionManager",
+
+    "Action":  "Started"
+
+}
+]

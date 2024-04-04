@@ -18,7 +18,7 @@ import TopbarPage from "./pages/TopbarPage.js";
 import LoginHistory from "./pages/LoginHistory.js";
 import AuthService from "./AuthService.js";
 import Mrserverdetails from "./manageserver/mrserverdetails.js";
-
+import HistoryPage from "./pages/HistoryPage.js";
 export const ThemeContext = React.createContext(null);
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -90,6 +90,9 @@ const App = () => {
              </Route>
             <Route exact path="/certificates">
                <Certtable userData={userData}/>
+            </Route>
+            <Route exact path="/history">
+               <HistoryPage userData={userData}/>
             </Route>
             <Route exact path="/loginhistory">
                <LoginHistory/>
