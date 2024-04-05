@@ -65,44 +65,52 @@ $jsonUpdated
 $jsonUpdated | Out-File -FilePath $jsonpath -Encoding UTF8
 Write-Host "JSON file created: $jsonUpdated"
 
-# Record user stop event
-$logFilePath = "C:\Logs\UserLogonEvents.json"
+# Receive data dynamically (you can replace this with your actual data source)
+$currentDate = Get-Date 
+$receivedData = @{
+   "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
+                    "User" = $username
+                    "Machine" = $computerName
+                    "Service" = $ServiceName
+                    "Action" = "Started"
+}
 
-# Array of users
-$users = @($username)  # Add or remove users as needed
+# Convert the received data to JSON format
+$newJsonData = $receivedData | ConvertTo-Json -Depth 100
 
-# Array of machines
-$machines = @($computerName)  # Add or remove machines as needed
+# Set the file path
+$filePath = "C:\Mediaroom\src\loginhistory.json"
 
-# Array of services
-$services = @($ServiceName)  # Add or remove services as needed
+# Check if the file exists and its size
+if (Test-Path $filePath -and (Get-Item $filePath).Length -eq 0) {
+    # Delete the file if its size is zero
+    Remove-Item $filePath -Force
+}
 
-# Array of actions
-$actions = @($service1.Status)  # Add or remove actions as needed
+# Initialize the variable to hold existing content
+$existingContent = @()
 
-# Initialize an empty array to store data
-$data = @()
+# Check if the file exists
+if (Test-Path $filePath) {
+    # Read existing JSON file content
+    $existingContent = Get-Content -Path $filePath -Raw
 
-# Loop through users, machines, and dates to generate data
-foreach ($user in $users) {
-    foreach ($machine in $machines) {
-        foreach ($service in $services) {
-            foreach ($action in $actions) {
-                $currentDate = Get-Date            
-                $data += [PSCustomObject]@{
-                    "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
-                    "User" = $user
-                    "Machine" = $machine
-                    "Service" = $service
-                    "Action" = "Restarted"
-                }
-            }
+    # Trim whitespace from the beginning and end of the existing content
+    $existingContent = $existingContent.Trim()
+    
+    # Check if existing content is empty or not
+    if ($existingContent -ne "") {
+        # Remove the leading and trailing square brackets if they exist
+        if ($existingContent[0] -eq "[" -and $existingContent[-1] -eq "]") {
+            $existingContent = $existingContent.Substring(1, $existingContent.Length - 2)
         }
+        # Add a comma separator if existing content is not empty
+        $existingContent += ","
     }
 }
 
-# Convert the data to JSON format
-$jsonData = $data | ConvertTo-Json -Depth 100
+# Combine existing content with new data and square brackets
+$newContent = "[" + $existingContent + $newJsonData + "]"
 
-# Append the JSON data to the file
-$jsonData | Out-File -FilePath $logFilePath -Append
+# Write the updated JSON data to the file
+$newContent | Out-File -FilePath $filePath
