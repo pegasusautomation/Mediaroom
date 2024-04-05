@@ -15,13 +15,17 @@ if (-not $computerName) {
     exit 1
 }
 
+# Get the currently logged-in username and domain
+$currentUsername = $env:USERNAME
+$currentDomain = $env:USERDOMAIN
+
 if ($computerName -like "MSPBR5*") {
     # Get service name based on computer name
-    $username = "MSPBR5\Raghavendra.Gandanah"
+    $username = "$currentDomain\$currentUsername"
 }
 else {
     # Get service name based on computer name
-    $username = "MSPBE5\Raghavendra.Gandanah"
+    $username = "MSPBE5\$currentUsername"
 }
 
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
