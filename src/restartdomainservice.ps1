@@ -72,7 +72,7 @@ $receivedData = @{
                     "User" = $username
                     "Machine" = $computerName
                     "Service" = $ServiceName
-                    "Action" = "Started"
+                    "Action" = "Restarted"
 }
 
 # Convert the received data to JSON format
