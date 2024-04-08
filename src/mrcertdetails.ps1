@@ -83,15 +83,15 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                             "Computer Name"          = $remoteComputer
                             "Issued To"              = $cert.Subject
                             "Issued By"              = $cert.Issuer
-                            "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss")
-                            "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss")
-                            "Subject Key Identifier" = $ski
+                            "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss tt")
+                            "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss tt")
+                            "Subject Key Identifier" = $ski -replace "\s", ""
                         } | Select-Object -Property $columnOrder
-
+                        
                         # Add the custom object to the array
                         $certDetailsArray += $certDetailsObject
                     }
-                }
+                }   
 
 
   
@@ -147,9 +147,9 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                             "Computer Name"          = $remoteComputer
                             "Issued To"              = $cert.Subject
                             "Issued By"              = $cert.Issuer
-                            "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss")
-                            "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss")
-                            "Subject Key Identifier" = $ski
+                            "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss tt")
+                            "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss tt")
+                            "Subject Key Identifier" = $ski -replace "\s", ""
                         } | Select-Object -Property $columnOrder
 
                         # Add the custom object to the array
