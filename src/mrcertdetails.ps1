@@ -76,7 +76,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                         }
 
                         # Define the desired column order
-                        $columnOrder = "Computer Name", "Issued To", "Issued By", "Expiration Date", "Valid From", "Valid To", "Subject Key Identifier"
+                        $columnOrder = "Computer Name", "Issued By", "Issued To", "Valid From", "Valid To", "Subject Key Identifier"
 
                         # Create a custom object to store certificate details in the desired order
                         $certDetailsObject = [PSCustomObject]@{
@@ -140,7 +140,7 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                         }
 
                         # Define the desired column order
-                        $columnOrder = "Computer Name", "Issued To", "Issued By", "Expiration Date", "Valid From", "Valid To", "Subject Key Identifier"
+                        $columnOrder = "Computer Name", "Issued By", "Issued To", "Valid From", "Valid To", "Subject Key Identifier"
 
                         # Create a custom object to store certificate details in the desired order
                         $certDetailsObject = [PSCustomObject]@{
