@@ -75,8 +75,35 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                             $ski = "Not available"
                         }
 
+                        # Attempt to fetch all extensions in the certificate for debugging
+                        $certificateExtensions = $cert.Extensions | ForEach-Object {
+                            [PSCustomObject]@{
+                                "Oid"          = $_.Oid.Value
+                                "FriendlyName" = $_.Oid.FriendlyName
+                                "Format"       = $_.Format(0)
+                            }
+                        }
+
+                        Write-Host "Certificate Extensions:"
+                        $certificateExtensions | Format-Table  # Debug output
+
+                        # Attempt to fetch the template information from the certificate properties
+                        $templateInfo = "Template information not found"
+                        if ($cert -is [System.Security.Cryptography.X509Certificates.X509Certificate2]) {
+                            $templateExtension = $cert.Extensions | Where-Object { $_.Oid.FriendlyName -eq "Certificate Template Information" }
+                            if ($templateExtension) {
+                                $templateInfo = $templateExtension.Format(0)
+                            }
+                            else {
+                                Write-Host "Template extension not found for certificate: $($cert.Subject)"
+                                $cert.Extensions | ForEach-Object {
+                                    Write-Host "Extension: $($_.Oid.FriendlyName)"
+                                }
+                            }
+                        }
+
                         # Define the desired column order
-                        $columnOrder = "Computer Name", "Issued By", "Issued To", "Valid From", "Valid To", "Subject Key Identifier"
+                        $columnOrder = "Computer Name", "Issued By", "Issued To", "Valid From", "Valid To", "Subject Key Identifier", "Template Information"
 
                         # Create a custom object to store certificate details in the desired order
                         $certDetailsObject = [PSCustomObject]@{
@@ -86,15 +113,13 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                             "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss tt")
                             "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss tt")
                             "Subject Key Identifier" = $ski -replace "\s", ""
+                            "Template Information"   = $templateInfo
                         } | Select-Object -Property $columnOrder
-                        
+
                         # Add the custom object to the array
                         $certDetailsArray += $certDetailsObject
                     }
-                }   
-
-
-  
+                }
             }
         }
     }
@@ -139,8 +164,34 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                             $ski = "Not available"
                         }
 
+                        # Attempt to fetch all extensions in the certificate for debugging
+                        $certificateExtensions = $cert.Extensions | ForEach-Object {
+                            [PSCustomObject]@{
+                                "Oid"          = $_.Oid.Value
+                                "FriendlyName" = $_.Oid.FriendlyName
+                                "Format"       = $_.Format(0)
+                            }
+                        }
+
+                        Write-Host "Certificate Extensions:"
+                        $certificateExtensions | Format-Table  # Debug output
+
+                        # Attempt to fetch the template information from the certificate properties
+                        $templateInfo = "Template information not found"
+                        if ($cert -is [System.Security.Cryptography.X509Certificates.X509Certificate2]) {
+                            $templateExtension = $cert.Extensions | Where-Object { $_.Oid.FriendlyName -eq "Certificate Template Information" }
+                            if ($templateExtension) {
+                                $templateInfo = $templateExtension.Format(0)
+                            }
+                            else {
+                                Write-Host "Template extension not found for certificate: $($cert.Subject)"
+                                $cert.Extensions | ForEach-Object {
+                                    Write-Host "Extension: $($_.Oid.FriendlyName)"
+                                }
+                            }
+                        }
                         # Define the desired column order
-                        $columnOrder = "Computer Name", "Issued By", "Issued To", "Valid From", "Valid To", "Subject Key Identifier"
+                        $columnOrder = "Computer Name", "Issued By", "Issued To", "Valid From", "Valid To", "Subject Key Identifier", "Template Information"
 
                         # Create a custom object to store certificate details in the desired order
                         $certDetailsObject = [PSCustomObject]@{
@@ -150,14 +201,13 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                             "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss tt")
                             "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss tt")
                             "Subject Key Identifier" = $ski -replace "\s", ""
+                            "Template Information"   = $templateInfo
                         } | Select-Object -Property $columnOrder
 
                         # Add the custom object to the array
                         $certDetailsArray += $certDetailsObject
                     }
                 }
-
-
 
             }
         }
