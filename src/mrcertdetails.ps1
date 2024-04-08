@@ -75,21 +75,26 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
                             $ski = "Not available"
                         }
 
-                        # Create a hashtable to store certificate details
-                        $certDetails = @{
-                            "Computer Name"              = $remoteComputer
+                        # Define the desired column order
+                        $columnOrder = "Computer Name", "Issued To", "Issued By", "Expiration Date", "Valid From", "Valid To", "Subject Key Identifier"
+
+                        # Create a custom object to store certificate details in the desired order
+                        $certDetailsObject = [PSCustomObject]@{
+                            "Computer Name"          = $remoteComputer
                             "Issued To"              = $cert.Subject
                             "Issued By"              = $cert.Issuer
-                            "Expiration Date"        = $cert.GetExpirationDateString()
                             "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss")
                             "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss")
                             "Subject Key Identifier" = $ski
-                        }
+                        } | Select-Object -Property $columnOrder
 
-                        # Add the hashtable to the array
-                        $certDetailsArray += $certDetails
+                        # Add the custom object to the array
+                        $certDetailsArray += $certDetailsObject
                     }
-                }  
+                }
+
+
+  
             }
         }
     }
@@ -134,21 +139,26 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                             $ski = "Not available"
                         }
 
-                        # Create a hashtable to store certificate details
-                        $certDetails = @{
-                            "Computer Name"              = $remoteComputer
+                        # Define the desired column order
+                        $columnOrder = "Computer Name", "Issued To", "Issued By", "Expiration Date", "Valid From", "Valid To", "Subject Key Identifier"
+
+                        # Create a custom object to store certificate details in the desired order
+                        $certDetailsObject = [PSCustomObject]@{
+                            "Computer Name"          = $remoteComputer
                             "Issued To"              = $cert.Subject
                             "Issued By"              = $cert.Issuer
-                            "Expiration Date"        = $cert.GetExpirationDateString()
                             "Valid From"             = $cert.NotBefore.ToString("yyyy-MM-dd HH:mm:ss")
                             "Valid To"               = $cert.NotAfter.ToString("yyyy-MM-dd HH:mm:ss")
                             "Subject Key Identifier" = $ski
-                        }
+                        } | Select-Object -Property $columnOrder
 
-                        # Add the hashtable to the array
-                        $certDetailsArray += $certDetails
+                        # Add the custom object to the array
+                        $certDetailsArray += $certDetailsObject
                     }
-                }  
+                }
+
+
+
             }
         }
     }
