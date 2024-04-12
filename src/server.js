@@ -80,6 +80,44 @@ app.post('/stopall-services', (req, res) => {
   });
 });
 
+  // Endpoint to handle stopping the service
+  app.post('/startall-services', (req, res) => {
+    const { roleName } = req.body;// Extract the service name from the request body
+    const { computerName } = req.body;
+    // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
+    // Construct the PowerShell command with the service name as an argument
+    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+  
+    exec(powershellCommand, (error, stdout, stderr) => {
+      if (error) {
+        console.error('Error stopping services:', error);
+        res.status(500).send('Error stopping services');
+        return;
+      }
+      console.log('Services stopped successfully.');
+      res.send('Services stopped successfully');
+    });
+  });
+
+    // Endpoint to handle stopping the service
+app.post('/restartall-services', (req, res) => {
+  const { roleName } = req.body;// Extract the service name from the request body
+  const { computerName } = req.body;
+  // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
+  // Construct the PowerShell command with the service name as an argument
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+
+  exec(powershellCommand, (error, stdout, stderr) => {
+    if (error) {
+      console.error('Error stopping services:', error);
+      res.status(500).send('Error stopping services');
+      return;
+    }
+    console.log('Services stopped successfully.');
+    res.send('Services stopped successfully');
+  });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

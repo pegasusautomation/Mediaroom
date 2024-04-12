@@ -27,9 +27,9 @@ const Mrserverdetails = ({ userData }) => {
     console.log("Stop action for computer:", roleName);
   };
  
-  const handleStopAll = (roleName, computerName) => {
+  const handleStopAll = (computerName) => {
     // const { Name } = roleName; // Extract the service name from the role object
-    const jsonServiceInfo = JSON.stringify({ roleName, computerName }); // Send Name and computerName as JSON data
+    const jsonServiceInfo = JSON.stringify({ computerName }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo)
       fetch('/stopall-services', { method: 'POST', body: jsonServiceInfo, headers: { 'Content-Type': 'application/json' } })
         .then(response => {
@@ -42,7 +42,6 @@ const Mrserverdetails = ({ userData }) => {
           console.error('Error stopping service:', error.message);
         });
       alert("All Services stopped");
-      console.log("Stop action for computer:", roleName);
     };
    
   // Other functions like handleStart and handleRestart remain unchanged
@@ -189,11 +188,15 @@ const Mrserverdetails = ({ userData }) => {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <br></br>
+                <br></br>
 <br></br>
 <label style={{ color: '#154775'}}><b>Recycle All Services:</b></label>
 <button onClick={() => handleStopAll(item.ComputerName)} style={{marginLeft: '10px', background:'#b95d5d'}}>Stop All</button>
+              </div>
+              {/* <br></br>
+<br></br>
+<label style={{ color: '#154775'}}><b>Recycle All Services:</b></label>
+<button onClick={() => handleStopAll(item.ComputerName)} style={{marginLeft: '10px', background:'#b95d5d'}}>Stop All</button> */}
               <br />
             </div>
           ))}
