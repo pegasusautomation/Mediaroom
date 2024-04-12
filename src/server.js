@@ -86,7 +86,7 @@ app.post('/stopall-services', (req, res) => {
     const { computerName } = req.body;
     // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
     // Construct the PowerShell command with the service name as an argument
-    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
   
     exec(powershellCommand, (error, stdout, stderr) => {
       if (error) {
@@ -105,7 +105,7 @@ app.post('/restartall-services', (req, res) => {
   const { computerName } = req.body;
   // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
   // Construct the PowerShell command with the service name as an argument
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
