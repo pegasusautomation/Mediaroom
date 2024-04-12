@@ -25,11 +25,6 @@ $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential($username, $password)
 
 # Invoke-Command to stop the service on the remote computer
-Invoke-Command -ComputerName $computerName -Credential $credential -ScriptBlock {
-
-    cmd.exe /c AdminService /action=Stop
-}
-
 $scriptBlock = {
     Start-Process -FilePath "C:\Program Files\Microsoft IPTV Services\InstallTools\AdminService.exe" -ArgumentList "/action=Stop" -Wait -NoNewWindow
 }
