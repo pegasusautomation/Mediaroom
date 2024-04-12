@@ -44,6 +44,40 @@ const Mrserverdetails = ({ userData }) => {
       alert("All Services stopped");
     };
    
+    const handleStartAll = (computerName) => {
+      // const { Name } = roleName; // Extract the service name from the role object
+      const jsonServiceInfo = JSON.stringify({ computerName }); // Send Name and computerName as JSON data
+      console.log(jsonServiceInfo)
+        fetch('/startall-services', { method: 'POST', body: jsonServiceInfo, headers: { 'Content-Type': 'application/json' } })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Error stopping service');
+            }
+            console.log('All Services started successfully.');
+          })
+          .catch(error => {
+            console.error('Error stopping service:', error.message);
+          });
+        alert("All Services started");
+      };
+   
+      const handleRestartAll = (computerName) => {
+        // const { Name } = roleName; // Extract the service name from the role object
+        const jsonServiceInfo = JSON.stringify({ computerName }); // Send Name and computerName as JSON data
+        console.log(jsonServiceInfo)
+          fetch('/restartall-services', { method: 'POST', body: jsonServiceInfo, headers: { 'Content-Type': 'application/json' } })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Error stopping service');
+              }
+              console.log('All Services Restarted successfully.');
+            })
+            .catch(error => {
+              console.error('Error stopping service:', error.message);
+            });
+          alert("All Services Restarted");
+        };
+       
   // Other functions like handleStart and handleRestart remain unchanged
   const handleStart = (roleName, computerName) => {
    
@@ -191,7 +225,9 @@ const Mrserverdetails = ({ userData }) => {
                 <br></br>
 <br></br>
 <label style={{ color: '#154775'}}><b>Recycle All Services:</b></label>
-<button onClick={() => handleStopAll(item.ComputerName)} style={{marginLeft: '10px', background:'#b95d5d'}}>Stop All</button>
+<button onClick={() => handleStopAll(item.ComputerName)} style={{marginLeft: '5px', background:'#b95d5d'}}>Stop All</button>
+<button onClick={() => handleStartAll(item.ComputerName)} style={{marginLeft: '5px', background: '#0cb061'}}>Start All</button>
+<button onClick={() => handleRestartAll(item.ComputerName)} style={{marginLeft: '5px',background:'#635279',width:'85px',height:'34px'}}>Restart All</button>
               </div>
               {/* <br></br>
 <br></br>
