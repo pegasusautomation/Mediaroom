@@ -18,8 +18,12 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV103",
@@ -29,13 +33,17 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV103\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV101",
@@ -45,13 +53,21 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV101\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG021",
@@ -73,13 +89,21 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG021\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IPTV Edition TimeShift Server Service",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5TSSERV001",
@@ -89,13 +113,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5TSSERV001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5DSERV102",
@@ -105,13 +133,25 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5DSERV102\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSched",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5BMGMT001",
@@ -201,13 +241,29 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5BMGMT001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvClientSnapshotService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG021",
@@ -241,13 +297,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG021\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  null
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  null
                               }
                           ],
         "ComputerName":  "MSPBR5HPNR011",
@@ -257,7 +317,7 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5HPNR011\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
@@ -270,13 +330,25 @@
         "Roles":  [
 
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MFMAP001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IPTV Edition VOD VServer Service",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV002",
@@ -286,13 +358,25 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV002\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG021",
@@ -342,13 +426,25 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG021\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5CFSG011",
@@ -398,13 +494,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CFSG011\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5SYNC001",
@@ -418,13 +518,17 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SYNC001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5VDIST001",
@@ -434,13 +538,29 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5VDIST001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvClientSnapshotService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5SFSG011",
@@ -474,13 +594,21 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFSG011\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5CGSG011",
@@ -502,13 +630,29 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CGSG011\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvListingsSync",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSched",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5SFBR001",
@@ -562,13 +706,25 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5SFBR001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IPTV Edition VOD VServer Service",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5VSERV001",
@@ -578,13 +734,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5VSERV001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5CDBE001",
@@ -602,13 +762,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDBE001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBR5CDFE001",
@@ -618,13 +782,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBR5CDFE001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Error: One or more computer names are not valid. If you are trying to pass a URI, use the -ConnectionUri parameter, or pass URI objects instead of strings."
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Error: One or more computer names are not valid. If you are trying to pass a URI, use the -ConnectionUri parameter, or pass URI objects instead of strings."
                               }
                           ],
         "ComputerName":  "MSPBE5BEDB001\\LIVEDB",
@@ -670,7 +838,7 @@
                           "Type":  "other"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDB001\u0027 failed: Error due to lack of resources"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
@@ -723,8 +891,12 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5VCTRL001",
@@ -742,13 +914,13 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5VCTRL001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5VCRT001",
@@ -762,13 +934,17 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5VCRT001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5MDIST001",
@@ -778,13 +954,17 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDIST001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5VMGMT001",
@@ -802,13 +982,17 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5VMGMT001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5RSERV001",
@@ -818,13 +1002,13 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5RSERV001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5ASERV003",
@@ -834,7 +1018,7 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV003\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
@@ -855,8 +1039,16 @@
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5AMGMT001",
@@ -886,13 +1078,29 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5AMGMT001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvDeliveryAgent",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvListingsSync",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSched",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5ACTRL001",
@@ -926,13 +1134,13 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ACTRL001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5ASERV002",
@@ -942,13 +1150,13 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV002\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5ASERV004",
@@ -958,13 +1166,13 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV004\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5ASERV001",
@@ -974,13 +1182,13 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5ASERV001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5MDSAF001",
@@ -990,13 +1198,13 @@
                           "Type":  "other"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSAF001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5MDSAF002",
@@ -1006,13 +1214,17 @@
                           "Type":  "other"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSAF002\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5MMGMT001",
@@ -1038,13 +1250,25 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MMGMT001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvCatalogMaintainerService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvFragmentGenerator",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5MDSING001",
@@ -1078,13 +1302,21 @@
                           "Type":  "service"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSING001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     },
     {
         "ServiceStatus":  [
                               {
-                                  "Name":  "No service found",
-                                  "Status":  "NA"
+                                  "Name":  "IptvFileReplicatorService",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "IptvSessionManager",
+                                  "Status":  "Running"
+                              },
+                              {
+                                  "Name":  "W3SVC",
+                                  "Status":  "Running"
                               }
                           ],
         "ComputerName":  "MSPBE5MDSFE001",
@@ -1138,6 +1370,6 @@
                           "Type":  "webservice"
                       }
                   ],
-        "ComputerStatus":  "Error: Testing connection to computer \u0027MSPBE5MDSFE001\u0027 failed: No such host is known"
+        "ComputerStatus":  "Reachable"
     }
 ]
