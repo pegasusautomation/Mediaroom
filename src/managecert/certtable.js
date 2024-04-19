@@ -23,8 +23,8 @@ const Certtable = ({ userData }) => {
 
   // Sort filtered details based on expiration date
   const sortedDetails = filteredDetails.slice().sort((a, b) => {
-    const dateA = new Date(a["Expiration Date"]);
-    const dateB = new Date(b["Expiration Date"]);
+    const dateA = new Date(a["Valid To"]);
+    const dateB = new Date(b["Valid To"]);
     return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
   });
 
@@ -47,21 +47,9 @@ const Certtable = ({ userData }) => {
 
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        width: "100%",
-        height: "100%",
-        // overflow: "auto",
-      }}
-    >
-      <h1 style={{ fontSize: "20px", marginRight: "1200px", marginBottom:'20px' }}>
-        <b>CERTIFICATE DETAILS</b>
-      </h1>
-      <div style={{ display: "flex", alignItems: "center", marginBottom: "20px", marginRight:'1800px' }}>
-        <label style={{ marginRight: "20px" }}>
+    <div style={{ overflowX: "auto", height: "91%", width: "57%" }}>
+      <h1 style={{ fontSize: "20px", marginLeft: "400px", marginBottom:'20px' }}>CERTIFICATE DETAILS</h1>
+<label style={{ marginRight: "20px" }}>
           <b>Select ComputerName</b>
         </label>
         <select
@@ -75,50 +63,51 @@ const Certtable = ({ userData }) => {
             </option>
           ))}
         </select>
-      </div>
-      <div style={{ overflowX: "auto", marginBottom: "100px" }}>
-        {sortedDetails.length > 0 ? (
-          <table style={{ minWidth: "100%" }}>
-            <colgroup>
-              {Object.keys(sortedDetails[0]).map((key, index) => (
-                <col key={index} style={{ width: "200px", marginRight:'10px'}} /> 
+        <br></br><br></br>
+        <table style={{ borderCollapse: "collapse", minHeight: "100%", minWidth: "100%", whiteSpace: "wrap" }}>
+        <thead style={{ background: "#908fb0", color: "white" }}>
+          <tr>
+            {Object.keys(sortedDetails[0] || {}).map((key, index) => (
+              <th
+                key={index}
+                onClick={key === "Valid To" ? toggleSortOrder : null}
+                style={{ padding: "2px 2px", border: "1px solid #ddd", cursor: "pointer", fontSize: "12px" }}
+              >
+                {key}
+                {key === "Valid To" && (
+                  <span>{sortOrder === "asc" ? " ▲" : " ▼"}</span>
+                )}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {sortedDetails.map((row, rowIndex) => (
+            <tr
+              key={rowIndex}
+              style={{
+                color: isExpired(row["Valid To"]) ? "red" : "inherit",
+              }}
+            >
+              {Object.entries(row).map(([key, value], cellIndex) => (
+                <td key={cellIndex} style={{ padding: "2px 2px", border: "1px solid #ddd", wordWrap: "break-word", fontSize: "10px", whiteSpace: key === "Template Information" || key === "Issued To" || key === "Subject Key Identifier" ? "pre-wrap" : "nowrap" }}>
+                  {key === "Issued By" || key === "Issued To" || key === "Template Information" ? (
+                    <>
+                      {value.split(',').map((line, index) => (
+                        <div key={index}>{line.trim()}</div>
+                      ))}
+                    </>
+                  ) : (
+                    value
+                  )}
+                </td>
               ))}
-            </colgroup>
-            <thead style={{ background: "#908fb0" }}>
-              <tr>
-                {Object.keys(sortedDetails[0]).map((key, index) => (
-                  <th
-                    key={index}
-                    onClick={key === "Expiration Date" ? toggleSortOrder : null}
-                  >
-                    {key}
-                    {key === "Expiration Date" && (
-                      <span>{sortOrder === "asc" ? " ▲" : " ▼"}</span>
-                    )}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {sortedDetails.map((row, rowIndex) => (
-                <tr
-                  key={rowIndex}
-                  style={{
-                    color: isExpired(row["Expiration Date"]) ? "red" : "inherit",
-                  }}
-                >
-                  {Object.values(row).map((cell, cellIndex) => (
-                    <td key={cellIndex}>{cell}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <p>No details found.</p>
-        )}
-      </div>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
+
 };
 export default Certtable;
