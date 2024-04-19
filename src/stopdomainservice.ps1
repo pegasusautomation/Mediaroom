@@ -1,6 +1,7 @@
 param (
     [string]$ServiceName, # Accept the service name as a parameter
-    [string]$computerName  # Accept the computer name as a parameter
+    [string]$computerName,  # Accept the computer name as a parameter
+    [string]$inputValue  # Accept the message as a parameter
 )
 
 # Check if the service name is provided
@@ -11,6 +12,12 @@ if (-not $ServiceName) {
 
 # Check if the computer name is provided
 if (-not $computerName) {
+    Write-Host "Error: Computer name not provided."
+    exit 1
+}
+
+# Check if the computer name is provided
+if (-not $inputValue) {
     Write-Host "Error: Computer name not provided."
     exit 1
 }
@@ -78,6 +85,7 @@ $receivedData = @{
                     "Machine" = $computerName
                     "Service" = $ServiceName
                     "Action" = "Stopped"
+                    "Action History" = $inputValue
 }
 
 # Convert the received data to JSON format
