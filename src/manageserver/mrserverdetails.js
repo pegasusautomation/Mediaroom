@@ -59,7 +59,6 @@ const Mrserverdetails = ({ userData }) => {
       .catch((error) => {
         console.error("Error stopping service:", error.message);
       });
-    alert("Service stopped");
     console.log("Stop action for computer:", roleName);
   };  
 
@@ -85,7 +84,6 @@ const Mrserverdetails = ({ userData }) => {
         console.error("Error stopping service:", error.message);
         // Handle error as needed
       });
-    alert("service started");
     console.log("start action for index:", roleName);
   };
 
@@ -114,7 +112,6 @@ const Mrserverdetails = ({ userData }) => {
         console.error("Error stopping service:", error.message);
         // Handle error as needed
       });
-    alert("service restarted");
     console.log("Restart action for index:", roleName);
   };
 
@@ -156,8 +153,6 @@ const Mrserverdetails = ({ userData }) => {
       .catch((error) => {
         console.error("Error stopping service:", error.message);
       });
-    handleConfirmationSubmit();
-    alert("All Services started");
   };
 
   const handleRestartAll = (computerName, inputValue) => {
@@ -178,8 +173,6 @@ const Mrserverdetails = ({ userData }) => {
       .catch((error) => {
         console.error("Error stopping service:", error.message);
       });
-    handleConfirmationSubmit();
-    alert("All Services Restarted");
   };
   // Define other handle functions like handleStopAll, handleStartAll, handleRestartAll, handleStart, handleRestart here...
 
