@@ -5,19 +5,19 @@ const Certtable = ({ userData }) => {
   const [selectedComputer, setSelectedComputer] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
-  const uniqueComputerNames = Array.from(
+  const uniqueComputerNames = ["All", ...Array.from(
     new Set(certTable.map((item) => item["Computer Name"]))
-  );
+  )];
 
-  // Set the default selected computer name to the first one only on component mount
+  // Set the default selected computer name to "All" on component mount
   useEffect(() => {
     if (selectedComputer === "") {
-      setSelectedComputer(uniqueComputerNames[0]);
+      setSelectedComputer("All");
     }
-  }, [selectedComputer, uniqueComputerNames]);
+  }, [selectedComputer]);
 
   // Filter computer details based on selected computer name
-  const filteredDetails = selectedComputer
+  const filteredDetails = selectedComputer !== "All"
     ? certTable.filter((item) => item["Computer Name"] === selectedComputer)
     : certTable;
 
@@ -45,74 +45,80 @@ const Certtable = ({ userData }) => {
     return expirationDate < currentDate;
   };
 
+
   return (
-    <div>
-      {userData.role === "manager" || userData.role === "admin" ? (
-        <>
-          <h1 style={{ marginLeft: "400px", fontSize: "20px" }}>
-            <b>CERTIFICATE DETAILS</b>
-          </h1>
-          <label>
-            <b>Select ComputerName</b>
-          </label>
-          <select
-            value={selectedComputer}
-            onChange={handleSelectComputer}
-            style={{ marginLeft: "10px", height: "25px", width: "200px" }}
-          >
-            {uniqueComputerNames.map((computer, index) => (
-              <option key={index} value={computer}>
-                {computer}
-              </option>
-            ))}
-          </select>
-          <br />
-          <br />
-          {sortedDetails.length > 0 ? (
-            <table style={{ height: "300px", overflowY: "inherit" }}>
-              <thead style={{ background: "#908fb0" }}>
-                <tr>
-                  {Object.keys(sortedDetails[0]).map((key, index) => (
-                    <th
-                      key={index}
-                      onClick={
-                        key === "Expiration Date" ? toggleSortOrder : null
-                      }
-                    >
-                      {key}
-                      {key === "Expiration Date" && (
-                        <span>{sortOrder === "asc" ? " ▲" : " ▼"}</span>
-                      )}
-                    </th>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
+        // overflow: "auto",
+      }}
+    >
+      <h1 style={{ fontSize: "20px", marginRight: "1200px", marginBottom:'20px' }}>
+        <b>CERTIFICATE DETAILS</b>
+      </h1>
+      <div style={{ display: "flex", alignItems: "center", marginBottom: "20px", marginRight:'1800px' }}>
+        <label style={{ marginRight: "20px" }}>
+          <b>Select ComputerName</b>
+        </label>
+        <select
+          value={selectedComputer}
+          onChange={handleSelectComputer}
+          style={{ height: "25px", width: "200px" }}
+        >
+          {uniqueComputerNames.map((computer, index) => (
+            <option key={index} value={computer}>
+              {computer}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div style={{ overflowX: "auto", marginBottom: "100px" }}>
+        {sortedDetails.length > 0 ? (
+          <table style={{ minWidth: "100%" }}>
+            <colgroup>
+              {Object.keys(sortedDetails[0]).map((key, index) => (
+                <col key={index} style={{ width: "200px", marginRight:'10px'}} /> 
+              ))}
+            </colgroup>
+            <thead style={{ background: "#908fb0" }}>
+              <tr>
+                {Object.keys(sortedDetails[0]).map((key, index) => (
+                  <th
+                    key={index}
+                    onClick={key === "Expiration Date" ? toggleSortOrder : null}
+                  >
+                    {key}
+                    {key === "Expiration Date" && (
+                      <span>{sortOrder === "asc" ? " ▲" : " ▼"}</span>
+                    )}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {sortedDetails.map((row, rowIndex) => (
+                <tr
+                  key={rowIndex}
+                  style={{
+                    color: isExpired(row["Expiration Date"]) ? "red" : "inherit",
+                  }}
+                >
+                  {Object.values(row).map((cell, cellIndex) => (
+                    <td key={cellIndex}>{cell}</td>
                   ))}
                 </tr>
-              </thead>
-              <tbody>
-                {sortedDetails.map((row, rowIndex) => (
-                  <tr
-                    key={rowIndex}
-                    style={{
-                      color: isExpired(row["Expiration Date"])
-                        ? "red"
-                        : "inherit",
-                    }}
-                  >
-                    {Object.values(row).map((cell, cellIndex) => (
-                      <td key={cellIndex}>{cell}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <p>No details found.</p>
-          )}
-        </>
-      ) : (
-        <div>You are not authorized to view this page.</div>
-      )}
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p>No details found.</p>
+        )}
+      </div>
     </div>
   );
 };
-
 export default Certtable;
