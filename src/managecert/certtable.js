@@ -39,12 +39,28 @@ const filteredExpiration = filteredDetails.filter((item) => {
   return expirationFilter === "all";
 });
 
-  // Sort filtered details based on expiration date
-  const sortedDetails = filteredExpiration.slice().sort((a, b) => {
-    const dateA = new Date(a["Valid To"]);
-    const dateB = new Date(b["Valid To"]);
-    return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
-  });
+// Parse date strings with AM/PM designation
+const parseDate = (dateString) => {
+  // Split the date string into date and time parts
+  const [datePart, timePart] = dateString.split(' ');
+  // Split the time part into hours, minutes, and AM/PM parts
+  const [hours, minutes, ampm] = timePart.split(':');
+  // Adjust hours if it's PM
+  const adjustedHours = ampm === 'PM' ? parseInt(hours, 10) + 12 : hours;
+  // Concatenate date and time parts into a format parsable by Date constructor
+  const formattedDate = `${datePart} ${adjustedHours}:${minutes}`;
+  // Return the parsed Date object
+  return new Date(formattedDate);
+};
+
+// Sort filtered details based on expiration date
+const sortedDetails = filteredExpiration.slice().sort((a, b) => {
+  const dateA = parseDate(a["Valid To"]); // Parse dates with AM/PM designation
+  const dateB = parseDate(b["Valid To"]);
+  return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
+});
+
+
 
   // Check if a date is expired
   const isExpired = (dateString) => {
@@ -110,15 +126,16 @@ const filteredExpiration = filteredDetails.filter((item) => {
           <tr>
             {Object.keys(sortedDetails[0] || {}).map((key, index) => (
               <th
-                key={index}
-                onClick={key === "Valid To" ? toggleSortOrder : null}
-                style={{ padding: "2px 2px", border: "1px solid #ddd", cursor: "pointer", fontSize: "12px" }}
-              >
-                {key}
-                {key === "Valid To" && (
-                  <span>{sortOrder === "asc" ? " ▲" : " ▼"}</span>
-                )}
-              </th>
+              key={index}
+              onClick={key === "Valid To" ? toggleSortOrder : null}
+              style={{ padding: "2px 2px", border: "1px solid #ddd", cursor: "pointer", fontSize: "12px" }}
+            >
+              {key}
+              {key === "Valid To" && (
+                <span>{sortOrder === "asc" ? " ▲" : " ▼"}</span>
+              )}
+            </th>
+            
             ))}
           </tr>
         </thead>
