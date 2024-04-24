@@ -63,11 +63,13 @@ const sortedDetails = filteredExpiration.slice().sort((a, b) => {
 
 
   // Check if a date is expired
-  const isExpired = (dateString) => {
-    const expirationDate = new Date(dateString);
-    return expirationDate < currentDate;
-  };
-  
+ // Check if a date is expired
+const isExpired = (dateString) => {
+  const expirationDate = parseDate(dateString);
+  const currentDate = new Date();
+  return expirationDate < currentDate;
+};
+
   // Handle dropdown change event for computer selection
   const handleSelectComputer = (event) => {
     setSelectedComputer(event.target.value);
