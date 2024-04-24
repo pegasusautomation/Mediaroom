@@ -4,6 +4,7 @@ import certTable from "./certdata.json";
 const Certtable = ({ userData }) => {
   const [selectedComputer, setSelectedComputer] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
+  const [expirationFilter, setExpirationFilter] = useState("all");
 
   const uniqueComputerNames = ["All", ...Array.from(
     new Set(certTable.map((item) => item["Computer Name"]))
@@ -21,50 +22,90 @@ const Certtable = ({ userData }) => {
     ? certTable.filter((item) => item["Computer Name"] === selectedComputer)
     : certTable;
 
+  // Filter certificates based on expiration period
+  const currentDate = new Date();
+const filteredExpiration = filteredDetails.filter((item) => {
+  const expirationDate = new Date(item["Valid To"]);
+  const daysUntilExpiration = Math.floor((expirationDate - currentDate) / (1000 * 60 * 60 * 24));
+  if (expirationFilter === "7days" && daysUntilExpiration <= 7 && daysUntilExpiration > 0) {
+    return true;
+  }
+  if (expirationFilter === "30days" && daysUntilExpiration <= 30 && daysUntilExpiration > 0) {
+    return true;
+  }
+  if (expirationFilter === "expired" && expirationDate < currentDate) {
+    return true;
+  }
+  return expirationFilter === "all";
+});
+
   // Sort filtered details based on expiration date
-  const sortedDetails = filteredDetails.slice().sort((a, b) => {
+  const sortedDetails = filteredExpiration.slice().sort((a, b) => {
     const dateA = new Date(a["Valid To"]);
     const dateB = new Date(b["Valid To"]);
     return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
   });
 
-  // Handle dropdown change event
+  // Check if a date is expired
+  const isExpired = (dateString) => {
+    const expirationDate = new Date(dateString);
+    return expirationDate < currentDate;
+  };
+  
+  // Handle dropdown change event for computer selection
   const handleSelectComputer = (event) => {
     setSelectedComputer(event.target.value);
   };
 
+  // Handle dropdown change event for expiration filter
+  const handleExpirationFilter = (event) => {
+    setExpirationFilter(event.target.value);
+  };
   // Handle sorting toggle
   const toggleSortOrder = () => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
-  // Check if a date is expired
-  const isExpired = (dateString) => {
-    const expirationDate = new Date(dateString);
-    const currentDate = new Date();
-    return expirationDate < currentDate;
-  };
-
-
+  const noCertificatesMessage = (
+    <tr>
+      <td colSpan={Object.keys(sortedDetails[0] || {}).length} style={{ textAlign: "center" }}>
+        No certificates match the selected expiration filter.
+      </td>
+    </tr>
+  );
+  
   return (
     <div style={{ overflowX: "auto", height: "91%", width: "57%" }}>
       <h1 style={{ fontSize: "20px", marginLeft: "400px", marginBottom:'20px' }}>CERTIFICATE DETAILS</h1>
-<label style={{ marginRight: "20px" }}>
-          <b>Select ComputerName</b>
-        </label>
-        <select
-          value={selectedComputer}
-          onChange={handleSelectComputer}
-          style={{ height: "25px", width: "200px" }}
-        >
-          {uniqueComputerNames.map((computer, index) => (
-            <option key={index} value={computer}>
-              {computer}
-            </option>
-          ))}
-        </select>
-        <br></br><br></br>
-        <table style={{ borderCollapse: "collapse", minHeight: "100%", minWidth: "100%", whiteSpace: "wrap" }}>
+      <label style={{ marginRight: "20px" }}>
+        <b>Select ComputerName</b>
+      </label>
+      <select
+        value={selectedComputer}
+        onChange={handleSelectComputer}
+        style={{ height: "25px", width: "200px" }}
+      >
+        {uniqueComputerNames.map((computer, index) => (
+          <option key={index} value={computer}>
+            {computer}
+          </option>
+        ))}
+      </select>
+      <label style={{ marginRight: "20px", marginLeft: "20px" }}>
+        <b>Expiration Filter:</b>
+      </label>
+      <select
+        value={expirationFilter}
+        onChange={handleExpirationFilter}
+        style={{ height: "25px", width: "200px" }}
+      >
+        <option value="all">All</option>
+        <option value="7days">Expires in 7 Days</option>
+        <option value="30days">Expires in 30 Days</option>
+        <option value="expired">Already Expired</option>
+      </select>
+      <br></br><br></br>
+      <table style={{ borderCollapse: "collapse", minHeight: "100%", minWidth: "100%", whiteSpace: "wrap" }}>
         <thead style={{ background: "#908fb0", color: "white" }}>
           <tr>
             {Object.keys(sortedDetails[0] || {}).map((key, index) => (
@@ -82,32 +123,36 @@ const Certtable = ({ userData }) => {
           </tr>
         </thead>
         <tbody>
-          {sortedDetails.map((row, rowIndex) => (
-            <tr
-              key={rowIndex}
-              style={{
-                color: isExpired(row["Valid To"]) ? "red" : "inherit",
-              }}
-            >
-              {Object.entries(row).map(([key, value], cellIndex) => (
-                <td key={cellIndex} style={{ padding: "2px 2px", border: "1px solid #ddd", wordWrap: "break-word", fontSize: "10px", whiteSpace: key === "Template Information" || key === "Issued To" || key === "Subject Key Identifier" ? "pre-wrap" : "nowrap" }}>
-                  {key === "Issued By" || key === "Issued To" || key === "Template Information" ? (
-                    <>
-                      {value.split(',').map((line, index) => (
-                        <div key={index}>{line.trim()}</div>
-                      ))}
-                    </>
-                  ) : (
-                    value
-                  )}
-                </td>
-              ))}
-            </tr>
-          ))}
+          {sortedDetails.length > 0 ? (
+            sortedDetails.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                style={{
+                  color: isExpired(row["Valid To"]) ? "red" : "inherit",
+                }}
+              >
+                {Object.entries(row).map(([key, value], cellIndex) => (
+                  <td key={cellIndex} style={{ padding: "2px 2px", border: "1px solid #ddd", wordWrap: "break-word", fontSize: "10px", whiteSpace: key === "Template Information" || key === "Issued To" || key === "Subject Key Identifier" ? "pre-wrap" : "nowrap" }}>
+                    {key === "Issued By" || key === "Issued To" || key === "Template Information" ? (
+                      <>
+                        {value.split(',').map((line, index) => (
+                          <div key={index}>{line.trim()}</div>
+                        ))}
+                      </>
+                    ) : (
+                      value
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))
+          ) : (
+            noCertificatesMessage
+          )}
         </tbody>
       </table>
     </div>
   );
-
 };
+
 export default Certtable;
