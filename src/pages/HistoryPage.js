@@ -14,6 +14,7 @@ const HistoryPage = () => {
             <th>Server</th>
             <th>Service</th>
             <th>Action</th>
+            <th>Action History</th>
           </tr>
         </thead>
         <tbody>
