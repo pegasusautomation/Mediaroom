@@ -17,37 +17,33 @@ const Mrserverdetails = ({ userData }) => {
     setShowConfirmation(false);
   };
 
-  const handleConfirmationSubmit = (inputValue) => {
+  const handleConfirmationSubmit = (message) => {
+	  console.log(message);
     // Call handleStop or handleRestart based on the action type
     if (setaction === "Stop") {
-      handleStop(roleName, computerName, inputValue);
+      handleStop(roleName, computerName, message);
     } else if (setaction === "Start") {
-      handleRestart(roleName, computerName, inputValue);
+      handleStart(roleName, computerName, message);
     } else if (setaction === "Restart") {
-      handleStart(roleName, computerName, inputValue);
+      handleRestart(roleName, computerName, message);
     }
     else if (setaction === "StopAll") {
-      handleStopAll(computerName, inputValue);
+      handleStopAll(computerName, message);
     } else if (setaction === "StartAll") {
-      handleStartAll(computerName, inputValue);
+      handleStartAll(computerName, message);
     } else {
-      handleRestartAll(computerName, inputValue);
+      handleRestartAll(computerName, message);
     }
     // Close the popup
     setShowConfirmation(false);
   };
 
-  const handleStop = (roleName, computerName, inputValue) => {
-    // const { Name } = roleName; // Extract the service name from the role object
-    const jsonServiceInfo = JSON.stringify({
-      roleName,
-      computerName,
-      inputValue,
-    }); // Send Name and computerName as JSON data
+  const handleStop = (roleName, computerName, message) => {
+    const jsonServiceInfo = JSON.stringify({ roleName, computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
     fetch("/stop-service", {
       method: "POST",
-      body: jsonServiceInfo,
+	  body: jsonServiceInfo,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -63,49 +59,41 @@ const Mrserverdetails = ({ userData }) => {
   };  
 
   // Other functions like handleStart and handleRestart remain unchanged
-  const handleStart = (roleName, computerName, inputValue) => {
-    const jsonServiceInfo = JSON.stringify({ roleName, computerName, inputValue }); // Send Name and computerName as JSON data
+  const handleStart = (roleName, computerName, message) => {
+   const jsonServiceInfo = JSON.stringify({ roleName, computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
-
-    // Add logic to handle stop action
     fetch("/start-service", {
       method: "POST",
-      body: jsonServiceInfo,
+	  body: jsonServiceInfo,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Error stopping service");
+          throw new Error("Error starting service");
         }
-        console.log("Service stopped successfully.");
+        console.log("Service started successfully.");
         // Handle success as needed
       })
       .catch((error) => {
-        console.error("Error stopping service:", error.message);
+        console.error("Error starting service:", error.message);
         // Handle error as needed
       });
     console.log("start action for index:", roleName);
   };
 
-  const handleRestart = (roleName, computerName, inputValue) => {
-    const jsonServiceInfo = JSON.stringify({
-      roleName,
-      computerName,
-      inputValue,
-    }); // Send Name and computerName as JSON data
+  const handleRestart = (roleName, computerName, message) => {
+   const jsonServiceInfo = JSON.stringify({ roleName, computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
-
-    // Add logic to handle stop action
     fetch("/restart-service", {
       method: "POST",
-      body: jsonServiceInfo,
+	  body: jsonServiceInfo,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Error stopping service");
+          throw new Error("Error restarting service");
         }
-        console.log("Service stopped successfully.");
+        console.log("Service restarted successfully.");
         // Handle success as needed
       })
       .catch((error) => {
@@ -115,9 +103,9 @@ const Mrserverdetails = ({ userData }) => {
     console.log("Restart action for index:", roleName);
   };
 
-  const handleStopAll = (computerName, inputValue) => {
+  const handleStopAll = (computerName, message) => {
     // const { Name } = roleName; // Extract the service name from the role object
-    const jsonServiceInfo = JSON.stringify({ computerName, inputValue }); // Send Name and computerName as JSON data
+    const jsonServiceInfo = JSON.stringify({ computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
     fetch("/stopall-services", {
       method: "POST",
@@ -135,9 +123,9 @@ const Mrserverdetails = ({ userData }) => {
       });
   };
 
-  const handleStartAll = (computerName, inputValue) => {
+  const handleStartAll = (computerName, message) => {
     // const { Name } = roleName; // Extract the service name from the role object
-    const jsonServiceInfo = JSON.stringify({ computerName, inputValue }); // Send Name and computerName as JSON data
+    const jsonServiceInfo = JSON.stringify({ computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
     fetch("/startall-services", {
       method: "POST",
@@ -155,9 +143,9 @@ const Mrserverdetails = ({ userData }) => {
       });
   };
 
-  const handleRestartAll = (computerName, inputValue) => {
+  const handleRestartAll = (computerName, message) => {
     // const { Name } = roleName; // Extract the service name from the role object
-    const jsonServiceInfo = JSON.stringify({ computerName, inputValue }); // Send Name and computerName as JSON data
+    const jsonServiceInfo = JSON.stringify({ computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
     fetch("/restartall-services", {
       method: "POST",
@@ -236,7 +224,12 @@ const Mrserverdetails = ({ userData }) => {
           onChange={handleSearchChange}
           style={{ height: "30px", width: "200px" }}
         />
+        
       </div>
+      <button onClick={() => {
+                                setShowConfirmation(true); // Display confirmation popup
+                                setactiontype("Stop"); // Pass action type and input value
+                              }}>btn</button>
       {filteredData.length > 0 && (
         <table style={{ width: "100%", marginBottom: "100px" }}>
           <thead style={{ background: "#908fb0" }}>

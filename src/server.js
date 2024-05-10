@@ -12,9 +12,11 @@ app.use(bodyParser.json());
 app.post('/stop-service', (req, res) => {
   const { roleName } = req.body;// Extract the service name from the request body
   const { computerName } = req.body;
+  const { message } = req.body;
   // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
   // Construct the PowerShell command with the service name as an argument
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+  // const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopps.ps1`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -23,7 +25,7 @@ app.post('/stop-service', (req, res) => {
       return;
     }
     console.log('Service stopped successfully.');
-    res.send('Service stopped successfully');
+    res.send('Raghavendra');
   });
 });
 
@@ -31,12 +33,12 @@ app.post('/stop-service', (req, res) => {
 app.post('/start-service', (req, res) => {
   const { roleName } = req.body;// Extract the service name from the request body
   const { computerName } = req.body;
-    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
-  
+  const { message } = req.body;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;  
     exec(powershellCommand, (error, stdout, stderr) => {
       if (error) {
-        console.error('Error stopping service:', error);
-        res.status(500).send('Error stopping service');
+        console.error('Error starting service:', error);
+        res.status(500).send('Error starting service');
         return;
       }
       console.log('Service started successfully.');
@@ -48,7 +50,8 @@ app.post('/start-service', (req, res) => {
 app.post('/restart-service', (req, res) => {
     const { roleName } = req.body; // Extract the service name from the request body
 	const { computerName } = req.body;
-    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+	 const { message } = req.body;
+    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
   
     exec(powershellCommand, (error, stdout, stderr) => {
       if (error) {
