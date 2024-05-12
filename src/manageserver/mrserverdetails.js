@@ -38,6 +38,23 @@ const Mrserverdetails = ({ userData }) => {
     setShowConfirmation(false);
   };
 
+  const getServiceStatus = () => {
+    fetch("/getstatus-service", {
+      method: "POST",
+	  body: null,
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error getting service");
+        }
+        console.log("Service updated successfully.");
+      })
+      .catch((error) => {
+        console.error("Error getting service:", error.message);
+      });
+  };
+
   const handleStop = (roleName, computerName, message) => {
     const jsonServiceInfo = JSON.stringify({ roleName, computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
@@ -227,9 +244,8 @@ const Mrserverdetails = ({ userData }) => {
         
       </div>
       <button onClick={() => {
-                                setShowConfirmation(true); // Display confirmation popup
-                                setactiontype("Stop"); // Pass action type and input value
-                              }}>btn</button>
+                                getServiceStatus() // Pass action type and input value
+                              }}>Update Service Status</button>
       {filteredData.length > 0 && (
         <table style={{ width: "100%", marginBottom: "100px" }}>
           <thead style={{ background: "#908fb0" }}>

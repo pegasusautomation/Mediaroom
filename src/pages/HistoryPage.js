@@ -25,6 +25,7 @@ const HistoryPage = () => {
               <td>{item.Machine}</td>
               <td>{item.Service}</td>
               <td>{item.Action}</td>
+              <td>{item.ActionHistory}</td>
             </tr>
           ))}
         </tbody>

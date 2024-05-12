@@ -9,6 +9,22 @@ const port = 5000; // Set the port number
 app.use(bodyParser.json());
 
 // Endpoint to handle stopping the service
+app.post('/getstatus-service', (req, res) => {
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/mrserverdeatils.ps1`;
+  // const powershellCommand = `powershell.exe -File C:/Mediaroom/src/w.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
+
+  exec(powershellCommand, (error, stdout, stderr) => {
+    if (error) {
+      console.error('Error stopping service:', error);
+      res.status(500).send('Error stopping service');
+      return;
+    }
+    console.log('Service stopped successfully.');
+    res.send('Service status updated successfully');
+  });
+});
+
+// Endpoint to handle stopping the service
 app.post('/stop-service', (req, res) => {
   const { roleName } = req.body;// Extract the service name from the request body
   const { computerName } = req.body;
@@ -25,7 +41,7 @@ app.post('/stop-service', (req, res) => {
       return;
     }
     console.log('Service stopped successfully.');
-    res.send('Raghavendra');
+    res.send('Service stoped successfully');
   });
 });
 
