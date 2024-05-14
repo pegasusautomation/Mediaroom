@@ -6,9 +6,8 @@ import ConfirmationPopup from "./confirmationpopup";
 const Mrserverdetails = ({ userData }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchColumn, setSearchColumn] = useState("ComputerName");
-  // State to handle showing the confirmation dialog
+  const [isFetchingServiceStatus, setIsFetchingServiceStatus] = useState(false); // State variable to track script execution status
   const [showConfirmation, setShowConfirmation] = useState(false);
-  // Define roleName and computerName states
   const [roleName, setRoleName] = useState("");
   const [computerName, setComputerName] = useState("");
   const [setaction, setactiontype] = useState("");
@@ -16,6 +15,36 @@ const Mrserverdetails = ({ userData }) => {
   const handleConfirmationCancel = () => {
     setShowConfirmation(false);
   };
+  
+// Within the Mrserverdetails component, add a new state variable to track the button's disabled state
+const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+// Update the state variable when the execution begins and ends
+const getServiceStatus = () => {
+  setIsButtonDisabled(true); // Disable the button when execution begins
+  setIsFetchingServiceStatus(true); // Set the flag to true before fetching service status
+  fetch("/getstatus-service", {
+    method: "POST",
+    body: null,
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((response) => {
+      setIsButtonDisabled(false); // Enable the button when execution ends
+      setIsFetchingServiceStatus(false); // Reset the flag after fetching service status
+      if (!response.ok) {
+        throw new Error("Error getting service");
+      }
+      console.log("Service updated successfully.");
+      alert("Service updated successfully."); // Show alert message
+    })
+    .catch((error) => {
+      setIsButtonDisabled(false); // Enable the button if an error occurs
+      setIsFetchingServiceStatus(false); // Reset the flag if an error occurs
+      console.error("Error getting service:", error.message);
+      alert("Error getting service: " + error.message); // Show alert message for error
+    });
+};
+
 
   const handleConfirmationSubmit = (message) => {
 	  console.log(message);
@@ -38,24 +67,7 @@ const Mrserverdetails = ({ userData }) => {
     setShowConfirmation(false);
   };
 
-  const getServiceStatus = () => {
-    fetch("/getstatus-service", {
-      method: "POST",
-	  body: null,
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error getting service");
-        }
-        console.log("Service updated successfully.");
-      })
-      .catch((error) => {
-        console.error("Error getting service:", error.message);
-      });
-  };
-
-  const handleStop = (roleName, computerName, message) => {
+   const handleStop = (roleName, computerName, message) => {
     const jsonServiceInfo = JSON.stringify({ roleName, computerName, message }); // Send Name and computerName as JSON data
     console.log(jsonServiceInfo);
     fetch("/stop-service", {
@@ -209,21 +221,22 @@ const Mrserverdetails = ({ userData }) => {
     }
   });
 
+  // Within the return statement of the Mrserverdetails component
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        width: "100%",
-        height: "100%",
+        alignItems: "center", // Align items to the center
+        width: "90%",
+        height: "88%",
         overflow: "auto",
       }}
     >
       <caption style={{ fontSize: "30px", marginBottom: "20px" }}>
-        PLANO SERVERS
+        HOUSTON SERVERS
       </caption>
-      <div style={{ marginBottom: "20px" }}>
+      <div style={{ width: "100%", marginBottom: "20px", textAlign: "left", paddingLeft: "20px" }}>
         {filteredData.length > 0 && (
           <select
             value={searchColumn}
@@ -239,13 +252,28 @@ const Mrserverdetails = ({ userData }) => {
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
-          style={{ height: "30px", width: "200px" }}
+          style={{ height: "20px", width: "200px" }}
         />
-        
       </div>
-      <button onClick={() => {
-                                getServiceStatus() // Pass action type and input value
-                              }}>Update Service Status</button>
+      <button
+        id="updateServiceStatusBtn"
+        onClick={getServiceStatus}
+        disabled={isButtonDisabled}
+        style={{
+          backgroundColor: isButtonDisabled ? '#ccc' : '#4CAF50',
+          color: isButtonDisabled ? 'orange' : '#fff',
+          cursor: isButtonDisabled ? 'not-allowed' : 'pointer',
+          border: 'none',
+          width: '150px',
+          borderRadius: '5px',
+          fontSize: '14px',
+          marginRight: '700px'
+        }}
+      >
+        {isButtonDisabled ? 'Updating Status...' : 'Update Service Status'}
+      </button>
+<br></br>
+
       {filteredData.length > 0 && (
         <table style={{ width: "100%", marginBottom: "100px" }}>
           <thead style={{ background: "#908fb0" }}>
@@ -298,21 +326,20 @@ const Mrserverdetails = ({ userData }) => {
                               >
                                 Start
                               </button>
-                            )}
-                            <button
-                              onClick={() => {
-                                setShowConfirmation(true); // Display confirmation popup
-                                setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
-                                setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
-                                setactiontype("Stop"); // Pass action type and input value
-                              }}
-                              style={{
-                                marginRight: "5px",
-                                background: "#b95d5d",
-                              }}
-                            >
-                              Stop
-                            </button>
+                            )}  :  <button
+                            onClick={() => {
+                              setShowConfirmation(true); // Display confirmation popup
+                              setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
+                              setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
+                              setactiontype("Stop"); // Pass action type and input value
+                            }}
+                            style={{
+                              marginRight: "5px",
+                              background: "#b95d5d",
+                            }}
+                          >
+                            Stop
+                          </button>                         
 
                             <button
                               onClick={() => {
@@ -328,6 +355,7 @@ const Mrserverdetails = ({ userData }) => {
                             >
                               Restart
                             </button>
+							
                           </>
                         )}
                       </li>

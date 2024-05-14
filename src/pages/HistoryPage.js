@@ -3,8 +3,15 @@ import jsonData from './UserLogonevents.json';
 
 const HistoryPage = () => {
     return (
-    <div style={{margin:'20px'}}>
-      <h2 style={{ marginLeft: "300px", fontSize: "20px" }}>Login History</h2>
+    <div style={{margin:'20px', display: "flex",
+    flexDirection: "column",
+    alignItems: "center", // Align items to the center
+    width: "100%",
+    height: "80%",
+    overflow: "auto",}}>
+      <caption style={{ fontSize: "30px", marginBottom: "20px" }}>
+        USER EVENT LOGS
+      </caption>
       <br></br>
       <table style={{ height: "300px", overflowY: "inherit" }}>
         <thead style={{ background: "#908fb0" ,height:'30px'}}>

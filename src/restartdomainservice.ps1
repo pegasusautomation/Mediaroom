@@ -1,34 +1,37 @@
 param (
-    [string]$ServiceName, # Accept the service name as a parameter
-   [string]$ComputerName,  # Accept the computer name as a parameter
-    [string]$Message  # Accept the message as a parameter
+   [string]$ServiceName, # Accept the service name as a parameter
+  [string]$ComputerName,  # Accept the computer name as a parameter
+   [string]$Message  # Accept the message as a parameter
 )
 
 # Check if the service name is provided
 if (-not $ServiceName) {
-   Write-Host "Error: Service name not provided."
-   exit 1
+  Write-Host "Error: Service name not provided."
+  exit 1
 }
 
 # Check if the computer name is provided
 if (-not $ComputerName) {
-   Write-Host "Error: Computer name not provided."
-   exit 1
+  Write-Host "Error: Computer name not provided."
+  exit 1
 }
 
 # Check if the message is provided
 if (-not $Message) {
-   Write-Host "Error: Message not provided."
-   exit 1
+  Write-Host "Error: Message not provided."
+  exit 1
 }
 
-if ($ComputerName -like "MSPBR5*") {
-   # Get service name based on computer name
-   $username = "MSPBR5\Raghavendra.Gandanah"
+# Get the currently logged-in username and domain
+$currentUsername = $env:USERNAME
+$currentDomain = $env:USERDOMAIN
+if ($computerName -like "MSPBR5*") {
+  # Get service name based on computer name
+  $username = "$currentDomain\$currentUsername"
 }
 else {
-   # Get service name based on computer name
-   $username = "MSPBE5\Raghavendra.Gandanah"
+  # Get service name based on computer name
+  $username = "MSPBE5\$currentUsername"
 }
 
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
@@ -36,16 +39,16 @@ $credential = New-Object System.Management.Automation.PSCredential($username, $p
 
 # Invoke-Command to stop the service on the remote computer
 Invoke-Command -ComputerName $ComputerName -Credential $credential -ScriptBlock {
-   param($serviceName)
-   Restart-Service -Name $serviceName
+  param($serviceName)
+  Restart-Service -Name $serviceName
 } -ArgumentList $ServiceName
 
 # Invoke-Command to get the service status on the remote computer
 $servicename = $ServiceName
 
 $scriptBlock = {
-   param($serviceName)
-   Get-Service $serviceName
+  param($serviceName)
+  Get-Service $serviceName
 }
 
 $service1 = Invoke-Command -ComputerName $ComputerName -Credential $credential -ScriptBlock $scriptBlock -ArgumentList $ServiceName
@@ -74,59 +77,37 @@ $jsonUpdated | Out-File -FilePath $jsonpath -Encoding UTF8
 Write-Host "JSON file created: $jsonUpdated"
 
 
-# Initialize an empty array to store data
-$currentDate = Get-Date 
-$receivedData = @{
-   "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
-   "User" = $username
-   "Machine" = $computerName
-   "Service" = $ServiceName
-   "Action" = "Restarted"
-   "Action History" = $Message
+# Store data in a PowerShell hashtable
+$currentDate = Get-Date
+$serviceData = @{
+  "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
+ "User" = $username
+ "Machine" = $computerName
+ "Service" = $ServiceName
+ "Action" = "Restarted"
+ "ActionHistory" = $Message
 }
 
-# Convert the received data to JSON format
-$newJsonData = $receivedData | ConvertTo-Json -Depth 100
+# Convert the hashtable to JSON format
+$newJsonData = $serviceData | ConvertTo-Json
 
-# Set the file path
-$filePath = "C:\Mediaroom\src\loginhistory.json"
+# Set the file path for the JSON file
+$jsonFilePath = "C:\Mediaroom\src\pages\UserLogonevents.json"
 
-# Check if the file exists and its size
-if (Test-Path $filePath -and (Get-Item $filePath).Length -eq 0) {
-   # Delete the file if its size is zero
-   Remove-Item $filePath -Force
-}
-
-# Initialize the variable to hold existing content
-$existingContent = @()
-
-# Check if the file exists
-if (Test-Path $filePath) {
-   # Read existing JSON file content
-   $existingContent = Get-Content -Path $filePath -Raw
-
-   # Trim whitespace from the beginning and end of the existing content
-   $existingContent = $existingContent.Trim()
-
-   # Check if existing content is empty or not
-   if ($existingContent -ne "") {
-       # Remove the leading and trailing square brackets if they exist
-       if ($existingContent[0] -eq "[" -and $existingContent[-1] -eq "]") {
-           $existingContent = $existingContent.Substring(1, $existingContent.Length - 2)
-       }
-       
-       # Add a comma separator if existing content is not empty
-       $existingContent += ","
-   }
-}
-
-# If there's existing content, add it along with the new entry
-if ($existingContent) {
-   $newContent = "[" + $existingContent + $newJsonData + "]"
+# Read existing JSON file content
+if (Test-Path $jsonFilePath) {
+  $existingJson = Get-Content -Path $jsonFilePath -Raw | ConvertFrom-Json
 } else {
-   # If no existing content, write the new entry without enclosing brackets
-   $newContent = $newJsonData
+  $existingJson = @()
 }
+
+# Append the new data to the existing JSON array
+$existingJson += $serviceData
+
+# Convert the updated array back to JSON format
+$updatedJson = $existingJson | ConvertTo-Json -Depth 100
 
 # Write the updated JSON data to the file
-$newContent | Out-File -FilePath $filePath
+$updatedJson | Set-Content -Path $jsonFilePath -Encoding UTF8
+
+Write-Host "Data added to JSON file: $jsonFilePath"

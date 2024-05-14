@@ -85,7 +85,7 @@ const App = () => {
             <Route exact path="/servers" className="bitrate">
                 <Servertable userData={userData}/>
              </Route>
-             <Route exact path="/planoservers">
+             <Route exact path="/houstonservers">
                 <Mrserverdetails userData={userData}/>
              </Route>
             <Route exact path="/certificates">

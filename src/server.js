@@ -8,21 +8,35 @@ const port = 5000; // Set the port number
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-// Endpoint to handle stopping the service
+let isExecutingStatusScript = false; // Flag to track script execution status
+
+// Endpoint to handle getting service status
 app.post('/getstatus-service', (req, res) => {
+  if (isExecutingStatusScript) {
+    // If the script is already executing, return a 503 Service Unavailable response
+    res.status(503).send('Service status script is already executing. Please wait.');
+    return;
+  }
+
+  isExecutingStatusScript = true; // Set the flag to true to indicate script execution
   const powershellCommand = `powershell.exe -File C:/Mediaroom/src/mrserverdeatils.ps1`;
-  // const powershellCommand = `powershell.exe -File C:/Mediaroom/src/w.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
+    isExecutingStatusScript = false; // Reset the flag after script execution
     if (error) {
-      console.error('Error stopping service:', error);
-      res.status(500).send('Error stopping service');
+      console.error('Error getting service status:', error);
+      res.status(500).send('Error getting service status');
       return;
     }
-    console.log('Service stopped successfully.');
-    res.send('Service status updated successfully');
+
+    // Log the status received from PowerShell script
+    console.log('Service status:', stdout);
+
+    // Assuming your PowerShell script returns the status, you can send it back as response
+    res.send("Service status updated successfully");
   });
 });
+
 
 // Endpoint to handle stopping the service
 app.post('/stop-service', (req, res) => {
