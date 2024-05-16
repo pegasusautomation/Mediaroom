@@ -36,6 +36,8 @@ $jsonObject = $jsonContent | ConvertFrom-Json
 
 $extractedData = @()
 
+# Get the currently logged-in username and domain
+$currentUsername = $env:USERNAME
 # Refers to B server layout
 foreach ($branch in $xml.SelectNodes("//branch")) {
     # $branchName = $branch.SelectSingleNode("@name").Value
@@ -46,7 +48,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             Write-Output($computerName)
 			
             # Get service name based on computer name
-            $username = "$($jsonObject.Branch)\Raghavendra.Gandanah"
+            $username = "$($jsonObject.Branch)\$currentUsername"
             #  $username = 'MSPBR5\Raghavendra.Gandanah'
             $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
             $credential = New-Object System.Management.Automation.PSCredential($username, $password)
@@ -67,7 +69,7 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             }
 
             foreach ($servicedec in $allServices.DisplayName) {
-                if ($servicedec.Contains("Iptv") -or $service.Contains("IPTV") -or $servicedec.Contains("World Wide Web")) {
+                if ($servicedec.Contains("Iptv") -or $servicedec.Contains("IPTV") -or $servicedec.Contains("World Wide Web")) {
                     # Get the service with the specified display name
                     $correspondingservice = Get-Service | Where-Object { $_.DisplayName -eq $servicedec }
                     if ($correspondingservice.Name -notin $serviceList) {
@@ -79,9 +81,9 @@ foreach ($branch in $xml.SelectNodes("//branch")) {
             $serviceStatus = @()
             if ($serviceList) {
                 foreach ($serviceName in $serviceList) {
-                    try {
+                    try {                        
                         # Get service name based on computer name
-                        $username = "$($jsonObject.Branch)\Raghavendra.Gandanah"
+                        $username = "$($jsonObject.Branch)\$currentUsername"
                         # $username = 'MSPBR5\Raghavendra.Gandanah'
                         $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
                         $credential = New-Object System.Management.Automation.PSCredential($username, $password)
@@ -170,7 +172,7 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
             Write-Output($computerName)
 			
             # Get service name based on computer name
-            $username = "$($jsonObject.Aquasition)\Raghavendra.Gandanah"
+            $username = "$($jsonObject.Aquasition)\$currentUsername"
             #  $username = 'MSPBR5\Raghavendra.Gandanah'
             $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
             $credential = New-Object System.Management.Automation.PSCredential($username, $password)
@@ -205,7 +207,7 @@ foreach ($branch in $xml_A.SelectNodes("//branch")) {
                 foreach ($serviceName in $serviceList) {
                     try {
                         # Get service name based on computer name
-                        $username = "$($jsonObject.Aquasition)\Raghavendra.Gandanah"
+                        $username = "$($jsonObject.Aquasition)\$currentUsername"
                         # $username = 'MSPBR5\Raghavendra.Gandanah'
                         $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
                         $credential = New-Object System.Management.Automation.PSCredential($username, $password)

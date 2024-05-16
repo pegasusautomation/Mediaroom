@@ -98,9 +98,8 @@ app.post('/restart-service', (req, res) => {
 app.post('/stopall-services', (req, res) => {
   const { roleName } = req.body;// Extract the service name from the request body
   const { computerName } = req.body;
-  // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
-  // Construct the PowerShell command with the service name as an argument
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+  const { message } = req.body;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -117,9 +116,8 @@ app.post('/stopall-services', (req, res) => {
   app.post('/startall-services', (req, res) => {
     const { roleName } = req.body;// Extract the service name from the request body
     const { computerName } = req.body;
-    // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
-    // Construct the PowerShell command with the service name as an argument
-    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+	const { message } = req.body;
+    const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startAllDomainServices.ps1 -ComputerName "${computerName}" -Message "${message}"`;
   
     exec(powershellCommand, (error, stdout, stderr) => {
       if (error) {
@@ -136,9 +134,8 @@ app.post('/stopall-services', (req, res) => {
 app.post('/restartall-services', (req, res) => {
   const { roleName } = req.body;// Extract the service name from the request body
   const { computerName } = req.body;
-  // const powershellCommand = `powershell Stop-Service -Name "${Name}"`;
-  // Construct the PowerShell command with the service name as an argument
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}"`;
+  const { message } = req.body;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName} -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {

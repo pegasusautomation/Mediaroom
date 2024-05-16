@@ -22,6 +22,7 @@ const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 // Update the state variable when the execution begins and ends
 const getServiceStatus = () => {
   setIsButtonDisabled(true); // Disable the button when execution begins
+  console.log(isFetchingServiceStatus);
   setIsFetchingServiceStatus(true); // Set the flag to true before fetching service status
   fetch("/getstatus-service", {
     method: "POST",
@@ -221,186 +222,191 @@ const getServiceStatus = () => {
     }
   });
 
-  // Within the return statement of the Mrserverdetails component
-  return (
-    <div
+// Within the return statement of the Mrserverdetails component
+return (
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center", // Align items to the center
+      width: "90%",
+      height: "88%",
+      overflow: "auto",
+    }}
+  >
+    <caption style={{ fontSize: "30px", marginBottom: "20px" }}>
+      HOUSTON SERVERS
+    </caption>
+    <div style={{ width: "100%", marginBottom: "20px", textAlign: "left", paddingLeft: "20px" }}>
+      {filteredData.length > 0 && (
+        <select
+          value={searchColumn}
+          onChange={handleColumnChange}
+          style={{ marginRight: "10px" }}
+        >
+          <option value="ComputerName">ComputerName</option>
+          <option value="ServiceStatus">ServiceStatus</option>
+        </select>
+      )}
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleSearchChange}
+        style={{ height: "20px", width: "200px" }}
+      />
+    </div>
+    <button
+      id="updateServiceStatusBtn"
+      onClick={getServiceStatus}
+      disabled={isButtonDisabled}
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center", // Align items to the center
-        width: "90%",
-        height: "88%",
-        overflow: "auto",
+        backgroundColor: isButtonDisabled ? '#ccc' : '#4CAF50',
+        color: isButtonDisabled ? 'orange' : '#fff',
+        cursor: isButtonDisabled ? 'not-allowed' : 'pointer',
+        border: 'none',
+        width: '150px',
+        borderRadius: '5px',
+        fontSize: '14px',
+        marginRight: '700px'
       }}
     >
-      <caption style={{ fontSize: "30px", marginBottom: "20px" }}>
-        HOUSTON SERVERS
-      </caption>
-      <div style={{ width: "100%", marginBottom: "20px", textAlign: "left", paddingLeft: "20px" }}>
-        {filteredData.length > 0 && (
-          <select
-            value={searchColumn}
-            onChange={handleColumnChange}
-            style={{ marginRight: "10px" }}
-          >
-            <option value="ComputerName">ComputerName</option>
-            <option value="ServiceStatus">ServiceStatus</option>
-          </select>
-        )}
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          style={{ height: "20px", width: "200px" }}
-        />
-      </div>
-      <button
-        id="updateServiceStatusBtn"
-        onClick={getServiceStatus}
-        disabled={isButtonDisabled}
-        style={{
-          backgroundColor: isButtonDisabled ? '#ccc' : '#4CAF50',
-          color: isButtonDisabled ? 'orange' : '#fff',
-          cursor: isButtonDisabled ? 'not-allowed' : 'pointer',
-          border: 'none',
-          width: '150px',
-          borderRadius: '5px',
-          fontSize: '14px',
-          marginRight: '700px'
-        }}
-      >
-        {isButtonDisabled ? 'Updating Status...' : 'Update Service Status'}
-      </button>
-<br></br>
+      {isButtonDisabled ? 'Updating Status...' : 'Update Service Status'}
+    </button>
+    <br></br>
 
-      {filteredData.length > 0 && (
-        <table style={{ width: "100%", marginBottom: "100px" }}>
-          <thead style={{ background: "#908fb0" }}>
-            <tr>
-              <th>Computer Name</th>
-              <th>Computer Status</th>
-              <th>Service Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((item, index) => (
-              <tr key={index}>
-                <td>{item.ComputerName}</td>
-                <td>{item.ComputerStatus}</td>
-                <td>
-                  {showConfirmation && (
-                    <ConfirmationPopup
-                      onCancel={handleConfirmationCancel}
-                      onConfirm={handleConfirmationSubmit}
-                    />
-                  )}
-                  <ul>
-                    {item.ServiceStatus.map((role, roleIndex) => (
-                      <li key={roleIndex}>
-                        <strong>Name:</strong> {role.Name},<br />
-                        <strong>Status:</strong>{" "}
-                        <span
-                          style={{
-                            color: role.Status === "Stopped" ? "red" : "green",
-                            marginRight: "10px",
-                          }}
-                        >
-                          {role.Status}
-                        </span>
-                        {role.Status !== "NA" && (
-                          <>
-                            {role.Status === "Stopped" && (
-                              <button
+    {filteredData.length > 0 && (
+      <table style={{ width: "100%", marginBottom: "100px" }}>
+        <thead style={{ background: "#908fb0" }}>
+          <tr>
+            <th>Computer Name</th>
+            <th>Computer Status</th>
+            <th>Service Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredData.map((item, index) => (
+            <tr key={index}>
+              <td>{item.ComputerName}</td>
+              <td>{item.ComputerStatus}</td>
+              <td>
+                {showConfirmation && (
+                  <ConfirmationPopup
+                    onCancel={handleConfirmationCancel}
+                    onConfirm={handleConfirmationSubmit}
+                  />
+                )}
+                <ul>
+                  {item.ServiceStatus.map((role, roleIndex) => (
+                    <li key={roleIndex}>
+                      <strong>Name:</strong> {role.Name}<br />
+                      <strong>Status:</strong>{" "}
+                      <span
+                        style={{
+                          color: role.Status === "Stopped" ? "red" : "green",
+                          marginRight: "10px",
+                        }}
+                      >
+                        {role.Status}
+                      </span>
+                      {role.Status !== "NA" && (
+                        <>
+                          {role.Status === "Stopped" && (
+                            <button
                               onClick={() => {
                                 setShowConfirmation(true); // Display confirmation popup
                                 setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
                                 setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
                                 setactiontype("Start"); // Pass action type and input value
                               }}
-                                style={{
-                                  marginRight: "5px",
-                                  background: "#0cb061",
-                                }}
-                              >
-                                Start
-                              </button>
-                            )}  :  <button
-                            onClick={() => {
-                              setShowConfirmation(true); // Display confirmation popup
-                              setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
-                              setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
-                              setactiontype("Stop"); // Pass action type and input value
-                            }}
-                            style={{
-                              marginRight: "5px",
-                              background: "#b95d5d",
-                            }}
-                          >
-                            Stop
-                          </button>                         
-
-                            <button
-                              onClick={() => {
-                                setShowConfirmation(true); // Display confirmation popup
-                                setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
-                                setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
-                                setactiontype("Restart"); // Pass action type and input value
-                              }}
                               style={{
                                 marginRight: "5px",
-                                background: "#635279",
+                                background: "#0cb061",
                               }}
                             >
-                              Restart
+                              Start
                             </button>
-							
-                          </>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </td>
-                <td>
-                  <button
-                    onClick={() => {
-                      setShowConfirmation(true); // Display confirmation popup
-                      setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
-                      setactiontype("StopAll"); // Pass action type and input value
-                    }}
-                    style={{ marginBottom: "5px", background: "#b95d5d" }}
-                  >
-                    Stop All
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowConfirmation(true); // Display confirmation popup
-                      setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
-                      setactiontype("StartAll"); // Pass action type and input value
-                    }}
-                    style={{ marginBottom: "5px", background: "#0cb061" }}
-                  >
-                    Start All
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowConfirmation(true); // Display confirmation popup
-                      setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
-                      setactiontype("RestartAll"); // Pass action type and input value
-                    }}
-                    style={{ marginBottom: "5px", background: "#635279" }}
-                  >
-                    Restart All
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
-  );
+                          )}
+
+                          {role.Status === "Running" && (
+                            <>
+                              <button
+                                onClick={() => {
+                                  setShowConfirmation(true); // Display confirmation popup
+                                  setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
+                                  setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
+                                  setactiontype("Stop"); // Pass action type and input value
+                                }}
+                                style={{
+                                  marginRight: "5px",
+                                  background: "#b95d5d",
+                                }}
+                              >
+                                Stop
+                              </button>
+                              <button
+                                onClick={() => {
+                                  setShowConfirmation(true); // Display confirmation popup
+                                  setRoleName(role.Name); // Set roleName for use in handleConfirmationSubmit
+                                  setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
+                                  setactiontype("Restart"); // Pass action type and input value
+                                }}
+                                style={{
+                                  marginRight: "5px",
+                                  background: "#635279",
+                                }}
+                              >
+                                Restart
+                              </button>
+                            </>
+                          )}
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </td>
+              <td>
+                <button
+                  onClick={() => {
+                    setShowConfirmation(true); // Display confirmation popup
+                    setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
+                    setactiontype("StopAll"); // Pass action type and input value
+                  }}
+                  style={{ marginBottom: "5px", background: "#b95d5d" }}
+                >
+                  Stop Services
+                </button>
+                <button
+                  onClick={() => {
+                    setShowConfirmation(true); // Display confirmation popup
+                    setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
+                    setactiontype("StartAll"); // Pass action type and input value
+                  }}
+                  style={{ marginBottom: "5px", background: "#0cb061" }}
+                >
+                  Start Services
+                </button>
+                <button
+                  onClick={() => {
+                    setShowConfirmation(true); // Display confirmation popup
+                    setComputerName(item.ComputerName); // Set computerName for use in handleConfirmationSubmit
+                    setactiontype("RestartAll"); // Pass action type and input value
+                  }}
+                  style={{ marginBottom: "5px", background: "#635279" }}
+                >
+                  Restart Services
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    )}
+  </div>
+);
+
 };
 
 export default Mrserverdetails;
