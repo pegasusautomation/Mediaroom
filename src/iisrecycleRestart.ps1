@@ -65,7 +65,7 @@ $serviceData = @{
     "User" = $username
     "Machine" = $computerName
     "Service" = $servicecmd
-    "Action" = "Stopped"
+    "Action" = "IIS Restarted"
     "ActionHistory" = $Message
 }
 

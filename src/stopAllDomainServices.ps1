@@ -1,10 +1,10 @@
 param (
-    [string]$computerName,  # Accept the computer name as a parameter
+    [string]$ComputerName,  # Accept the computer name as a parameter
     [string]$Message  # Accept the message as a parameter
 )
 
 # Check if the computer name is provided
-if (-not $computerName) {
+if (-not $ComputerName) {
     Write-Host "Error: Computer name not provided."
     exit 1
 }
@@ -19,7 +19,7 @@ if (-not $Message) {
 $currentUsername = $env:USERNAME
 $currentDomain = $env:USERDOMAIN
 
-if ($computerName -like "MSPBR5*") {
+if ($ComputerName -like "MSPBR5*") {
     # Set username based on computer name pattern
     $username = "$currentDomain\$currentUsername"
 } else {
@@ -30,50 +30,79 @@ if ($computerName -like "MSPBR5*") {
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential($username, $password)
 
-# Define the script block to stop the service on the remote computer
-$scriptBlock = {
-    Start-Process -FilePath "C:\Program Files\Microsoft IPTV Services\InstallTools\AdminService.exe" -ArgumentList "/action=Stop" -Wait -NoNewWindow
+# Define the script block to stop services and get their statuses
+$stopServiceScriptBlock = {
+    param($serviceName)
+    Stop-Service -Name $serviceName -Force
+    Start-Sleep -Seconds 5
+    Get-Service -Name $serviceName
 }
 
-# Invoke the command on the remote computer
-Invoke-Command -ComputerName $computerName -Credential $credential -ScriptBlock $scriptBlock
+# Path to the JSON file
+$jsonPath = "C:\Mediaroom\src\manageserver\mrserverdata.json"
 
-# Prepare data to store in the JSON file
-$servicecmd = "AdminService.exe /action=stop"
+# Read the JSON file
+$jsonContent = Get-Content -Path $jsonPath -Raw
+$data = $jsonContent | ConvertFrom-Json
+
+# Find the entry for the specified computer
+$computerEntry = $data | Where-Object { $_.ComputerName -eq $ComputerName }
+
+if (-not $computerEntry) {
+    Write-Host "Error: No entry found for computer: $ComputerName"
+    exit 1
+}
+
+# Loop through each service in the ServiceStatus array and update its status
+foreach ($service in $computerEntry.ServiceStatus) {
+    $serviceName = $service.Name
+    $serviceResult = Invoke-Command -ComputerName $ComputerName -Credential $credential -ScriptBlock $stopServiceScriptBlock -ArgumentList $serviceName
+    $service.Status = $serviceResult.Status
+    Write-Host "Updated status for service: $serviceName to $($serviceResult.Status)"  # Debugging output
+}
+
+# Convert the updated data back to JSON
+$jsonUpdated = $data | ConvertTo-Json -Depth 100
+
+# Output the updated JSON for debugging
+Write-Host "Updated JSON:"
+$jsonUpdated
+
+# Write the updated JSON back to the file
+$jsonUpdated | Set-Content -Path $jsonPath -Encoding UTF8
+Write-Host "JSON file updated with service statuses."
+
+# Prepare log data
 $currentDate = Get-Date
-$serviceData = @{
-    "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
-    "User" = $username
-    "Machine" = $computerName
-    "Service" = $servicecmd
-    "Action" = "Stopped"
-    "ActionHistory" = $Message
+$logEntry = @{
+    Timelog = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
+    User = $username
+    Machine = $ComputerName
+    Service = "AdminService.exe /action=stop"
+    Action = "Stopped"
+    ActionHistory = $Message
 }
 
-# Convert the hashtable to JSON format
-$newJsonData = $serviceData | ConvertTo-Json
+# Path to the log JSON file
+$logFilePath = "C:\Mediaroom\src\pages\UserLogonevents.json"
 
-# Set the file path for the JSON file
-$jsonFilePath = "C:\Mediaroom\src\pages\UserLogonevents.json"
-
-# Read existing JSON file content
-if (Test-Path $jsonFilePath) {
-    $existingJson = Get-Content -Path $jsonFilePath -Raw | ConvertFrom-Json
-    # Ensure existingJson is treated as an array
-    if ($existingJson -isnot [array]) {
-        $existingJson = @($existingJson)
+# Read existing log file content
+if (Test-Path $logFilePath) {
+    $existingLog = Get-Content -Path $logFilePath -Raw | ConvertFrom-Json
+    if ($existingLog -isnot [array]) {
+        $existingLog = @($existingLog)
     }
 } else {
-    $existingJson = @()
+    $existingLog = @()
 }
 
-# Append the new data to the existing JSON array
-$existingJson += $serviceData
+# Append the new log entry
+$existingLog += $logEntry
 
-# Convert the updated array back to JSON format
-$updatedJson = $existingJson | ConvertTo-Json -Depth 100
+# Convert the updated log entries back to JSON
+$updatedLogJson = $existingLog | ConvertTo-Json -Depth 100
 
-# Write the updated JSON data to the file
-$updatedJson | Set-Content -Path $jsonFilePath -Encoding UTF8
+# Write the updated log JSON back to the file
+$updatedLogJson | Set-Content -Path $logFilePath -Encoding UTF8
 
-Write-Host "Data added to JSON file: $jsonFilePath"
+Write-Host "Data added to JSON file: $logFilePath"

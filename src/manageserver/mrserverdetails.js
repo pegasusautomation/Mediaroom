@@ -15,7 +15,15 @@ const Mrserverdetails = ({ userData }) => {
   const [isIISStopping, setIsIISStopping] = useState(false);
   const [isIISStarting, setIsIISStarting] = useState(false);
   const [isIISRestarting, setIsIISRestarting] = useState(false);
-
+  
+  const [isServicesStopping, setIsServicesStopping] = useState(false);
+  const [isServicesStarting, setIsServicesStarting] = useState(false);
+  const [isServicesReStarting, setIsServicesReStarting] = useState(false);
+  
+  const [isServiceStopping, setServiceStopping] = useState(false);
+  const [isServiceStarting, setServiceStarting] = useState(false);
+  const [isServiceReStarting, setServiceReStarting] = useState(false);
+  
   const handleConfirmationCancel = () => {
     setShowConfirmation(false);
   };
@@ -68,7 +76,8 @@ const Mrserverdetails = ({ userData }) => {
     setShowConfirmation(false);
   };
 
-  const handleStop = (roleName, computerName, message) => {
+ const handleStop = (roleName, computerName, message) => {
+    setServiceStopping(true); // Set action executing state
     const jsonServiceInfo = JSON.stringify({ roleName, computerName, message });
     fetch("/stop-service", {
       method: "POST",
@@ -76,17 +85,20 @@ const Mrserverdetails = ({ userData }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+        setServiceStopping(false); // Reset action executing state
         if (!response.ok) {
           throw new Error("Error stopping service");
         }
         console.log("Service stopped successfully.");
       })
       .catch((error) => {
+        setServiceStopping(false); // Reset action executing state
         console.error("Error stopping service:", error.message);
       });
   };
 
   const handleStart = (roleName, computerName, message) => {
+	  setServiceStarting(true); // Set action executing state
     const jsonServiceInfo = JSON.stringify({ roleName, computerName, message });
     fetch("/start-service", {
       method: "POST",
@@ -94,17 +106,20 @@ const Mrserverdetails = ({ userData }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+		  setServiceStarting(false); // Reset action executing state
         if (!response.ok) {
           throw new Error("Error starting service");
         }
         console.log("Service started successfully.");
       })
       .catch((error) => {
+		  setServiceStarting(false); // Reset action executing state
         console.error("Error starting service:", error.message);
       });
   };
 
   const handleRestart = (roleName, computerName, message) => {
+	  setServiceReStarting(true); // Reset action executing state
     const jsonServiceInfo = JSON.stringify({ roleName, computerName, message });
     fetch("/restart-service", {
       method: "POST",
@@ -112,17 +127,20 @@ const Mrserverdetails = ({ userData }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+		  setServiceReStarting(false); // Reset action executing state
         if (!response.ok) {
           throw new Error("Error restarting service");
         }
         console.log("Service restarted successfully.");
       })
       .catch((error) => {
+		  setServiceReStarting(false); // Reset action executing state
         console.error("Error restarting service:", error.message);
       });
   };
 
   const handleStopAll = (computerName, message) => {
+    setIsServicesStopping(true);
     const jsonServiceInfo = JSON.stringify({ computerName, message });
     fetch("/stopall-services", {
       method: "POST",
@@ -130,17 +148,21 @@ const Mrserverdetails = ({ userData }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+        setIsServicesStopping(false);
         if (!response.ok) {
           throw new Error("Error stopping all services");
         }
         console.log("All services stopped successfully.");
+		alert("Services stopped successfully.");
       })
       .catch((error) => {
+        setIsServicesStopping(false);
         console.error("Error stopping all services:", error.message);
       });
   };
 
   const handleStartAll = (computerName, message) => {
+	  setIsServicesStarting(true); // Set action executing state
     const jsonServiceInfo = JSON.stringify({ computerName, message });
     fetch("/startall-services", {
       method: "POST",
@@ -148,17 +170,21 @@ const Mrserverdetails = ({ userData }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+		  setIsServicesStarting(false); // Set action executing state
         if (!response.ok) {
           throw new Error("Error starting all services");
         }
         console.log("All services started successfully.");
+		alert("Services started successfully.");
       })
       .catch((error) => {
+		  setIsServicesStarting(false); // Set action executing state
         console.error("Error starting all services:", error.message);
       });
   };
 
   const handleRestartAll = (computerName, message) => {
+	  setIsServicesReStarting(true); // Set action executing state
     const jsonServiceInfo = JSON.stringify({ computerName, message });
     fetch("/restartall-services", {
       method: "POST",
@@ -166,12 +192,15 @@ const Mrserverdetails = ({ userData }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+		  setIsServicesReStarting(false); // Set action executing state
         if (!response.ok) {
           throw new Error("Error restarting all services");
         }
         console.log("All services restarted successfully.");
+		alert("Services restarted successfully.");
       })
       .catch((error) => {
+		  setIsServicesReStarting(false); // Set action executing state
         console.error("Error restarting all services:", error.message);
       });
   };
@@ -382,36 +411,42 @@ const Mrserverdetails = ({ userData }) => {
                           <>
                             {role.Status === "Stopped" && (
                               <button
-                                onClick={() => {
-                                  setShowConfirmation(true);
-                                  setRoleName(role.Name);
-                                  setComputerName(item.ComputerName);
-                                  setActionType("Start");
-                                }}
-                                style={{
-                                  marginRight: "5px",
-                                  background: "#0cb061",
-                                }}
-                              >
-                                Start
-                              </button>
+                                  onClick={() => {
+                                    setShowConfirmation(true);
+                                    setRoleName(role.Name);
+                                    setComputerName(item.ComputerName);
+                                    setActionType("Start");
+                                  }}
+                                  disabled={isServiceStarting} // Disable button based on state
+                    style={{
+                      marginBottom: "5px",
+                      background: isServiceStarting ? "#ccc" : "#0cb061",
+                      color: isServiceStarting ? "black" : "#fff",
+                      cursor: isServiceStarting ? "not-allowed" : "pointer",
+                    }}
+                  >
+                    {isServiceStarting ? "starting..." : "Start"}
+                  </button>
                             )}
                             {role.Status === "Running" && (
                               <>
-                                <button
+                                 <button
                                   onClick={() => {
                                     setShowConfirmation(true);
                                     setRoleName(role.Name);
                                     setComputerName(item.ComputerName);
                                     setActionType("Stop");
                                   }}
-                                  style={{
-                                    marginRight: "5px",
-                                    background: "#b95d5d",
-                                  }}
-                                >
-                                  Stop
-                                </button>
+                                  disabled={isServiceStopping} // Disable button based on state
+                    style={{
+                      marginBottom: "5px",
+                      background: isServiceStopping ? "#ccc" : "#b95d5d",
+                      color: isServiceStopping ? "black" : "#fff",
+                      cursor: isServiceStopping ? "not-allowed" : "pointer",
+                    }}
+                  >
+                    {isServiceStopping ? "stopping..." : "Stop"}
+                  </button>
                                 <button
                                   onClick={() => {
                                     setShowConfirmation(true);
@@ -419,13 +454,16 @@ const Mrserverdetails = ({ userData }) => {
                                     setComputerName(item.ComputerName);
                                     setActionType("Restart");
                                   }}
-                                  style={{
-                                    marginRight: "5px",
-                                    background: "#635279",
-                                  }}
-                                >
-                                  Restart
-                                </button>
+                                  disabled={isServiceReStarting} // Disable button based on state
+                    style={{
+                      marginBottom: "5px",
+                      background: isServiceReStarting ? "#ccc" : "#635279",
+                      color: isServiceReStarting ? "black" : "#fff",
+                      cursor: isServiceReStarting ? "not-allowed" : "pointer",
+                    }}
+                  >
+                    {isServiceReStarting ? "Restarting..." : "Restart"}
+                  </button>
                               </>
                             )}
                           </>
@@ -435,15 +473,21 @@ const Mrserverdetails = ({ userData }) => {
                   </ul>
                 </td>
                 <td>
-                  <button
+                   <button
                     onClick={() => {
                       setShowConfirmation(true);
                       setComputerName(item.ComputerName);
                       setActionType("StopAll");
                     }}
-                    style={{ marginBottom: "5px", background: "#b95d5d" }}
+                    disabled={isServicesStopping} // Disable button based on state
+                    style={{
+                      marginBottom: "5px",
+                      background: isServicesStopping ? "#ccc" : "#b95d5d",
+                      color: isServicesStopping ? "orange" : "#fff",
+                      cursor: isServicesStopping ? "not-allowed" : "pointer",
+                    }}
                   >
-                    Stop Services
+                    {isServicesStopping ? "Stopping..." : "Stop Services"}
                   </button>
                   <button
                     onClick={() => {
@@ -451,9 +495,15 @@ const Mrserverdetails = ({ userData }) => {
                       setComputerName(item.ComputerName);
                       setActionType("StartAll");
                     }}
-                    style={{ marginBottom: "5px", background: "#0cb061" }}
+                    disabled={isServicesStarting} // Disable button based on state
+                    style={{
+                      marginBottom: "5px",
+                      background: isServicesStarting ? "#ccc" : "#0cb061",
+                      color: isServicesStarting ? "orange" : "#fff",
+                      cursor: isServicesStarting ? "not-allowed" : "pointer",
+                    }}
                   >
-                    Start Services
+                    {isServicesStarting ? "Starting..." : "Start Services"}
                   </button>
                   <button
                     onClick={() => {
@@ -461,9 +511,15 @@ const Mrserverdetails = ({ userData }) => {
                       setComputerName(item.ComputerName);
                       setActionType("RestartAll");
                     }}
-                    style={{ marginBottom: "5px", background: "#635279" }}
+                    disabled={isServicesReStarting} // Disable button based on state
+                    style={{
+                      marginBottom: "5px",
+                      background: isServicesReStarting ? "#ccc" : "#635279",
+                      color: isServicesReStarting ? "orange" : "#fff",
+                      cursor: isServicesReStarting ? "not-allowed" : "pointer",
+                    }}
                   >
-                    Restart Services
+                    {isServicesReStarting ? "Restarting..." : "Restart Services"}
                   </button>
                 </td>
                 <td>

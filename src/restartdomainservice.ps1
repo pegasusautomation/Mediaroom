@@ -1,37 +1,37 @@
-param (
-   [string]$ServiceName, # Accept the service name as a parameter
-  [string]$ComputerName,  # Accept the computer name as a parameter
-   [string]$Message  # Accept the message as a parameter
-)
-
+ param (
+     [string]$ServiceName, # Accept the service name as a parameter
+    [string]$ComputerName,  # Accept the computer name as a parameter
+     [string]$Message  # Accept the message as a parameter
+ )
+ 
 # Check if the service name is provided
 if (-not $ServiceName) {
-  Write-Host "Error: Service name not provided."
-  exit 1
+    Write-Host "Error: Service name not provided."
+    exit 1
 }
 
 # Check if the computer name is provided
 if (-not $ComputerName) {
-  Write-Host "Error: Computer name not provided."
-  exit 1
+    Write-Host "Error: Computer name not provided."
+    exit 1
 }
 
 # Check if the message is provided
 if (-not $Message) {
-  Write-Host "Error: Message not provided."
-  exit 1
+    Write-Host "Error: Message not provided."
+    exit 1
 }
 
 # Get the currently logged-in username and domain
 $currentUsername = $env:USERNAME
 $currentDomain = $env:USERDOMAIN
 if ($computerName -like "MSPBR5*") {
-  # Get service name based on computer name
-  $username = "$currentDomain\$currentUsername"
+    # Get service name based on computer name
+    $username = "$currentDomain\$currentUsername"
 }
 else {
-  # Get service name based on computer name
-  $username = "MSPBE5\$currentUsername"
+    # Get service name based on computer name
+    $username = "MSPBE5\$currentUsername"
 }
 
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
@@ -39,16 +39,16 @@ $credential = New-Object System.Management.Automation.PSCredential($username, $p
 
 # Invoke-Command to stop the service on the remote computer
 Invoke-Command -ComputerName $ComputerName -Credential $credential -ScriptBlock {
-  param($serviceName)
-  Restart-Service -Name $serviceName
+    param($serviceName)
+    Restart-Service -Name $serviceName
 } -ArgumentList $ServiceName
 
 # Invoke-Command to get the service status on the remote computer
 $servicename = $ServiceName
 
 $scriptBlock = {
-  param($serviceName)
-  Get-Service $serviceName
+    param($serviceName)
+    Get-Service $serviceName
 }
 
 $service1 = Invoke-Command -ComputerName $ComputerName -Credential $credential -ScriptBlock $scriptBlock -ArgumentList $ServiceName
@@ -80,12 +80,12 @@ Write-Host "JSON file created: $jsonUpdated"
 # Store data in a PowerShell hashtable
 $currentDate = Get-Date
 $serviceData = @{
-  "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
- "User" = $username
- "Machine" = $computerName
- "Service" = $ServiceName
- "Action" = "Restarted"
- "ActionHistory" = $Message
+    "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
+   "User" = $username
+   "Machine" = $computerName
+   "Service" = $ServiceName
+   "Action" = "Restarted"
+   "ActionHistory" = $Message
 }
 
 # Convert the hashtable to JSON format
@@ -96,9 +96,9 @@ $jsonFilePath = "C:\Mediaroom\src\pages\UserLogonevents.json"
 
 # Read existing JSON file content
 if (Test-Path $jsonFilePath) {
-  $existingJson = Get-Content -Path $jsonFilePath -Raw | ConvertFrom-Json
+    $existingJson = Get-Content -Path $jsonFilePath -Raw | ConvertFrom-Json
 } else {
-  $existingJson = @()
+    $existingJson = @()
 }
 
 # Append the new data to the existing JSON array

@@ -30,23 +30,42 @@ if ($computerName -like "MSPBR5*") {
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential($username, $password)
 
-# Define the script block to stop the service on the remote computer
+# Define the script block to stop IIS using iisreset
 $scriptBlock = {
-    Start-Process -FilePath "IISReset" -ArgumentList "/Start" -Wait -NoNewWindow
+    try {
+        # Check if the IIS service exists
+        $iisService = Get-Service -Name "W3SVC" -ErrorAction SilentlyContinue
+        if ($null -eq $iisService) {
+            throw "IIS service does not exist on this server."
+        }
+        
+        # Use cmd.exe to run iisreset /stop
+        $process = Start-Process -FilePath "cmd.exe" -ArgumentList "/c iisreset /start" -Wait -NoNewWindow -PassThru
+        
+        # Check if the process exited successfully
+        if ($process.ExitCode -eq 0) {
+            Write-Output "IIS reset successfully."
+        } else {
+            throw "IIS reset failed with exit code $($process.ExitCode)."
+        }
+    } catch {
+        # Capture and output any errors
+        Write-Output "Error stopping IIS: $_"
+    }
 }
 
 # Invoke the command on the remote computer
 Invoke-Command -ComputerName $computerName -Credential $credential -ScriptBlock $scriptBlock
 
 # Prepare data to store in the JSON file
-$servicecmd = "IISReset /stop"
+$servicecmd = "IISReset /start"
 $currentDate = Get-Date
 $serviceData = @{
     "Timelog" = $currentDate.ToString("yyyy-MM-dd HH:mm:ss")
     "User" = $username
     "Machine" = $computerName
     "Service" = $servicecmd
-    "Action" = "Stopped"
+    "Action" = "IIS Started"
     "ActionHistory" = $Message
 }
 
