@@ -104,7 +104,7 @@ const linksArray = [
         to: "/servers",
     },
     {
-        label: "Houston Servers",
+        label: "Servers",
         icon: <MdDesignServices />,
         to: "/houstonservers",
     },

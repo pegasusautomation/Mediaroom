@@ -181,6 +181,66 @@ app.post('/restartall-services', (req, res) => {
   });
 });
 
+app.post("/stopselected-services", (req, res) => {
+  const { selectedMachines, message } = req.body;
+
+  if (!selectedMachines || !message) {
+    return res.status(400).send("Missing parameters");
+  }
+
+  const computerNames = selectedMachines.join(',');
+  const command = `powershell.exe -File C:/Mediaroom/src/stopGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
+
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error stopping services: ${stderr}`);
+      return res.status(500).send(`Error stopping services`);
+    }
+    console.log(`Group Services stopped: ${stdout}`);
+    res.send("Services stop command issued");
+  });
+});
+
+app.post("/startselected-services", (req, res) => {
+  const { selectedMachines, message } = req.body;
+
+  if (!selectedMachines || !message) {
+    return res.status(400).send("Missing parameters");
+  }
+
+  const computerNames = selectedMachines.join(',');
+  const command = `powershell.exe -File C:/Mediaroom/src/startGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
+
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error starting services: ${stderr}`);
+      return res.status(500).send(`Error starting services`);
+    }
+    console.log(`Group Services started: ${stdout}`);
+    res.send("Services start command issued");
+  });
+});
+
+app.post("/restartselected-services", (req, res) => {
+  const { selectedMachines, message } = req.body;
+
+  if (!selectedMachines || !message) {
+    return res.status(400).send("Missing parameters");
+  }
+
+  const computerNames = selectedMachines.join(',');
+  const command = `powershell.exe -File C:/Mediaroom/src/restartGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
+
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error starting services: ${stderr}`);
+      return res.status(500).send(`Error starting services`);
+    }
+    console.log(`Group Services started: ${stdout}`);
+    res.send("Services stop command issued");
+  });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
