@@ -22,8 +22,7 @@ import {
     AiOutlineLeft,
     AiOutlineProfile,
 } from "react-icons/ai";
-import { MdDesignServices, MdHistory, MdHistoryEdu } from "react-icons/md";
-import { BsServer } from "react-icons/bs";
+import { MdDesignServices, MdHistoryEdu } from "react-icons/md";
 
 import { ThemeContext } from 'styled-components'
 import { useLocation } from "react-router-dom";
@@ -63,14 +62,14 @@ const Sidebar = ({userData}) => {
                 </SLinkContainer>
             ))}
             <SDivider />
-            {secondaryLinksArray.map(({ icon, label }) => (
+            {/* {secondaryLinksArray.map(({ icon, label }) => (
                 <SLinkContainer key={label}>
                     <SLink to="/loginhistory" style={!sidebarOpen ? { width: `fit-content` } : {}}>
                         <SLinkIcon>{icon}</SLinkIcon>
                         {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
                     </SLink>
                 </SLinkContainer>
-            ))}
+            ))} */}
             {/* <SDivider /> */}
             <STheme>
                 {sidebarOpen && <SThemeLabel>Dark Mode</SThemeLabel>}
@@ -99,11 +98,6 @@ const linksArray = [
         to: "/home",
     },
     {
-        label: "Virtual Machines",
-        icon: <BsServer />,
-        to: "/servers",
-    },
-    {
         label: "Servers",
         icon: <MdDesignServices />,
         to: "/houstonservers",
@@ -120,13 +114,13 @@ const linksArray = [
     },
 ];
 
-const secondaryLinksArray = [
-    {
-        label: "Login History",
-        icon: <MdHistory />,
-        to:"/loginhistory"
-    },
-];
+// const secondaryLinksArray = [
+//     {
+//         label: "Login History",
+//         icon: <MdHistory />,
+//         to:"/loginhistory"
+//     },
+// ];
 
 export default Sidebar;
 

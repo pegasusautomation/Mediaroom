@@ -1,3 +1,0 @@
-Server01
-Server02
-Server03

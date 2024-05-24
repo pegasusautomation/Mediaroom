@@ -41,7 +41,7 @@ app.post('/getstatus-service', (req, res) => {
 // Endpoint to handle stopping the service
 app.post('/stop-service', (req, res) => {
   const { roleName, computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/stopdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -57,7 +57,7 @@ app.post('/stop-service', (req, res) => {
 // Endpoint to handle starting the service
 app.post('/start-service', (req, res) => {
   const { roleName, computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;  
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/startdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;  
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
       console.error('Error starting service:', error);
@@ -72,7 +72,7 @@ app.post('/start-service', (req, res) => {
 // Endpoint to handle restarting the service
 app.post('/restart-service', (req, res) => {
   const { roleName, computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/restartdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -88,7 +88,7 @@ app.post('/restart-service', (req, res) => {
 // Endpoint to handle recycling the IIS service
 app.post('/iisstop-recycle', (req, res) => {
   const { computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/iisrecycleStop.ps1 -ComputerName "${computerName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/iisrecycleStop.ps1 -ComputerName "${computerName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -104,7 +104,7 @@ app.post('/iisstop-recycle', (req, res) => {
 // Endpoint to handle recycling the IIS service
 app.post('/iisstart-recycle', (req, res) => {
   const { computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/iisrecycleStart.ps1 -ComputerName "${computerName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/iisrecycleStart.ps1 -ComputerName "${computerName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -120,7 +120,7 @@ app.post('/iisstart-recycle', (req, res) => {
 // Endpoint to handle recycling the IIS service
 app.post('/iisrestart-recycle', (req, res) => {
   const { computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/iisrecycleRestart.ps1 -ComputerName "${computerName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/iisrecycleRestart.ps1 -ComputerName "${computerName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -136,7 +136,7 @@ app.post('/iisrestart-recycle', (req, res) => {
 // Endpoint to handle stopping all services
 app.post('/stopall-services', (req, res) => {
   const { computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/stopAllDomainServices.ps1 -ComputerName "${computerName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/stopAllDomainServices.ps1 -ComputerName "${computerName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -152,7 +152,7 @@ app.post('/stopall-services', (req, res) => {
 // Endpoint to handle starting all services
 app.post('/startall-services', (req, res) => {
   const { computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/startAllDomainServices.ps1 -ComputerName "${computerName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/startAllDomainServices.ps1 -ComputerName "${computerName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -168,7 +168,7 @@ app.post('/startall-services', (req, res) => {
 // Endpoint to handle restarting all services
 app.post('/restartall-services', (req, res) => {
   const { roleName, computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/restartAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/restartAllDomainServices.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
@@ -189,7 +189,7 @@ app.post("/stopselected-services", (req, res) => {
   }
 
   const computerNames = selectedMachines.join(',');
-  const command = `powershell.exe -File C:/Mediaroom/src/stopGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
+  const command = `powershell.exe -File C:/Mediaroom/src/manageserver/stopGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
@@ -209,7 +209,7 @@ app.post("/startselected-services", (req, res) => {
   }
 
   const computerNames = selectedMachines.join(',');
-  const command = `powershell.exe -File C:/Mediaroom/src/startGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
+  const command = `powershell.exe -File C:/Mediaroom/src/manageserver/startGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
@@ -229,7 +229,7 @@ app.post("/restartselected-services", (req, res) => {
   }
 
   const computerNames = selectedMachines.join(',');
-  const command = `powershell.exe -File C:/Mediaroom/src/restartGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
+  const command = `powershell.exe -File C:/Mediaroom/src/manageserver/restartGroupDomainServices.ps1 -ComputerNames "${computerNames}" -Message "${message}"`;
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
