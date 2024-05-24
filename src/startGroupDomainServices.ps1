@@ -89,7 +89,7 @@ foreach ($ComputerName in $ComputerNamesArray) {
             User = $username
             Machine = "GroupOFMachines"
             Service = "AdminService /action=start"
-            Action = "NA"
+            Action = "Started"
             ActionHistory = $Message
         }
 

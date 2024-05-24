@@ -115,10 +115,19 @@ for ($i = 0; $i -lt $branches.Count; $i++) {
             $password = 'Password1!'
             
             $services = Get-RemoteServiceStatus -ComputerName $computerName -Username $username -Password $password
-            
-            $serviceList = $services | Select-Object -ExpandProperty Name
-            $credential = New-Object System.Management.Automation.PSCredential($username, (ConvertTo-SecureString -String $password -AsPlainText -Force))
-            $serviceStatus = Get-ServiceStatus -ComputerName $computerName -Credential $credential -ServiceList $serviceList
+
+            if ($services.Count -eq 0) {
+                $serviceStatus = @(
+                    @{
+                        "Name" = "No service found"
+                        "Status" = "NA"
+                    }
+                )
+            } else {
+                $serviceList = $services | Select-Object -ExpandProperty Name
+                $credential = New-Object System.Management.Automation.PSCredential($username, (ConvertTo-SecureString -String $password -AsPlainText -Force))
+                $serviceStatus = Get-ServiceStatus -ComputerName $computerName -Credential $credential -ServiceList $serviceList
+            }
 
             try {
                 $result = Test-Connection -ComputerName $computerName -Count 1 -ErrorAction Stop
