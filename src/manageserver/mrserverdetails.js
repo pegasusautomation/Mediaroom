@@ -674,7 +674,7 @@ const Mrserverdetails = ({ userData }) => {
                                     setShowConfirmation(true);
                                     setRoleName(role.Name);
                                     setComputerName(item.ComputerName);
-                                    setActionType("Restart");
+                                    setActionType("Start");
                                   }}
                                   disabled={isButtonDisabled} // Disable button based on state
                                   style={{
@@ -698,7 +698,7 @@ const Mrserverdetails = ({ userData }) => {
                                       setShowConfirmation(true);
                                       setRoleName(role.Name);
                                       setComputerName(item.ComputerName);
-                                      setActionType("Restart");
+                                      setActionType("Stop");
                                     }}
                                     disabled={isButtonDisabled} // Disable button based on state
                                     style={{
