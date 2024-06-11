@@ -3,29 +3,42 @@ param (
     [string]$Message  # Accept the message as a parameter
 )
 
+# Function to write logs
+function Write-Log {
+    param (
+        [string]$Message
+    )
+    Write-Host (Get-Date -Format "yyyy-MM-dd HH:mm:ss") - $Message
+}
+
 # Check if the computer name is provided
-if (-not $computerName) {
-    Write-Host "Error: Computer name not provided."
+if (-not $ComputerName) {
+    Write-Log "Error: Computer name not provided."
     exit 1
 }
 
 # Check if the message is provided
 if (-not $Message) {
-    Write-Host "Error: Message not provided."
+    Write-Log "Error: Message not provided."
     exit 1
 }
 
-# Get the currently logged-in username and domain
-$currentUsername = $env:USERNAME
-$currentDomain = $env:USERDOMAIN
-
-if ($computerName -like "MSPBR5*") {
-    # Set username based on computer name pattern
-    $username = "$currentDomain\$currentUsername"
-} else {
-    # Set username for other cases
-    $username = "MSPBE5\$currentUsername"
+# Function to get domain-specific username
+function Get-Username {
+    param (
+        [string]$ComputerName
+    )
+    # Determine the domain based on the computer name
+    if ($ComputerName -like "MSPBR5*") {
+        return "MSPBR5\$($env:USERNAME)"
+    } elseif ($ComputerName -like "MSPBE5*") {
+        return "MSPBE5\$($env:USERNAME)"
+    } else {
+        return "$($env:USERDOMAIN)\$($env:USERNAME)"
+    }
 }
+
+$username = Get-Username -ComputerName $ComputerName
 
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential($username, $password)
