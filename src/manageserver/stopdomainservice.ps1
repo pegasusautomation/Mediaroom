@@ -1,39 +1,54 @@
- param (
-     [string]$ServiceName, # Accept the service name as a parameter
-    [string]$ComputerName,  # Accept the computer name as a parameter
-     [string]$Message  # Accept the message as a parameter
- )
- 
+param (
+    [string]$ServiceName,  # Accept the service name as a parameter
+    [string]$ComputerName, # Accept the computer name as a parameter
+    [string]$Message       # Accept the message as a parameter
+)
+
+# Function to write logs
+function Write-Log {
+    param (
+        [string]$Message
+    )
+    Write-Host (Get-Date -Format "yyyy-MM-dd HH:mm:ss") - $Message
+}
+
 # Check if the service name is provided
 if (-not $ServiceName) {
-    Write-Host "Error: Service name not provided."
+    Write-Log "Error: Service name not provided."
     exit 1
 }
 
 # Check if the computer name is provided
 if (-not $ComputerName) {
-    Write-Host "Error: Computer name not provided."
+    Write-Log "Error: Computer name not provided."
     exit 1
 }
 
 # Check if the message is provided
 if (-not $Message) {
-	console.log(message)
-    Write-Host "Error: Message not provided."
+    Write-Log "Error: Message not provided."
     exit 1
 }
 
-# Get the currently logged-in username and domain
-$currentUsername = $env:USERNAME
-$currentDomain = $env:USERDOMAIN
-if ($computerName -like "MSPBR5*") {
-    # Get service name based on computer name
-    $username = "$currentDomain\$currentUsername"
+# Function to get domain-specific username
+function Get-Username {
+    param (
+        [string]$ComputerName
+    )
+    # Determine the domain based on the computer name
+    if ($ComputerName -like "MSPBR5*") {
+        return "MSPBR5\$($env:USERNAME)"
+    } elseif ($ComputerName -like "MSPBE5*") {
+        return "MSPBE5\$($env:USERNAME)"
+    } else {
+        return "$($env:USERDOMAIN)\$($env:USERNAME)"
+    }
 }
-else {
-    # Get service name based on computer name
-    $username = "MSPBE5\$currentUsername"
-}
+
+$username = Get-Username -ComputerName $ComputerName
+
+# Log the credentials being used
+Write-Log "Using credentials: $username"
 
 $password = 'Password1!' | ConvertTo-SecureString -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential($username, $password)

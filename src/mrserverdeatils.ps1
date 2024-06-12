@@ -1,32 +1,38 @@
-$roleTypeXmlFilePath = "C:\Mediaroom\Roles.xml"
-$roleDescriptionsXml = [xml](Get-Content $roleTypeXmlFilePath) 
+# Specify the directory containing the XML files
+$xmlDirectoryPath = "C:\Mediaroom"
+$xmlFiles = Get-ChildItem -Path $xmlDirectoryPath -Filter "*.xml"
 
-$roleTypeXmlFilePath_A = "C:\Mediaroom\ARoles.xml"
-$roleDescriptionsXml_A = [xml](Get-Content $roleTypeXmlFilePath_A) 
- 
+# Read role descriptions from all role XML files dynamically
 $roleDescriptions = @{}
-foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
-    $roleName = $role.SelectSingleNode("@role").Value
-    $roleType = $role.SelectSingleNode("@type").Value
-    $roleDescriptions[$roleName] = @{
-        "Type" = $roleType
-    }
-}
-
 $roleDescriptions_A = @{}
-foreach ($role in $roleDescriptionsXml_A.SelectNodes("//machineRole")) {
-    $roleName = $role.SelectSingleNode("@role").Value
-    $roleType = $role.SelectSingleNode("@type").Value
-    $roleDescriptions_A[$roleName] = @{
-        "Type" = $roleType
+
+foreach ($xmlFile in $xmlFiles) {
+    if ($xmlFile.Name -like "*Roles.xml") {
+        $roleDescriptionsXml = [xml](Get-Content $xmlFile.FullName)
+        foreach ($role in $roleDescriptionsXml.SelectNodes("//machineRole")) {
+            $roleName = $role.SelectSingleNode("@role").Value
+            $roleType = $role.SelectSingleNode("@type").Value
+            if ($xmlFile.Name -like "*ARoles.xml") {
+                $roleDescriptions_A[$roleName] = @{
+                    "Type" = $roleType
+                }
+            } else {
+                $roleDescriptions[$roleName] = @{
+                    "Type" = $roleType
+                }
+            }
+        }
     }
 }
 
-$xmlFilePath = "C:\Mediaroom\serverLayout.xml"
-$xml = [xml](Get-Content $xmlFilePath)
-
-$xmlFilePath_A = "C:\Mediaroom\AserverLayout.xml"
-$xml_A = [xml](Get-Content $xmlFilePath_A)
+# Read layout XML files dynamically
+$branches = @()
+foreach ($xmlFile in $xmlFiles) {
+    if ($xmlFile.Name -like "*serverLayout.xml") {
+        $xml = [xml](Get-Content $xmlFile.FullName)
+        $branches += $xml
+    }
+}
 
 # Read domain info JSON file content
 $jsonContent = Get-Content -Raw -Path 'C:\Mediaroom\config\domain.json'
@@ -98,9 +104,22 @@ function Get-ServiceStatus {
     return $serviceStatus
 }
 
-# Define the branches to process
-$branches = @($xml, $xml_A)
-$domains = @($jsonObject.Branch, $jsonObject.Aquasition)
+# Define the branches to process and their respective domains
+$branches = @()
+$domains = @()
+
+foreach ($xmlFile in $xmlFiles) {
+    if ($xmlFile.Name -like "*serverLayout.xml") {
+        $xml = [xml](Get-Content $xmlFile.FullName)
+        $branches += $xml
+        # Determine the domain based on the file name pattern
+        if ($xmlFile.Name -like "*AserverLayout.xml") {
+            $domains += $jsonObject.Aquasition
+        } else {
+            $domains += $jsonObject.Branch
+        }
+    }
+}
 
 for ($i = 0; $i -lt $branches.Count; $i++) {
     $branch = $branches[$i]
@@ -109,7 +128,7 @@ for ($i = 0; $i -lt $branches.Count; $i++) {
     foreach ($zone in $branch.SelectNodes("//branch//zone")) {
         foreach ($computer in $zone.SelectNodes(".//computer")) {
             $computerName = $computer.SelectSingleNode("@name").Value
-            Write-Output($computerName)
+            Write-Output "Processing $computerName in domain $domain"
             
             $username = "$domain\$currentUsername"
             $password = 'Password1!'
@@ -140,7 +159,7 @@ for ($i = 0; $i -lt $branches.Count; $i++) {
             $roles = @()
             foreach ($roleNode in $computer.SelectNodes(".//role")) {
                 $roleName = $roleNode.SelectSingleNode("@name").Value
-                $roleType = if ($i -eq 0) { $roleDescriptions[$roleName].Type } else { $roleDescriptions_A[$roleName].Type }
+                $roleType = if ($domain -eq $jsonObject.Aquasition) { $roleDescriptions_A[$roleName].Type } else { $roleDescriptions[$roleName].Type }
                 $roles += @{
                     "Name" = $roleName
                     "Type" = $roleType

@@ -507,7 +507,7 @@ const Mrserverdetails = ({ userData }) => {
             marginRight: "190px",
           }}
         >
-          {isButtonDisabled ? "Updating Status" : "Update Service Status"}
+          {isButtonDisabled ? "Updating Status" : "Upload Servers"}
         </button>
         <button
           id="updateServiceStatusBtn"
@@ -674,7 +674,7 @@ const Mrserverdetails = ({ userData }) => {
                                     setShowConfirmation(true);
                                     setRoleName(role.Name);
                                     setComputerName(item.ComputerName);
-                                    setActionType("Restart");
+                                    setActionType("Start");
                                   }}
                                   disabled={isButtonDisabled} // Disable button based on state
                                   style={{
@@ -698,7 +698,7 @@ const Mrserverdetails = ({ userData }) => {
                                       setShowConfirmation(true);
                                       setRoleName(role.Name);
                                       setComputerName(item.ComputerName);
-                                      setActionType("Restart");
+                                      setActionType("Stop");
                                     }}
                                     disabled={isButtonDisabled} // Disable button based on state
                                     style={{
