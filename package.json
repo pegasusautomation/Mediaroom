@@ -34,7 +34,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "pkg": "pkg . --targets node16-win-x64,node16-linux-x64,node16-macos-x64"
     },
     "eslintConfig": {
         "extends": [
@@ -55,13 +56,25 @@
         ]
     },
     "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-    "main": "index.js",
+    "main": "server.js",
+    "bin": "server.js",
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "autoprefixer": "^10.4.17",
         "gh-pages": "^6.1.1",
+        "pkg": "^5.8.1",
         "postcss": "^8.4.33"
-    }
+    },
+
+    "pkg": {
+    "scripts": [
+        "server.js"
+    ],
+    "assets": [
+        "build/**/*"
+    ]
+}
+
 }
