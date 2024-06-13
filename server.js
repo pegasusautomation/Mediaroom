@@ -16,7 +16,7 @@ const scriptPath = process.pkg
   ? path.join(path.dirname(process.execPath), 'src', 'manageserver', 'stopdomainservice.ps1')
   : path.join(__dirname, 'src', 'manageserver', 'stopdomainservice.ps1');
 
-  // Log paths for debugging
+  // Log paths for  debugging
 console.log(`process.execPath: ${process.execPath}`);
 console.log(`__dirname: ${__dirname}`);
 console.log(`scriptPath: ${scriptPath}`);
