@@ -1,7 +1,9 @@
 {
-    "name": "2-sidebar-react",
-    "version": "0.1.0",
+    "name": "MR Server Monitoring Tool",
+    "version": "1.0",
     "private": true,
+    "main": "server.js",
+    "bin": "server.js",
     "proxy": "http://localhost:5000/",
     "dependencies": {
         "@fortawesome/free-solid-svg-icons": "^6.5.2",
@@ -31,11 +33,11 @@
         "xlsx": "^0.18.5"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "start": "node server.js",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "pkg": "pkg . --targets node16-win-x64,node16-linux-x64,node16-macos-x64"
+        "pkg": "pkg . --targets node16-win-x64"
     },
     "eslintConfig": {
         "extends": [
@@ -55,9 +57,7 @@
             "last 1 safari version"
         ]
     },
-    "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-    "main": "server.js",
-    "bin": "server.js",
+    "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",    
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -67,14 +67,14 @@
         "pkg": "^5.8.1",
         "postcss": "^8.4.33"
     },
-
     "pkg": {
-    "scripts": [
-        "server.js"
-    ],
-    "assets": [
-        "build/**/*"
-    ]
-}
-
+        "scripts": [
+            "server.js",
+            "dist/bundle.js"
+        ],
+        "assets": [
+            "build/**/*",
+            "src/manageserver/stopdomainservice.ps1"
+        ]
+    }
 }

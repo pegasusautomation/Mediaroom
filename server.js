@@ -11,6 +11,14 @@ app.use(bodyParser.json());
 
 let isExecutingStatusScript = false; // Flag to track script execution status
 
+// Determine the path to the PowerShell script
+const scriptPath = process.pkg 
+  ? path.join(path.dirname(process.execPath), 'src', 'manageserver', 'stopdomainservice.ps1')
+  : path.join(__dirname, 'src', 'manageserver', 'stopdomainservice.ps1');
+console.log(`Script path: ${scriptPath}`);
+console.log(`process.execPath: ${process.execPath}`);
+console.log(`__dirname: ${__dirname}`);
+
 // Endpoint to handle getting service status
 app.post('/getstatus-service', (req, res) => {
   if (isExecutingStatusScript) {
@@ -42,7 +50,7 @@ app.post('/getstatus-service', (req, res) => {
 // Endpoint to handle stopping the service
 app.post('/stop-service', (req, res) => {
   const { roleName, computerName, message } = req.body;
-  const powershellCommand = `powershell.exe -File C:/Mediaroom/src/manageserver/stopdomainservice.ps1 -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
+  const powershellCommand = `powershell.exe -File "${scriptPath}" -ComputerName "${computerName}" -ServiceName "${roleName}" -Message "${message}"`;
 
   exec(powershellCommand, (error, stdout, stderr) => {
     if (error) {
