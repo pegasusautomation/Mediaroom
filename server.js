@@ -12,12 +12,14 @@ app.use(bodyParser.json());
 let isExecutingStatusScript = false; // Flag to track script execution status
 
 // Determine the path to the PowerShell script
-const scriptPath = process.pkg 
+const scriptPath = process.pkg
   ? path.join(path.dirname(process.execPath), 'src', 'manageserver', 'stopdomainservice.ps1')
   : path.join(__dirname, 'src', 'manageserver', 'stopdomainservice.ps1');
-console.log(`Script path: ${scriptPath}`);
+
+  // Log paths for debugging
 console.log(`process.execPath: ${process.execPath}`);
 console.log(`__dirname: ${__dirname}`);
+console.log(`scriptPath: ${scriptPath}`);
 
 // Endpoint to handle getting service status
 app.post('/getstatus-service', (req, res) => {
