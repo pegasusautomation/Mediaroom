@@ -4,7 +4,7 @@ const { exec } = require('child_process');
 const path = require('path');
 
 const app = express();
-const port = 5000; // Set the port number
+const port = 3000; // Set the port number
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
