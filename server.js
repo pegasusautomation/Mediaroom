@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const port = 5000; // Set the port number
 
-// Middleware to parse JSON bodies
+// Middleware to parse JSON  bodies
 app.use(bodyParser.json());
 
 let isExecutingStatusScript = false; // Flag to track script execution status
