@@ -1,0 +1,992 @@
+﻿[
+    {
+        "Computer Name":  "MSPBR5DSERV103",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5DSERV103.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 04:18:45 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "a4d97f3cccb829ce83c7515faf50037477505d14",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5DSERV103",
+        "Issued By":  "CN=WMSvc-MSPBR5DSERV103",
+        "Issued To":  "CN=WMSvc-MSPBR5DSERV103",
+        "Valid From":  "2015-07-21 14:30:57 PM",
+        "Valid To":  "2025-07-18 14:30:57 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5DSERV101",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5DSERV101.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-12-20 04:47:29 AM",
+        "Valid To":  "2025-12-19 04:47:29 AM",
+        "Subject Key Identifier":  "3aa9ccf1c10572ef33479c045132b51f2ff0cb54",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5DSERV101",
+        "Issued By":  "CN=WMSvc-MSPBR5DSERV101",
+        "Issued To":  "CN=WMSvc-MSPBR5DSERV101",
+        "Valid From":  "2016-06-06 11:32:00 AM",
+        "Valid To":  "2026-06-04 11:32:00 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CGSG021",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CGSG021.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-12-20 05:19:23 AM",
+        "Valid To":  "2025-12-19 05:19:23 AM",
+        "Subject Key Identifier":  "74eca3ee040d636b0b21e4789975dab2477b4ab2",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5CGSG021",
+        "Issued By":  "CN=WMSvc-MSPBR5CGSG021",
+        "Issued To":  "CN=WMSvc-MSPBR5CGSG021",
+        "Valid From":  "2016-06-06 11:32:29 AM",
+        "Valid To":  "2026-06-04 11:32:29 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5TSSERV001",
+        "Issued By":  "CN=WMSvc-MSPBR5TSSERV001",
+        "Issued To":  "CN=WMSvc-MSPBR5TSSERV001",
+        "Valid From":  "2015-07-21 15:00:48 PM",
+        "Valid To":  "2025-07-18 15:00:48 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5TSSERV001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5TSSERV001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-12 00:31:47 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "07fcc84eb458b2510e7785cc445eeacb2fcaa655",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5DSERV102",
+        "Issued By":  "CN=WMSvc-MSPBR5DSERV102",
+        "Issued To":  "CN=WMSvc-MSPBR5DSERV102",
+        "Valid From":  "2015-07-21 14:49:22 PM",
+        "Valid To":  "2025-07-18 14:49:22 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5DSERV102",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5DSERV102.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 04:30:53 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "0a3131ddb1c43f6696f1e2bc612d85997007d24a",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5BMGMT001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5BMGMT001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-05-12 15:32:16 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "29a988c85d427aee0d33688c6ef201a0ff0a549b",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5BMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5.MRSUPP.COM SSL Client Certificate",
+        "Valid From":  "2023-10-30 18:13:40 PM",
+        "Valid To":  "2025-10-29 18:13:40 PM",
+        "Subject Key Identifier":  "2e58c43473d872144243d3132e777ecf9ca1b001",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5BMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=Client SSL for ENV 5",
+        "Valid From":  "2023-10-05 10:07:02 AM",
+        "Valid To":  "2025-10-04 10:07:02 AM",
+        "Subject Key Identifier":  "c72f242914b164e006c7787febec9b57591c6279",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5BMGMT001",
+        "Issued By":  "CN=WMSvc-MSPBR5BMGMT001",
+        "Issued To":  "CN=WMSvc-MSPBR5BMGMT001",
+        "Valid From":  "2015-07-21 14:32:10 PM",
+        "Valid To":  "2025-07-18 14:32:10 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5BMGMT001",
+        "Issued By":  "CN=MSPBR5BROMGW001.MSPBR5.MRSUPP.COM",
+        "Issued To":  "CN=MSPBR5BROMGW001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2024-02-27 00:35:59 AM",
+        "Valid To":  "2025-02-27 00:55:59 AM",
+        "Subject Key Identifier":  "6f73ae257099e82fd072ec8bf693cb6e7ca86f41",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5SFSG021",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5SFSG021.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 03:02:50 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "e164c43023ff87f850dadc0a92bc2a5df44ba859",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5SFSG021",
+        "Issued By":  "CN=WMSvc-MSPBR5SFSG021",
+        "Issued To":  "CN=WMSvc-MSPBR5SFSG021",
+        "Valid From":  "2015-07-21 14:32:53 PM",
+        "Valid To":  "2025-07-18 14:32:53 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5HPNR011",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5HPNR011.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 04:27:30 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "27b00f44ecd9248a8f1ee068cf3d3c36b2d17be6",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5HPNR011",
+        "Issued By":  "CN=WMSvc-MSPBR5HPNR011",
+        "Issued To":  "CN=WMSvc-MSPBR5HPNR011",
+        "Valid From":  "2015-07-21 14:31:05 PM",
+        "Valid To":  "2025-07-18 14:31:05 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5VSERV002",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5VSERV002.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 12:46:25 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "6d98f7c40f14efae09d21c9c69dcbb3aa8551fe2",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5VSERV002",
+        "Issued By":  "CN=WMSvc-MSPBR5VSERV002",
+        "Issued To":  "CN=WMSvc-MSPBR5VSERV002",
+        "Valid From":  "2015-07-21 14:32:01 PM",
+        "Valid To":  "2025-07-18 14:32:01 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5VSERV002",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=Client SSL for ENV 5",
+        "Valid From":  "2023-10-05 10:07:02 AM",
+        "Valid To":  "2025-10-04 10:07:02 AM",
+        "Subject Key Identifier":  "c72f242914b164e006c7787febec9b57591c6279",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG021",
+        "Issued By":  "CN=WMSvc-MSPBR5CFSG021",
+        "Issued To":  "CN=WMSvc-MSPBR5CFSG021",
+        "Valid From":  "2016-06-06 11:35:29 AM",
+        "Valid To":  "2026-06-04 11:35:29 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG021",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CFSG021.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-09-07 13:51:07 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "71584a8fd9da34476ead28e3744cdb98dd17e9cf",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG011",
+        "Issued By":  "CN=WMSvc-MSPBR5CFSG011",
+        "Issued To":  "CN=WMSvc-MSPBR5CFSG011",
+        "Valid From":  "2015-07-21 14:51:08 PM",
+        "Valid To":  "2025-07-18 14:51:08 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG011",
+        "Issued By":  "CN=MRPSI ROOT CA",
+        "Issued To":  "CN=MRPSI ROOT CA",
+        "Valid From":  "2012-06-11 18:14:25 PM",
+        "Valid To":  "2022-06-11 18:24:24 PM",
+        "Subject Key Identifier":  "47a3ece9474c049bc8c97e56561ac69049ec2c54",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG011",
+        "Issued By":  "CN=MediaroomPSI ROOT CA",
+        "Issued To":  "CN=MediaroomPSI ROOT CA",
+        "Valid From":  "2014-09-17 11:01:25 AM",
+        "Valid To":  "2019-09-17 11:11:22 AM",
+        "Subject Key Identifier":  "0203d7ee0ed9e60ef486f64773dd08e91af3cb02",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG011",
+        "Issued By":  "CN=MR-UTIL-0302-CA",
+        "Issued To":  "CN=MR-UTIL-0301-CA, DC=mr, DC=ericsson, DC=se",
+        "Valid From":  "2014-12-18 09:14:27 AM",
+        "Valid To":  "2034-12-18 09:24:27 AM",
+        "Subject Key Identifier":  "2dc9c008fb645cc3314b9ad903e15338392ff04b",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG011",
+        "Issued By":  "CN=IPTV-CA-ROOT-CA",
+        "Issued To":  "CN=MR-UTIL-0302-CA",
+        "Valid From":  "2014-12-18 08:21:33 AM",
+        "Valid To":  "2054-11-10 16:23:05 PM",
+        "Subject Key Identifier":  "ad7cbebfdfb500c559634b5d66a870a191f24bba",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CFSG011",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CFSG011.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-09-06 15:01:44 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "8c41b050eed7101ec2c648898de52711aa7a1b58",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5SYNC001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5SYNC001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-07 19:14:38 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "0aad838333cf148e91a8be80c990cd07d4c8c58c",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5SYNC001",
+        "Issued By":  "CN=WMSvc-MSPBR5SYNC001",
+        "Issued To":  "CN=WMSvc-MSPBR5SYNC001",
+        "Valid From":  "2015-07-21 14:31:50 PM",
+        "Valid To":  "2025-07-18 14:31:50 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5VDIST001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5VDIST001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-12 02:12:08 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "50ca1041941e1ab77811ee935eccdc4823a78add",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5VDIST001",
+        "Issued By":  "CN=WMSvc-MSPBR5VDIST001",
+        "Issued To":  "CN=WMSvc-MSPBR5VDIST001",
+        "Valid From":  "2015-07-21 14:29:37 PM",
+        "Valid To":  "2025-07-18 14:29:37 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5VDIST001",
+        "Issued By":  "CN=MediaroomTestCert",
+        "Issued To":  "CN=MediaroomTestCert",
+        "Valid From":  "2009-09-30 16:09:41 PM",
+        "Valid To":  "2039-12-31 17:59:59 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5VDIST001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BACKEND-ACCESS SSL Client Certificate",
+        "Valid From":  "2019-08-05 09:47:29 AM",
+        "Valid To":  "2021-08-04 09:47:29 AM",
+        "Subject Key Identifier":  "ee52eb356d967390756fe65bc13cc02a8edccae4",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5SFSG011",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5SFSG011.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-12-19 20:55:22 PM",
+        "Valid To":  "2025-12-18 20:55:22 PM",
+        "Subject Key Identifier":  "5aa2b42ecb13303d0cd9207cf72ba675de8bcf78",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5SFSG011",
+        "Issued By":  "CN=WMSvc-MSPBR5SFSG011",
+        "Issued To":  "CN=WMSvc-MSPBR5SFSG011",
+        "Valid From":  "2016-06-06 11:32:00 AM",
+        "Valid To":  "2026-06-04 11:32:00 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CGSG011",
+        "Issued By":  "CN=WMSvc-MSPBR5CGSG011",
+        "Issued To":  "CN=WMSvc-MSPBR5CGSG011",
+        "Valid From":  "2015-07-21 15:06:55 PM",
+        "Valid To":  "2025-07-18 15:06:55 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CGSG011",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CGSG011.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 04:26:49 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "11ae5ecdce6edc4b8620fa065834c1cd0104f06d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5SFBR001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5.MRSUPP.COM SSL Client Certificate",
+        "Valid From":  "2023-10-30 18:13:40 PM",
+        "Valid To":  "2025-10-29 18:13:40 PM",
+        "Subject Key Identifier":  "2e58c43473d872144243d3132e777ecf9ca1b001",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5SFBR001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=Client SSL for ENV 5",
+        "Valid From":  "2023-10-05 10:07:02 AM",
+        "Valid To":  "2025-10-04 10:07:02 AM",
+        "Subject Key Identifier":  "c72f242914b164e006c7787febec9b57591c6279",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5SFBR001",
+        "Issued By":  "CN=WMSvc-MSPBR5SFBR001",
+        "Issued To":  "CN=WMSvc-MSPBR5SFBR001",
+        "Valid From":  "2015-07-21 15:06:36 PM",
+        "Valid To":  "2025-07-18 15:06:36 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5SFBR001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5SFBR001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-10-30 23:05:51 PM",
+        "Valid To":  "2025-10-29 23:05:51 PM",
+        "Subject Key Identifier":  "205cb5ba598db0989510a205ba909ab4a86acf0b",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5VSERV001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5VSERV001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 04:47:26 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "1634c11ade83c7f4884566bab0e634bd6035c536",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5VSERV001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=Client SSL for ENV 5",
+        "Valid From":  "2023-10-05 10:07:02 AM",
+        "Valid To":  "2025-10-04 10:07:02 AM",
+        "Subject Key Identifier":  "c72f242914b164e006c7787febec9b57591c6279",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBR5VSERV001",
+        "Issued By":  "CN=WMSvc-MSPBR5VSERV001",
+        "Issued To":  "CN=WMSvc-MSPBR5VSERV001",
+        "Valid From":  "2015-07-21 15:05:36 PM",
+        "Valid To":  "2025-07-18 15:05:36 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CDBE001",
+        "Issued By":  "CN=WMSvc-MSPBR5CDBE001",
+        "Issued To":  "CN=WMSvc-MSPBR5CDBE001",
+        "Valid From":  "2021-09-20 03:55:55 AM",
+        "Valid To":  "2031-09-18 03:55:55 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CDBE001",
+        "Issued By":  "CN=Mediaroom ROOT CA",
+        "Issued To":  "CN=Mediaroom ROOT CA",
+        "Valid From":  "2014-07-22 23:22:14 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "45e251acfee740daadc1144184577f5169a98d4b",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CDBE001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-MSPBR5CDBE001-SSLServer",
+        "Valid From":  "2021-10-04 06:56:38 AM",
+        "Valid To":  "2023-10-04 06:56:38 AM",
+        "Subject Key Identifier":  "ce5f0b706ac3ed75fae0ed8c42d3de0b32658c76",
+        "Template Information":  "Template=SSLServer(1.3.6.1.4.1.311.21.8.2668996.12126884.7423882.1624594.6297611.7.3123733.11752734), Major Version Number=100, Minor Version Number=3"
+    },
+    {
+        "Computer Name":  "MSPBR5CDBE001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CDBE001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-08-12 08:25:57 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "4a4fa2764ca68b5c85a8d895920f3a86351ddb06",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5CDBE001",
+        "Issued By":  "CN=Mediaroom ROOT CA",
+        "Issued To":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Valid From":  "2015-07-21 21:05:05 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "b54a73fa5d3844b0e54df5cbbcf1c7bf64581758",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBR5CDFE001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:11:49 AM",
+        "Valid To":  "2023-08-12 09:11:49 AM",
+        "Subject Key Identifier":  "e650ff478ccb9e422615c23b924b6539692bce1d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBR5CDFE001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-MSPBR5CDFE001-SSLServer",
+        "Valid From":  "2021-10-01 06:57:41 AM",
+        "Valid To":  "2023-10-01 06:57:41 AM",
+        "Subject Key Identifier":  "ce629abea1a41770c5243fa744884c27da3b95aa",
+        "Template Information":  "Template=SSLServer(1.3.6.1.4.1.311.21.8.2668996.12126884.7423882.1624594.6297611.7.3123733.11752734), Major Version Number=100, Minor Version Number=3"
+    },
+    {
+        "Computer Name":  "MSPBR5CDFE001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CDFE001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-08-12 08:26:36 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "379df5a079c4fe7d800f699e9d175e78b4a2bc33",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBR5CDFE001",
+        "Issued By":  "CN=WMSvc-MSPBR5CDFE001",
+        "Issued To":  "CN=WMSvc-MSPBR5CDFE001",
+        "Valid From":  "2021-09-20 04:06:12 AM",
+        "Valid To":  "2031-09-18 04:06:12 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5BEDB001\\LIVEDB",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:11:49 AM",
+        "Valid To":  "2023-08-12 09:11:49 AM",
+        "Subject Key Identifier":  "e650ff478ccb9e422615c23b924b6539692bce1d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5BEDB001\\LIVEDB",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-MSPBR5CDFE001-SSLServer",
+        "Valid From":  "2021-10-01 06:57:41 AM",
+        "Valid To":  "2023-10-01 06:57:41 AM",
+        "Subject Key Identifier":  "ce629abea1a41770c5243fa744884c27da3b95aa",
+        "Template Information":  "Template=SSLServer(1.3.6.1.4.1.311.21.8.2668996.12126884.7423882.1624594.6297611.7.3123733.11752734), Major Version Number=100, Minor Version Number=3"
+    },
+    {
+        "Computer Name":  "MSPBE5BEDB001\\LIVEDB",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5CDFE001.MSPBR5.MRSUPP.COM",
+        "Valid From":  "2023-08-12 08:26:36 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "379df5a079c4fe7d800f699e9d175e78b4a2bc33",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=13"
+    },
+    {
+        "Computer Name":  "MSPBE5BEDB001\\LIVEDB",
+        "Issued By":  "CN=WMSvc-MSPBR5CDFE001",
+        "Issued To":  "CN=WMSvc-MSPBR5CDFE001",
+        "Valid From":  "2021-09-20 04:06:12 AM",
+        "Valid To":  "2031-09-18 04:06:12 AM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5VCTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM VOD Client Server Certificate",
+        "Valid From":  "2015-07-28 16:05:18 PM",
+        "Valid To":  "2017-07-27 16:05:18 PM",
+        "Subject Key Identifier":  "98bf90b3245491081857a7a37893d2376fee8ace",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5140656.2377373.7291310.1077647.6265397.123.14681413.11175396, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5VCTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5VCTRL001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2019-08-05 09:46:44 AM",
+        "Valid To":  "2021-08-04 09:46:44 AM",
+        "Subject Key Identifier":  "628279711ae379da0d6d0dbf3223983055367511",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5VCTRL001",
+        "Issued By":  "CN=WMSvc-MSPBE5VCTRL001",
+        "Issued To":  "CN=WMSvc-MSPBE5VCTRL001",
+        "Valid From":  "2015-07-20 17:56:07 PM",
+        "Valid To":  "2025-07-17 17:56:07 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5VCTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5VCTRL001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-05-12 19:58:52 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "932c8033380ac56d1f7e8240974f86a651f0abdb",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5VCRT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM VOD Client Server Certificate",
+        "Valid From":  "2015-07-28 16:05:18 PM",
+        "Valid To":  "2017-07-27 16:05:18 PM",
+        "Subject Key Identifier":  "98bf90b3245491081857a7a37893d2376fee8ace",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5140656.2377373.7291310.1077647.6265397.123.14681413.11175396, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5VCRT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5VCRT001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 09:53:02 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "12ce0bf94435ccc04998c2d44dcbaa4af0de2a3b",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDIST001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM VOD Client Server Certificate",
+        "Valid From":  "2015-07-28 16:05:18 PM",
+        "Valid To":  "2017-07-27 16:05:18 PM",
+        "Subject Key Identifier":  "98bf90b3245491081857a7a37893d2376fee8ace",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5140656.2377373.7291310.1077647.6265397.123.14681413.11175396, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDIST001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MDIST001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-10 01:14:26 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "bcce413df243518adf6a5798991aa6af47e9fb9b",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDIST001",
+        "Issued By":  "CN=MediaroomTestCert",
+        "Issued To":  "CN=MediaroomTestCert",
+        "Valid From":  "2009-09-30 16:09:41 PM",
+        "Valid To":  "2039-12-31 17:59:59 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MDIST001",
+        "Issued By":  "CN=WMSvc-MSPBE5MDIST001",
+        "Issued To":  "CN=WMSvc-MSPBE5MDIST001",
+        "Valid From":  "2015-07-20 17:03:21 PM",
+        "Valid To":  "2025-07-17 17:03:21 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5VMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM VOD Client Server Certificate",
+        "Valid From":  "2015-07-28 16:05:18 PM",
+        "Valid To":  "2017-07-27 16:05:18 PM",
+        "Subject Key Identifier":  "98bf90b3245491081857a7a37893d2376fee8ace",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5140656.2377373.7291310.1077647.6265397.123.14681413.11175396, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5VMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5VMGMT001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-05-12 18:48:57 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "2c0eaee4aae150268e9b4cf7fec4978e2cae7782",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5VMGMT001",
+        "Issued By":  "CN=WMSvc-MSPBE5VMGMT001",
+        "Issued To":  "CN=WMSvc-MSPBE5VMGMT001",
+        "Valid From":  "2016-04-06 13:55:41 PM",
+        "Valid To":  "2026-04-04 13:55:41 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5RSERV001",
+        "Issued By":  "CN=WMSvc-MSPBE5RSERV001",
+        "Issued To":  "CN=WMSvc-MSPBE5RSERV001",
+        "Valid From":  "2015-07-20 17:00:57 PM",
+        "Valid To":  "2025-07-17 17:00:57 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5RSERV001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5RSERV001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-09 23:56:23 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "9751d73330dcff67592bb23767af8d8dcc50e0ee",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ASERV003",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5ASERV003.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-10-20 00:57:48 AM",
+        "Valid To":  "2025-10-19 00:57:48 AM",
+        "Subject Key Identifier":  "816784aa9e6abea0400b730b2dfa9f35ca0d70d4",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5AMGMT001",
+        "Issued By":  "CN=WMSvc-MSPBE5AMGMT001",
+        "Issued To":  "CN=WMSvc-MSPBE5AMGMT001",
+        "Valid From":  "2015-07-21 13:26:52 PM",
+        "Valid To":  "2025-07-18 13:26:52 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5AMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM LIVE Client Server Certificate",
+        "Valid From":  "2015-07-28 16:05:21 PM",
+        "Valid To":  "2017-07-27 16:05:21 PM",
+        "Subject Key Identifier":  "b2d0cc7ae4786675245789b75b420aa2bc13d50a",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5140656.2377373.7291310.1077647.6265397.123.14681413.11175396, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5AMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5AMGMT001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-05-13 00:07:13 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "823644c60e23b9b3941ddae3e93f0a2794a38c56",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ACTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BACKEND-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:07:05 AM",
+        "Valid To":  "2023-08-12 09:07:05 AM",
+        "Subject Key Identifier":  "f03985f6aa22b680b20f668f6e3dbecb1fe4cbd4",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBE5ACTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5ACTRL001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-10 17:17:59 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "1753937f3508711d6f32de960950c507243002a6",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ACTRL001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:11:49 AM",
+        "Valid To":  "2023-08-12 09:11:49 AM",
+        "Subject Key Identifier":  "e650ff478ccb9e422615c23b924b6539692bce1d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ACTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5ACTRL001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-01-07 16:07:17 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "94967a8c617067d4e55b85963f09c7f2d9f822ec",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5ACTRL001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM LIVE Client Server Certificate",
+        "Valid From":  "2015-07-28 16:05:21 PM",
+        "Valid To":  "2017-07-27 16:05:21 PM",
+        "Subject Key Identifier":  "b2d0cc7ae4786675245789b75b420aa2bc13d50a",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5140656.2377373.7291310.1077647.6265397.123.14681413.11175396, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ACTRL001",
+        "Issued By":  "CN=WMSvc-MSPBE5ACTRL001",
+        "Issued To":  "CN=WMSvc-MSPBE5ACTRL001",
+        "Valid From":  "2015-07-20 17:03:49 PM",
+        "Valid To":  "2025-07-17 17:03:49 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5ASERV002",
+        "Issued By":  "CN=MediaroomTestCert",
+        "Issued To":  "CN=MediaroomTestCert",
+        "Valid From":  "2009-09-30 16:09:41 PM",
+        "Valid To":  "2039-12-31 17:59:59 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5ASERV002",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5ASERV002.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 07:53:50 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "c8b976f5031cd3f33a39f5ec1aaf3c19de2ecb0a",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ASERV004",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5ASERV004.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-10-20 05:55:56 AM",
+        "Valid To":  "2025-10-19 05:55:56 AM",
+        "Subject Key Identifier":  "309371b462f3b7518a51988045976d88cb782645",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5ASERV001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5ASERV001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-10-16 20:18:13 PM",
+        "Valid To":  "2025-10-15 20:18:13 PM",
+        "Subject Key Identifier":  "ae1d3cec6b7c0311a08964cc66ed32d5d791b05f",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSAF001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MDSAF001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 08:57:28 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "43c8b2300026b79e32ff85ea7b8292f6a06c29cc",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSAF001",
+        "Issued By":  "CN=WMSvc-MSPBE5MDSAF001",
+        "Issued To":  "CN=WMSvc-MSPBE5MDSAF001",
+        "Valid From":  "2015-07-20 17:56:21 PM",
+        "Valid To":  "2025-07-17 17:56:21 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSAF002",
+        "Issued By":  "CN=WMSvc-MSPBE5MDSAF002",
+        "Issued To":  "CN=WMSvc-MSPBE5MDSAF002",
+        "Valid From":  "2015-07-20 16:42:04 PM",
+        "Valid To":  "2025-07-17 16:42:04 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSAF002",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MDSAF002.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-03 09:07:22 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "af675d0761483707f8a81e898eb5ad4e1afed3ae",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5.MRSUPP.COM SSL Client Certificate",
+        "Valid From":  "2017-08-02 19:16:48 PM",
+        "Valid To":  "2019-08-02 19:16:48 PM",
+        "Subject Key Identifier":  "efa72291d8a0fc0a51dcdf5c5ad3b8a397ee2d7b",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=Mediaroom ROOT CA",
+        "Issued To":  "CN=Mediaroom ROOT CA",
+        "Valid From":  "2014-07-22 23:22:14 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "45e251acfee740daadc1144184577f5169a98d4b",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MMGMT001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-02-10 07:28:47 AM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "020cb94410b815bfee0196837f939248ed06ab90",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM SSL Client Certificate",
+        "Valid From":  "2015-07-31 10:23:06 AM",
+        "Valid To":  "2017-07-30 10:23:06 AM",
+        "Subject Key Identifier":  "65facbc3e1b9aa241d62d7a2b07fce44e72e8035",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:11:49 AM",
+        "Valid To":  "2023-08-12 09:11:49 AM",
+        "Subject Key Identifier":  "e650ff478ccb9e422615c23b924b6539692bce1d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=Mediaroom ROOT CA",
+        "Issued To":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Valid From":  "2015-07-21 21:05:05 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "b54a73fa5d3844b0e54df5cbbcf1c7bf64581758",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=WMSvc-MSPBE5MMGMT001",
+        "Issued To":  "CN=WMSvc-MSPBE5MMGMT001",
+        "Valid From":  "2015-07-20 16:44:23 PM",
+        "Valid To":  "2025-07-17 16:44:23 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MMGMT001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MMGMT001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2015-07-28 16:05:30 PM",
+        "Valid To":  "2017-07-27 16:05:30 PM",
+        "Subject Key Identifier":  "e66a08776028aa37731208b736a4678f77911de2",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSING001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBR5.MRSUPP.COM SSL Client Certificate",
+        "Valid From":  "2023-10-30 18:13:40 PM",
+        "Valid To":  "2025-10-29 18:13:40 PM",
+        "Subject Key Identifier":  "2e58c43473d872144243d3132e777ecf9ca1b001",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=8"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSING001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5.MRSUPP.COM SSL Client Certificate",
+        "Valid From":  "2015-07-31 10:23:06 AM",
+        "Valid To":  "2017-07-30 10:23:06 AM",
+        "Subject Key Identifier":  "65facbc3e1b9aa241d62d7a2b07fce44e72e8035",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSING001",
+        "Issued By":  "CN=WMSvc-MSPBE5MDSING001",
+        "Issued To":  "CN=WMSvc-MSPBE5MDSING001",
+        "Valid From":  "2015-07-20 17:55:53 PM",
+        "Valid To":  "2025-07-17 17:55:53 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSING001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:11:49 AM",
+        "Valid To":  "2023-08-12 09:11:49 AM",
+        "Subject Key Identifier":  "e650ff478ccb9e422615c23b924b6539692bce1d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSING001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MDSING001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-06-10 15:27:50 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "32fcc49bdf0cc71f63f23cd92b386e23a2081787",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSFE001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MDSFE001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2023-05-12 21:26:29 PM",
+        "Valid To":  "2024-07-22 23:32:13 PM",
+        "Subject Key Identifier":  "300abe646543383c55d5105381071c9c1e93c69e",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.6971055.6418846.5524922.5044298.13501444.118.8811440.5592405, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSFE001",
+        "Issued By":  "CN=WMSvc-MSPBE5MDSFE001",
+        "Issued To":  "CN=WMSvc-MSPBE5MDSFE001",
+        "Valid From":  "2015-07-20 16:42:02 PM",
+        "Valid To":  "2025-07-17 16:42:02 PM",
+        "Subject Key Identifier":  "Notavailable",
+        "Template Information":  "Template information not found"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSFE001",
+        "Issued By":  "CN=MSPBR5-MSPBR5BRCA001-CA, DC=MSPBR5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=BRANCH-ACCESS SSL Client Certificate",
+        "Valid From":  "2021-08-12 09:11:49 AM",
+        "Valid To":  "2023-08-12 09:11:49 AM",
+        "Subject Key Identifier":  "e650ff478ccb9e422615c23b924b6539692bce1d",
+        "Template Information":  "Template=1.3.6.1.4.1.311.21.8.5252110.5918962.7684521.10209155.7836277.230.11793316.4864434, Major Version Number=100, Minor Version Number=2"
+    },
+    {
+        "Computer Name":  "MSPBE5MDSFE001",
+        "Issued By":  "CN=MSPBE5-MSPBE5BECA001-CA, DC=MSPBE5, DC=MRSUPP, DC=COM",
+        "Issued To":  "CN=MSPBE5MDSFE001.MSPBE5.MRSUPP.COM",
+        "Valid From":  "2021-08-12 09:06:07 AM",
+        "Valid To":  "2023-08-12 09:06:07 AM",
+        "Subject Key Identifier":  "606aa90fa3a6d1ee9d61b7e25a67322c3fefb07a",
+        "Template Information":  "Template information not found"
+    }
+]
